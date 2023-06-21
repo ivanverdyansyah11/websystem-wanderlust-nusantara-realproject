@@ -57,9 +57,9 @@
                             @csrf
                             <div class="input-wrapper pt-2 w-100 d-flex flex-column gap-3">
                                 <input type="email" name="email" class="w-100 input-text rounded-full"
-                                    placeholder="Enter your email">
+                                    placeholder="Enter your email" style="border-radius: 9999px;">
                                 <input type="password" name="password" class="w-100 input-text mt-2 rounded-full"
-                                    placeholder="Enter your password">
+                                    placeholder="Enter your password" style="border-radius: 9999px;">
                             </div>
                             <button type="submit"
                                 class="btn btn-color w-100 p-3 mt-4 rounded-full text-center">Login</button>
