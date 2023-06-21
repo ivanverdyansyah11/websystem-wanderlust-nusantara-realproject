@@ -31,7 +31,7 @@
                             <td>Name</td>
                             <td>Image</td>
                             <td>Total Destination</td>
-                            <td>History Paragraph 1</td>
+                            <td>History</td>
                             <td></td>
                         </tr>
                     </thead>
