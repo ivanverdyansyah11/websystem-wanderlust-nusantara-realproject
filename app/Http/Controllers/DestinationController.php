@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\City;
 use App\Models\Destination;
+use App\Models\Gallery;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
@@ -20,6 +21,7 @@ class DestinationController extends Controller
 
         return view('destination.index', [
             'page' => 'Destination',
+            'id' => Destination::latest('id')->value('id'),
             'destinations' => Destination::all(),
             'cities' => City::all(),
             'text_history_1' => $text_history_1,
@@ -29,6 +31,7 @@ class DestinationController extends Controller
     public function store(Request $request)
     {
         $validatedData = $request->validate([
+            'id' => 'required',
             'cities_id' => 'required',
             'name' => 'required',
             'rating' => 'required',
@@ -39,6 +42,9 @@ class DestinationController extends Controller
         ]);
 
         $validatedData['image'] = $request->file('image')->store('destination-images');
+        $gallery = Gallery::create([
+            'destinations_id' => $validatedData['id'],
+        ]);
         $destination = Destination::create($validatedData);
         if ($destination) {
             return redirect(route('index-destination'))->with('success', 'Add New Destination Successfully!');

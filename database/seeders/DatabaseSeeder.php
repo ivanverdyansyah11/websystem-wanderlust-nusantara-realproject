@@ -8,6 +8,7 @@ use App\Models\Chef;
 use App\Models\City;
 use App\Models\Destination;
 use App\Models\Feedback;
+use App\Models\Gallery;
 use App\Models\History;
 use App\Models\Location;
 use App\Models\Menu;
@@ -84,6 +85,7 @@ class DatabaseSeeder extends Seeder
         ]);
 
         Destination::create([
+            'id' => '1',
             'cities_id' => '8',
             'name' => 'Candi Borobudur',
             'location' => 'Magelang, Jawa Tengah',
@@ -93,7 +95,12 @@ class DatabaseSeeder extends Seeder
             'history_2' => "Candi Borobudur is an exceptional example of Mahayana Buddhist architecture. It consists of nine stacked platforms, topped by a central dome. The temple is adorned with intricate relief carvings that depict various scenes from Buddhist teachings and Javanese life. The design of the temple reflects a fusion of Indian and indigenous Indonesian architectural styles.",
         ]);
 
+        Gallery::create([
+            'destinations_id' => '1',
+        ]);
+
         Destination::create([
+            'id' => '2',
             'cities_id' => '8',
             'name' => 'Candi Prambanan',
             'location' => 'Magelang, Jawa Tengah',
@@ -103,7 +110,12 @@ class DatabaseSeeder extends Seeder
             'history_2' => "Candi Prambanan is renowned for its stunning architecture, characterized by tall and intricately carved spires (shikharas) that reach towards the sky. The temple complex consists of several individual temples, with the central compound dedicated to Lord Shiva. The temples are adorned with elaborate relief carvings depicting scenes from Hindu epics, such as the Ramayana and Mahabharata.",
         ]);
 
+        Gallery::create([
+            'destinations_id' => '2',
+        ]);
+
         Destination::create([
+            'id' => '3',
             'cities_id' => '8',
             'name' => 'Keraton Kasunanan Solo',
             'location' => 'Magelang, Jawa Tengah',
@@ -113,7 +125,12 @@ class DatabaseSeeder extends Seeder
             'history_2' => "The Kasunanan Kingdom of Solo was an offshoot of the Mataram Sultanate, which played a significant role in shaping the Javanese culture and history. The Keraton Kasunanan Solo adopted many of the courtly traditions, rituals, and architectural styles of the Mataram Sultanate.",
         ]);
 
+        Gallery::create([
+            'destinations_id' => '3',
+        ]);
+
         Destination::create([
+            'id' => '4',
             'cities_id' => '8',
             'name' => 'Candi Sukuh',
             'location' => 'Magelang, Jawa Tengah',
@@ -121,6 +138,10 @@ class DatabaseSeeder extends Seeder
             'image' => 'destination-image',
             'history_1' => "Candi Sukuh was built during the 15th century, towards the end of the Majapahit Empire's rule in Java. It is believed to have been constructed under the patronage of King Brawijaya V, who was known for his interest in mysticism and esoteric beliefs. The temple's architecture and design deviate from the typical Javanese Hindu temple style, showcasing a blend of Hindu-Buddhist and indigenous Javanese influences.",
             'history_2' => "Candi Sukuh is known for its distinctive pyramid-like structure, reminiscent of Mesoamerican stepped pyramids. The temple's design includes various stone reliefs, sculptures, and symbolic motifs that depict scenes from Hindu mythology and Javanese cosmology. It is believed that Candi Sukuh served as a place for spiritual rituals and ceremonies associated with fertility and ancestral worship.",
+        ]);
+
+        Gallery::create([
+            'destinations_id' => '4',
         ]);
     }
 }

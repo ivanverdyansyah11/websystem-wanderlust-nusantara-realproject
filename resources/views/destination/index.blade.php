@@ -80,6 +80,7 @@
                             <div class="wrapper d-flex gap-3">
                                 <div class="pt-2 w-100">
                                     <div class="input-text-wrapper w-100 mb-3">
+                                        <input type="hidden" name="id" value="{{ $id + 1 }}">
                                         <label for="name" class="text-black fw-medium fs-14">Name</label>
                                         <input type="text" id="name" name="name"
                                             class="w-100 input-text border-0 @error('name') is-invalid @enderror"
