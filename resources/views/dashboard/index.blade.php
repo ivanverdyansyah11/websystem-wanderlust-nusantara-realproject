@@ -20,8 +20,8 @@
                                     alt="Menu Dashboard Icon" style="border-radius: 2px">
                             </div>
                             <div class="card-dashboard-name d-flex flex-column">
-                                <p class="card-dashboard-desc">Total Menu</p>
-                                <p class="main-color fs-4 fw-bold ">{{ $menu_count }}</p>
+                                <p class="card-dashboard-desc">Total Featured</p>
+                                <p class="main-color fs-4 fw-bold ">4</p>
                             </div>
                         </div>
                     </div>
@@ -34,8 +34,8 @@
                                     alt="Menu Dashboard Icon" style="border-radius: 2px">
                             </div>
                             <div class="card-dashboard-name d-flex flex-column">
-                                <p class="card-dashboard-desc">Total Location Branch</p>
-                                <p class="main-color fs-4 fw-bold ">{{ $location_count }}</p>
+                                <p class="card-dashboard-desc">Total Destination</p>
+                                <p class="main-color fs-4 fw-bold ">{{ $destination_count }}</p>
                             </div>
                         </div>
                     </div>
@@ -48,8 +48,8 @@
                                     alt="Menu Dashboard Icon" style="border-radius: 2px">
                             </div>
                             <div class="card-dashboard-name d-flex flex-column">
-                                <p class="card-dashboard-desc">Total Chef</p>
-                                <p class="main-color fs-4 fw-bold ">{{ $chef_count }}</p>
+                                <p class="card-dashboard-desc">Total City</p>
+                                <p class="main-color fs-4 fw-bold ">{{ $city_count }}</p>
                             </div>
                         </div>
                     </div>
@@ -62,8 +62,8 @@
                                     alt="Menu Dashboard Icon" style="border-radius: 2px">
                             </div>
                             <div class="card-dashboard-name d-flex flex-column">
-                                <p class="card-dashboard-desc">Customer Feedback</p>
-                                <p class="main-color fs-4 fw-bold ">{{ $feedback_count }}</p>
+                                <p class="card-dashboard-desc">Total Gallery</p>
+                                <p class="main-color fs-4 fw-bold ">{{ $gallery_count }}</p>
                             </div>
                         </div>
                     </div>
@@ -72,7 +72,7 @@
         </div>
     </div>
     <div class="main-content mt-4 px-5">
-        <p class="fw-medium text-black mb-3" style="font-size: 18px">Most Recent Menu</p>
+        <p class="fw-medium text-black mb-3" style="font-size: 18px">Most Recent Destination</p>
         <div class="row px-3 py-4 rounded-1" style="background-color: white">
             <div class="col-12 my-2">
                 <table class="table mb-0">
@@ -80,27 +80,26 @@
                         <tr>
                             <td>No</td>
                             <td>Name</td>
-                            <td>Image</td>
-                            <td>Price</td>
-                            <td>Description</td>
+                            <td>Location</td>
+                            <td>Rating</td>
+                            <td>Total Images</td>
+                            <td>History</td>
                         </tr>
                     </thead>
                     <tbody>
-                        @if ($menus->count() == 0)
+                        @if ($destinations->count() == 0)
                             <tr>
-                                <td colspan="6" class="text-center py-3">Data Menu Not Found!</td>
+                                <td colspan="6" class="text-center py-3">Data Destination Not Found!</td>
                             </tr>
                         @else
-                            @foreach ($menus as $menu)
+                            @foreach ($destinations as $i => $destinations)
                                 <tr>
                                     <td>{{ $loop->iteration }}</td>
-                                    <td>{{ $menu->name }}</td>
-                                    <td>
-                                        <img src="{{ asset('storage/' . $menu->image) }}" alt="{{ $menu->name }} image"
-                                            width="150">
-                                    </td>
-                                    <td>{{ $menu->price }}</td>
-                                    <td style="width: 400px">{{ $menu->description }}</td>
+                                    <td>{{ $destinations->name }}</td>
+                                    <td>{{ $destinations->location }}</td>
+                                    <td>{{ $destinations->rating }}</td>
+                                    <td></td>
+                                    <td style="width: 300px">{{ $text_history_1[$i] }}</td>
                                 </tr>
                             @endforeach
                         @endif
