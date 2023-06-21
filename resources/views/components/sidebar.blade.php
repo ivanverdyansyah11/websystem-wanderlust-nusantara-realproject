@@ -15,6 +15,15 @@
                     </a>
                 </div>
             </div>
+            {{-- <div class="col-12">
+                <div class="menu-sidebar ps-4 pe-3">
+                    <a href="{{ route('index-destination') }}"
+                        class="{{ Request::is('*destination*') ? 'active' : '' }} d-flex align-items-center menu-wrapper gap-3 text-decoration-none">
+                        <div class="icon-sidebar destination-icon"></div>
+                        <p class="mb-0">Destination</p>
+                    </a>
+                </div>
+            </div> --}}
             <div class="col-12">
                 <div class="menu-sidebar ps-4 pe-3">
                     <a href="{{ route('index-city') }}"
@@ -24,6 +33,15 @@
                     </a>
                 </div>
             </div>
+            {{-- <div class="col-12">
+                <div class="menu-sidebar ps-4 pe-3">
+                    <a href="{{ route('index-gallery') }}"
+                        class="{{ Request::is('*gallery*') ? 'active' : '' }} d-flex align-items-center menu-wrapper gap-3 text-decoration-none">
+                        <div class="icon-sidebar gallery-icon"></div>
+                        <p class="mb-0">Gallery</p>
+                    </a>
+                </div>
+            </div> --}}
             <div class="col-12">
                 <div class="menu-sidebar ps-4 pe-3">
                     <form action="{{ route('logout.action') }}" method="post" class="d-inline-block"

@@ -188,20 +188,14 @@ textarea::-webkit-scrollbar{
 .dashboard-icon {
     background-image: url('../img/sidebar/dashboard-unactive.svg');
 }
-.menu-icon {
-    background-image: url('../img/sidebar/menu-unactive.svg');
+.destination-icon {
+    background-image: url('../img/sidebar/destination-unactive.svg');
 }
-.location-icon {
-    background-image: url('../img/sidebar/location-unactive.svg');
+.city-icon {
+    background-image: url('../img/sidebar/city-unactive.svg');
 }
-.history-icon {
-    background-image: url('../img/sidebar/history-unactive.svg');
-}
-.chef-icon {
-    background-image: url('../img/sidebar/chef-unactive.svg');
-}
-.feedback-icon {
-    background-image: url('../img/sidebar/feedback-unactive.svg');
+.gallery-icon {
+    background-image: url('../img/sidebar/gallery-unactive.svg');
 }
 .logout-icon {
     background-image: url('../img/sidebar/logout-unactive.svg');
@@ -211,25 +205,17 @@ textarea::-webkit-scrollbar{
 .menu-wrapper:hover .dashboard-icon {
     background-image: url('../img/sidebar/dashboard-active.svg');
 }
-.menu-wrapper.active .menu-icon,
-.menu-wrapper:hover .menu-icon {
-    background-image: url('../img/sidebar/menu-active.svg');
+.menu-wrapper.active .destination-icon,
+.menu-wrapper:hover .destination-icon {
+    background-image: url('../img/sidebar/destination-active.svg');
 }
-.menu-wrapper.active .location-icon,
-.menu-wrapper:hover .location-icon {
-    background-image: url('../img/sidebar/location-active.svg');
+.menu-wrapper.active .city-icon,
+.menu-wrapper:hover .city-icon {
+    background-image: url('../img/sidebar/city-active.svg');
 }
-.menu-wrapper.active .history-icon,
-.menu-wrapper:hover .history-icon {
-    background-image: url('../img/sidebar/history-active.svg');
-}
-.menu-wrapper.active .chef-icon,
-.menu-wrapper:hover .chef-icon {
-    background-image: url('../img/sidebar/chef-active.svg');
-}
-.menu-wrapper.active .feedback-icon,
-.menu-wrapper:hover .feedback-icon {
-    background-image: url('../img/sidebar/feedback-active.svg');
+.menu-wrapper.active .gallery-icon,
+.menu-wrapper:hover .gallery-icon {
+    background-image: url('../img/sidebar/gallery-active.svg');
 }
 .menu-wrapper.active .logout-icon,
 .menu-wrapper:hover .logout-icon {

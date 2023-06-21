@@ -47,6 +47,14 @@ Route::middleware(['auth'])->prefix('admin')->group(function () {
         Route::get('/dashboard', 'index')->name('dashboard');
     });
 
+    // Route::controller(CityController::class)->group(function () {
+    //     Route::get('/city', 'index')->name('index-destination');
+    //     Route::post('/city/store', 'store')->name('store-city');
+    //     Route::get('/city/edit/{id}', 'edit')->name('edit-city');
+    //     Route::post('/city/edit/{id}', 'update')->name('update-city');
+    //     Route::post('/city/delete/{id}', 'delete')->name('delete-city');
+    // });
+
     Route::controller(CityController::class)->group(function () {
         Route::get('/city', 'index')->name('index-city');
         Route::post('/city/store', 'store')->name('store-city');
@@ -54,4 +62,12 @@ Route::middleware(['auth'])->prefix('admin')->group(function () {
         Route::post('/city/edit/{id}', 'update')->name('update-city');
         Route::post('/city/delete/{id}', 'delete')->name('delete-city');
     });
+
+    // Route::controller(CityController::class)->group(function () {
+    //     Route::get('/city', 'index')->name('index-gallery');
+    //     Route::post('/city/store', 'store')->name('store-city');
+    //     Route::get('/city/edit/{id}', 'edit')->name('edit-city');
+    //     Route::post('/city/edit/{id}', 'update')->name('update-city');
+    //     Route::post('/city/delete/{id}', 'delete')->name('delete-city');
+    // });
 });
