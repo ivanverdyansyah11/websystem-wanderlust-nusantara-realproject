@@ -6,6 +6,7 @@ namespace Database\Seeders;
 
 use App\Models\Chef;
 use App\Models\City;
+use App\Models\Destination;
 use App\Models\Feedback;
 use App\Models\History;
 use App\Models\Location;
@@ -76,10 +77,50 @@ class DatabaseSeeder extends Seeder
         ]);
 
         City::create([
-            'name' => 'Aceh',
+            'name' => 'Central Java',
             'image' => 'city-image',
-            'history_1' => "The region of Aceh has a rich history dating back to ancient times. It was an important hub for maritime trade, connecting the Indian Ocean with the East Asian trade routes. The area was influenced by various cultures, including Indian, Arab, and Chinese traders.",
-            'history_2' => "In the 13th century, Islam was introduced to Aceh, and the region eventually became a powerful Islamic Sultanate. The Sultanate of Aceh reached its peak during the 16th and 17th centuries, becoming a major center of Islamic learning and trade. Aceh's Sultanate was known for its strong navy and played a significant role in regional politics.",
+            'history_1' => "The history of Jawa Tengah can be traced back to ancient times. The area was inhabited by various indigenous communities, including the Kalingga Kingdom in the 6th century. During the classical period, Jawa Tengah was part of the powerful Sailendra and Mataram Kingdoms, which were centers of Buddhism and Hinduism in the region.",
+            'history_2' => "In the 16th century, Islam began to spread in Jawa Tengah, and several Islamic Sultanates emerged, such as the Sultanate of Demak and the Sultanate of Pajang. These Sultanates played a crucial role in the spread of Islam in Java and became influential centers of trade and culture.",
+        ]);
+
+        Destination::create([
+            'cities_id' => '8',
+            'name' => 'Candi Borobudur',
+            'location' => 'Magelang, Jawa Tengah',
+            'rating' => '5.0',
+            'image' => 'destination-image',
+            'history_1' => "Candi Borobudur was built during the Sailendra Dynasty in the 8th and 9th centuries. It is believed that the construction began around 780 AD and took several decades to complete. The temple was commissioned by the ruling dynasty to showcase their devotion to Buddhism and serve as a place of worship and pilgrimage.",
+            'history_2' => "Candi Borobudur is an exceptional example of Mahayana Buddhist architecture. It consists of nine stacked platforms, topped by a central dome. The temple is adorned with intricate relief carvings that depict various scenes from Buddhist teachings and Javanese life. The design of the temple reflects a fusion of Indian and indigenous Indonesian architectural styles.",
+        ]);
+
+        Destination::create([
+            'cities_id' => '8',
+            'name' => 'Candi Prambanan',
+            'location' => 'Magelang, Jawa Tengah',
+            'rating' => '4.8',
+            'image' => 'destination-image',
+            'history_1' => "Candi Prambanan was built during the 9th century by the rulers of the Mataram Kingdom, specifically during the reign of Rakai Pikatan. The temple complex was dedicated to the Trimurti, the Hindu trinity of Brahma, Vishnu, and Shiva. It is believed that Candi Prambanan was constructed as a grand royal project to showcase the power and influence of the Mataram Kingdom.",
+            'history_2' => "Candi Prambanan is renowned for its stunning architecture, characterized by tall and intricately carved spires (shikharas) that reach towards the sky. The temple complex consists of several individual temples, with the central compound dedicated to Lord Shiva. The temples are adorned with elaborate relief carvings depicting scenes from Hindu epics, such as the Ramayana and Mahabharata.",
+        ]);
+
+        Destination::create([
+            'cities_id' => '8',
+            'name' => 'Keraton Kasunanan Solo',
+            'location' => 'Magelang, Jawa Tengah',
+            'rating' => '4.6 ',
+            'image' => 'destination-image',
+            'history_1' => "The Keraton Kasunanan Solo was founded in 1745 by Susuhunan Pakubuwono II, who established the Kasunanan Kingdom in Solo after a period of political and territorial disputes in the Mataram Sultanate. The palace served as the residence of the royal family and the center of Javanese court culture and governance.",
+            'history_2' => "The Kasunanan Kingdom of Solo was an offshoot of the Mataram Sultanate, which played a significant role in shaping the Javanese culture and history. The Keraton Kasunanan Solo adopted many of the courtly traditions, rituals, and architectural styles of the Mataram Sultanate.",
+        ]);
+
+        Destination::create([
+            'cities_id' => '8',
+            'name' => 'Candi Sukuh',
+            'location' => 'Magelang, Jawa Tengah',
+            'rating' => '4.5',
+            'image' => 'destination-image',
+            'history_1' => "Candi Sukuh was built during the 15th century, towards the end of the Majapahit Empire's rule in Java. It is believed to have been constructed under the patronage of King Brawijaya V, who was known for his interest in mysticism and esoteric beliefs. The temple's architecture and design deviate from the typical Javanese Hindu temple style, showcasing a blend of Hindu-Buddhist and indigenous Javanese influences.",
+            'history_2' => "Candi Sukuh is known for its distinctive pyramid-like structure, reminiscent of Mesoamerican stepped pyramids. The temple's design includes various stone reliefs, sculptures, and symbolic motifs that depict scenes from Hindu mythology and Javanese cosmology. It is believed that Candi Sukuh served as a place for spiritual rituals and ceremonies associated with fertility and ancestral worship.",
         ]);
     }
 }

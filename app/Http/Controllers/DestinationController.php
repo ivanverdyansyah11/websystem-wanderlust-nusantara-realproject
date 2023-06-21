@@ -2,24 +2,23 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\City;
+use App\Models\Destination;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
 
-class CityController extends Controller
+class DestinationController extends Controller
 {
     public function index()
     {
-        $text_history_1 = City::select('history_1')
+        $text_history_1 = Destination::select('history_1')
             ->get()
             ->map(function ($text) {
                 return Str::limit($text->history_1, 100);
             });
 
-        return view('city.index', [
-            'page' => 'Cities',
-            'cities' => City::all(),
+        return view('destination.index', [
+            'page' => 'Destination',
+            'destinations' => Destination::all(),
             'text_history_1' => $text_history_1,
         ]);
     }

@@ -4,6 +4,7 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\ChefController;
 use App\Http\Controllers\CityController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\DestinationController;
 use App\Http\Controllers\FeedbackController;
 use App\Http\Controllers\HistoryController;
 use App\Http\Controllers\HomepageController;
@@ -47,13 +48,13 @@ Route::middleware(['auth'])->prefix('admin')->group(function () {
         Route::get('/dashboard', 'index')->name('dashboard');
     });
 
-    // Route::controller(CityController::class)->group(function () {
-    //     Route::get('/city', 'index')->name('index-destination');
-    //     Route::post('/city/store', 'store')->name('store-city');
-    //     Route::get('/city/edit/{id}', 'edit')->name('edit-city');
-    //     Route::post('/city/edit/{id}', 'update')->name('update-city');
-    //     Route::post('/city/delete/{id}', 'delete')->name('delete-city');
-    // });
+    Route::controller(DestinationController::class)->group(function () {
+        Route::get('/destination', 'index')->name('index-destination');
+        Route::post('/destination/store', 'store')->name('store-destination');
+        Route::get('/destination/edit/{id}', 'edit')->name('edit-destination');
+        Route::post('/destination/edit/{id}', 'update')->name('update-destination');
+        Route::post('/destination/delete/{id}', 'delete')->name('delete-destination');
+    });
 
     Route::controller(CityController::class)->group(function () {
         Route::get('/city', 'index')->name('index-city');

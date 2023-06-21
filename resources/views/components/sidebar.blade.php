@@ -15,7 +15,7 @@
                     </a>
                 </div>
             </div>
-            {{-- <div class="col-12">
+            <div class="col-12">
                 <div class="menu-sidebar ps-4 pe-3">
                     <a href="{{ route('index-destination') }}"
                         class="{{ Request::is('*destination*') ? 'active' : '' }} d-flex align-items-center menu-wrapper gap-3 text-decoration-none">
@@ -23,7 +23,7 @@
                         <p class="mb-0">Destination</p>
                     </a>
                 </div>
-            </div> --}}
+            </div>
             <div class="col-12">
                 <div class="menu-sidebar ps-4 pe-3">
                     <a href="{{ route('index-city') }}"
