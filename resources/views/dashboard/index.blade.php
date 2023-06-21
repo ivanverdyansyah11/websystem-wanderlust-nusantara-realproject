@@ -98,7 +98,14 @@
                                     <td>{{ $destinations->name }}</td>
                                     <td>{{ $destinations->location }}</td>
                                     <td>{{ $destinations->rating }}</td>
-                                    <td></td>
+                                    @php
+                                        $isEmpty = empty(array_filter($gallery_count_destination[$i]));
+                                    @endphp
+                                    @if (!$isEmpty)
+                                        <td>{{ count($gallery_count_destination[$i]) }}</td>
+                                    @else
+                                        <td>0</td>
+                                    @endif
                                     <td style="width: 300px">{{ $text_history_1[$i] }}</td>
                                 </tr>
                             @endforeach

@@ -22,6 +22,11 @@ class DashboardController extends Controller
                 return Str::limit($text->history_1, 100);
             });
 
+        $gallery_count = Gallery::select('image')->get()
+            ->map(function ($file) {
+                return explode(',', $file->image);
+            });
+
         return view('dashboard.index', [
             'page' => 'Destination',
             'destinations' => Destination::all(),
@@ -29,6 +34,7 @@ class DashboardController extends Controller
             'city_count' => City::count(),
             'gallery_count' => Gallery::count(),
             'text_history_1' => $text_history_1,
+            'gallery_count_destination' => $gallery_count,
         ]);
     }
 }

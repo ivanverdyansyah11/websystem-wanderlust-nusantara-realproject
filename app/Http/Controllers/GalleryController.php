@@ -11,9 +11,15 @@ class GalleryController extends Controller
 {
     public function index()
     {
+        $gallery_count = Gallery::select('image')->get()
+            ->map(function ($file) {
+                return explode(',', $file->image);
+            });
+
         return view('gallery.index', [
             'page' => 'Gallery',
             'destinations' => Destination::all(),
+            'gallery_count' => $gallery_count,
         ]);
     }
 
