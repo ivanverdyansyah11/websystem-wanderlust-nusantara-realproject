@@ -19,12 +19,18 @@ class DestinationController extends Controller
                 return Str::limit($text->history_1, 100);
             });
 
+        $gallery_count = Gallery::select('image')->get()
+            ->map(function ($file) {
+                return explode(',', $file->image);
+            });
+
         return view('destination.index', [
             'page' => 'Destination',
             'id' => Destination::latest('id')->value('id'),
             'destinations' => Destination::all(),
             'cities' => City::all(),
             'text_history_1' => $text_history_1,
+            'gallery_count' => $gallery_count,
         ]);
     }
 
