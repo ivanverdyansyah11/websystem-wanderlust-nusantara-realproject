@@ -5,7 +5,7 @@
 
         <p class="text-black fw-medium fs-2">{{ $page }} Page</p>
         <button class="btn btn-color d-lg-flex d-none" data-bs-toggle="modal" data-bs-target="#AddModal">Add New
-            City</button>
+            Destination</button>
         <div class="d-xl-none hamburger-wrapper d-flex text-white align-self-center">
             <i class="fa-solid fa-bars"></i>
         </div>
@@ -39,7 +39,7 @@
                     <tbody>
                         @if ($destinations->count() == 0)
                             <tr>
-                                <td colspan="7" class="text-center py-3">Data Menu Not Found!</td>
+                                <td colspan="7" class="text-center py-3">Data Destination Not Found!</td>
                             </tr>
                         @else
                             @foreach ($destinations as $i => $destinations)
@@ -69,20 +69,50 @@
         </div>
     </div>
 
-    <form action="{{ route('store-city') }}" method="post" enctype="multipart/form-data">
+    <form action="{{ route('store-destination') }}" method="post" enctype="multipart/form-data">
         @csrf
         <div class="modal fade" id="AddModal" tabindex="-1" aria-labelledby="AddModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
+            <div class="modal-dialog modal-lg">
                 <div class="modal-content">
                     <div class="modal-body p-5">
-                        <div class="text-center fs-3 title-font fw-medium">Add New City</div>
+                        <div class="text-center fs-3 title-font fw-medium">Add New Destination</div>
                         <div class="d-flex flex-column">
-                            <div class="pt-2 w-100">
-                                <div class="input-text-wrapper w-100 mb-3">
-                                    <label for="name" class="text-black fw-medium fs-14">Name</label>
-                                    <input type="text" id="name" name="name"
-                                        class="w-100 input-text border-0 @error('name') is-invalid @enderror"
-                                        placeholder="Enter city name" value="{{ old('name') }}">
+                            <div class="wrapper d-flex gap-3">
+                                <div class="pt-2 w-100">
+                                    <div class="input-text-wrapper w-100 mb-3">
+                                        <label for="name" class="text-black fw-medium fs-14">Name</label>
+                                        <input type="text" id="name" name="name"
+                                            class="w-100 input-text border-0 @error('name') is-invalid @enderror"
+                                            placeholder="Enter city name" value="{{ old('name') }}">
+                                    </div>
+                                </div>
+                                <div class="pt-2 w-100">
+                                    <div class="input-text-wrapper w-100 mb-3">
+                                        <label for="rating" class="text-black fw-medium fs-14">Rating</label>
+                                        <input type="text" id="rating" name="rating"
+                                            class="w-100 input-text border-0 @error('rating') is-invalid @enderror"
+                                            placeholder="Enter city rating" value="{{ old('rating') }}">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="wrapper d-flex gap-3">
+                                <div class="pt-2 w-100">
+                                    <div class="input-text-wrapper w-100 mb-3">
+                                        <label for="location" class="text-black fw-medium fs-14">Location</label>
+                                        <input type="text" id="location" name="location"
+                                            class="w-100 input-text border-0 @error('location') is-invalid @enderror"
+                                            placeholder="Enter city location" value="{{ old('location') }}">
+                                    </div>
+                                </div>
+                                <div class="pt-2 w-100">
+                                    <div class="input-text-wrapper w-100 mb-3">
+                                        <label for="cities_id" class="text-black fw-medium fs-14">City</label>
+                                        <select class="w-100 input-text border-0" name="cities_id" id="cities_id">
+                                            @foreach ($cities as $city)
+                                                <option value="{{ $city->id }}">{{ $city->name }}</option>
+                                            @endforeach
+                                        </select>
+                                    </div>
                                 </div>
                             </div>
                             <div class="w-100">
@@ -96,26 +126,30 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="w-100">
-                                <div class="input-text-wrapper w-100 mb-3">
-                                    <label for="history_1" class="text-black fw-medium fs-14">History Paragraph 1</label>
-                                    <textarea type="text" id="history_1" name="history_1"
-                                        class="w-100 input-text border-0 @error('history_1') is-invalid @enderror"
-                                        placeholder="Enter city history paragraph 1" value="{{ old('history_1') }}" rows="3"></textarea>
+                            <div class="wrapper d-flex gap-3">
+                                <div class="w-100">
+                                    <div class="input-text-wrapper w-100 mb-3">
+                                        <label for="history_1" class="text-black fw-medium fs-14">History Paragraph
+                                            1</label>
+                                        <textarea type="text" id="history_1" name="history_1"
+                                            class="w-100 input-text border-0 @error('history_1') is-invalid @enderror"
+                                            placeholder="Enter city history paragraph 1" value="{{ old('history_1') }}" rows="3"></textarea>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="w-100">
-                                <div class="input-text-wrapper w-100 mb-3">
-                                    <label for="history_2" class="text-black fw-medium fs-14">History Paragraph 2</label>
-                                    <textarea type="text" id="history_2" name="history_2"
-                                        class="w-100 input-text border-0 @error('history_2') is-invalid @enderror"
-                                        placeholder="Enter city history paragraph 2" value="{{ old('history_2') }}" rows="3"></textarea>
+                                <div class="w-100">
+                                    <div class="input-text-wrapper w-100 mb-3">
+                                        <label for="history_2" class="text-black fw-medium fs-14">History Paragraph
+                                            2</label>
+                                        <textarea type="text" id="history_2" name="history_2"
+                                            class="w-100 input-text border-0 @error('history_2') is-invalid @enderror"
+                                            placeholder="Enter city history paragraph 2" value="{{ old('history_2') }}" rows="3"></textarea>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                         <div class="d-flex flex-row justify-content-center gap-2 pt-4">
                             <button type="button" class="btn btn-dark fs-15" data-bs-dismiss="modal">Cancel Add</button>
-                            <button type="submit" class="btn btn-color fs-15">Add New City</button>
+                            <button type="submit" class="btn btn-color fs-15">Add New Destination</button>
                         </div>
                     </div>
                 </div>
@@ -126,17 +160,35 @@
     <form id="edit-modal" method="post" enctype="multipart/form-data">
         @csrf
         <div class="modal fade" id="EditModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
+            <div class="modal-dialog modal-lg">
                 <div class="modal-content">
                     <div class="modal-body p-5">
                         <div class="text-center fs-3 title-font fw-medium fw-medium">Edit Menu</div>
                         <div class="d-flex flex-column gap-3">
+                            <div class="wrapper d-flex gap-3">
+                                <div class="pt-2 w-100">
+                                    <div class="input-text-wrapper w-100 mb-3">
+                                        <label for="name" class="text-black fw-medium fs-14">Name</label>
+                                        <input type="text" id="name" name="name"
+                                            class="w-100 input-text border-0 @error('name') is-invalid @enderror"
+                                            data-value="name">
+                                    </div>
+                                </div>
+                                <div class="pt-2 w-100">
+                                    <div class="input-text-wrapper w-100 mb-3">
+                                        <label for="rating" class="text-black fw-medium fs-14">Rating</label>
+                                        <input type="text" id="rating" name="rating"
+                                            class="w-100 input-text border-0 @error('rating') is-invalid @enderror"
+                                            data-value="rating">
+                                    </div>
+                                </div>
+                            </div>
                             <div class="pt-2 w-100">
                                 <div class="input-text-wrapper w-100 mb-3">
-                                    <label for="name" class="text-black fw-medium fs-14">Name</label>
-                                    <input type="text" id="name" name="name"
-                                        class="w-100 input-text border-0 @error('name') is-invalid @enderror"
-                                        data-value="name">
+                                    <label for="location" class="text-black fw-medium fs-14">Location</label>
+                                    <input type="text" id="location" name="location"
+                                        class="w-100 input-text border-0 @error('location') is-invalid @enderror"
+                                        data-value="location">
                                 </div>
                             </div>
                             <div class="w-100">
@@ -151,18 +203,24 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="w-100">
-                                <div class="input-text-wrapper w-100 mb-3">
-                                    <label for="history_1" class="text-black fw-medium fs-14">History Paragraph 1</label>
-                                    <textarea type="text" id="history_1" name="history_1"
-                                        class="w-100 input-text border-0 @error('history_1') is-invalid @enderror" rows="3" data-value="history_1"></textarea>
+                            <div class="wrapper d-flex gap-3">
+                                <div class="w-100">
+                                    <div class="input-text-wrapper w-100 mb-3">
+                                        <label for="history_1" class="text-black fw-medium fs-14">History Paragraph
+                                            1</label>
+                                        <textarea type="text" id="history_1" name="history_1"
+                                            class="w-100 input-text border-0 @error('history_1') is-invalid @enderror" data-value="history_1"
+                                            rows="3"></textarea>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="w-100">
-                                <div class="input-text-wrapper w-100 mb-3">
-                                    <label for="history_2" class="text-black fw-medium fs-14">History Paragraph 2</label>
-                                    <textarea type="text" id="history_2" name="history_2"
-                                        class="w-100 input-text border-0 @error('history_2') is-invalid @enderror" rows="3" data-value="history_1"></textarea>
+                                <div class="w-100">
+                                    <div class="input-text-wrapper w-100 mb-3">
+                                        <label for="history_2" class="text-black fw-medium fs-14">History Paragraph
+                                            2</label>
+                                        <textarea type="text" id="history_2" name="history_2"
+                                            class="w-100 input-text border-0 @error('history_2') is-invalid @enderror" data-value="history_2"
+                                            rows="3"></textarea>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -183,13 +241,14 @@
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-body p-5">
-                        <div class="text-center fs-3 fw-medium title-font">Delete City</div>
-                        <div class="pt-3 text-center"> Do you really want to delete these city? This process cannot be
+                        <div class="text-center fs-3 fw-medium title-font">Delete Destination</div>
+                        <div class="pt-3 text-center"> Do you really want to delete these destination? This process cannot
+                            be
                             undone.
                         </div>
                         <div class="d-flex flex-row justify-content-center gap-2 pt-4">
                             <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Cancel Delete</button>
-                            <button type="submit" class="btn btn-color">Delete City</button>
+                            <button type="submit" class="btn btn-color">Delete Destination</button>
                         </div>
                     </div>
                 </div>
@@ -204,25 +263,25 @@
     <script>
         $(document).on('click', '[data-bs-target="#EditModal"]', function() {
             let id = $(this).data('id');
-            $('#edit-modal').attr('action', '/admin/city/edit/' + id);
+            $('#edit-modal').attr('action', '/admin/destination/edit/' + id);
             $.ajax({
                 type: 'get',
-                url: '/admin/city/edit/' + id,
+                url: '/admin/destination/edit/' + id,
                 success: function(data) {
                     $('[data-value="name"]').val(data.name);
+                    $('[data-value="rating"]').val(data.rating);
+                    $('[data-value="location"]').val(data.location);
                     $('[data-value="oldImage"]').val(data.image);
                     $('[data-value="image"]').attr("src", "/storage/" + data.image);
                     $('[data-value="history_1"]').val(data.history_1);
                     $('[data-value="history_2"]').val(data.history_2);
-
-                    console.log($('[data-value="image"]').attr("src"));
                 }
             });
         });
 
         $(document).on('click', '[data-bs-target="#DeleteModal"]', function() {
             let id = $(this).data('id');
-            $('#delete-modal').attr('action', '/admin/city/delete/' + id);
+            $('#delete-modal').attr('action', '/admin/destination/delete/' + id);
         });
 
         const tagImage = document.querySelector('.tag-image');

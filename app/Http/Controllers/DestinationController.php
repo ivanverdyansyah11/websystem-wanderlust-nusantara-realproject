@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\City;
 use App\Models\Destination;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
 
 class DestinationController extends Controller
@@ -19,6 +21,7 @@ class DestinationController extends Controller
         return view('destination.index', [
             'page' => 'Destination',
             'destinations' => Destination::all(),
+            'cities' => City::all(),
             'text_history_1' => $text_history_1,
         ]);
     }
@@ -26,31 +29,36 @@ class DestinationController extends Controller
     public function store(Request $request)
     {
         $validatedData = $request->validate([
+            'cities_id' => 'required',
             'name' => 'required',
+            'rating' => 'required',
+            'location' => 'required',
             'image' => 'file|image',
             'history_1' => 'required',
             'history_2' => 'required',
         ]);
 
-        $validatedData['image'] = $request->file('image')->store('city-images');
-        $city = City::create($validatedData);
-        if ($city) {
-            return redirect(route('index-city'))->with('success', 'Add New City Successfully!');
+        $validatedData['image'] = $request->file('image')->store('destination-images');
+        $destination = Destination::create($validatedData);
+        if ($destination) {
+            return redirect(route('index-destination'))->with('success', 'Add New Destination Successfully!');
         } else {
-            return redirect(route('index-city'))->with('failed', 'Add New City Failed!');
+            return redirect(route('index-destination'))->with('failed', 'Add New Destination Failed!');
         }
     }
 
     public function edit($id)
     {
-        $city = City::where('id', $id)->first();
-        return response()->json($city);
+        $destination = Destination::where('id', $id)->first();
+        return response()->json($destination);
     }
 
     public function update(Request $request, $id)
     {
         $validatedData = $request->validate([
             'name' => 'required',
+            'rating' => 'required',
+            'location' => 'required',
             'image' => 'file|image',
             'history_1' => 'required',
             'history_2' => 'required',
@@ -58,30 +66,30 @@ class DestinationController extends Controller
 
         if ($request->file('image')) {
             Storage::delete($request->oldImage);
-            $validatedData['image'] = $request->file('image')->store('city-images');
+            $validatedData['image'] = $request->file('image')->store('destination-images');
         }
 
-        $city = City::findOrFail($id)->update($validatedData);
-        if ($city) {
-            return redirect(route('index-city'))->with('success', 'Update City Successfully!');
+        $destination = Destination::findOrFail($id)->update($validatedData);
+        if ($destination) {
+            return redirect(route('index-destination'))->with('success', 'Update Destination Successfully!');
         } else {
-            return redirect(route('index-city'))->with('failed', 'Update City Failed!');
+            return redirect(route('index-destination'))->with('failed', 'Update Destination Failed!');
         }
     }
 
     public function delete($id)
     {
-        $city = City::findOrFail($id);
+        $destination = Destination::findOrFail($id);
 
-        if ($city->image) {
-            Storage::delete($city->image);
+        if ($destination->image) {
+            Storage::delete($destination->image);
         }
 
-        $city = $city->delete();
-        if ($city) {
-            return redirect(route('index-city'))->with('success', 'Delete City Successfully!');
+        $destination = $destination->delete();
+        if ($destination) {
+            return redirect(route('index-destination'))->with('success', 'Delete Destination Successfully!');
         } else {
-            return redirect(route('index-city'))->with('failed', 'Delete City Failed!');
+            return redirect(route('index-destination'))->with('failed', 'Delete Destination Failed!');
         }
     }
 }
