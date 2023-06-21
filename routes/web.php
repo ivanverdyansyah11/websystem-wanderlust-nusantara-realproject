@@ -69,8 +69,6 @@ Route::middleware(['auth'])->prefix('admin')->group(function () {
         Route::get('/gallery', 'index')->name('index-gallery');
         Route::get('/gallery/{id}', 'detail')->name('detail-gallery');
         Route::post('/gallery/store', 'store')->name('store-gallery');
-        Route::get('/gallery/edit/{id}', 'edit')->name('edit-gallery');
-        Route::post('/gallery/edit/{id}', 'update')->name('update-gallery');
         Route::post('/gallery/delete/{id}', 'delete')->name('delete-gallery');
     });
 });

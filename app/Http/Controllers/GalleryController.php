@@ -27,7 +27,7 @@ class GalleryController extends Controller
         return view('gallery.detail', [
             'page' => 'Gallery',
             'destination' => Destination::findOrFail($id),
-            'galleries' => Gallery::where('destinations_id', $id)->get(),
+            'gallery' => Gallery::where('destinations_id', $id)->first(),
             'images' => $imagesArray,
         ]);
     }
@@ -74,14 +74,17 @@ class GalleryController extends Controller
 
     public function delete($id)
     {
-        $destination = Destination::findOrFail($id);
+        $gallery = Gallery::findOrFail($id);
 
-        if ($destination->image) {
-            Storage::delete($destination->image);
+        if ($gallery->image) {
+            Storage::delete($gallery->image);
         }
 
-        $destination = $destination->delete();
-        if ($destination) {
+        $gallery = Gallery::findOrFail($id)->update([
+            'image' => null,
+        ]);
+
+        if ($gallery) {
             return redirect('/admin/gallery/' . $id)->with('success', 'Delete Destination Successfully!');
         } else {
             return redirect('/admin/gallery/' . $id)->with('failed', 'Delete Destination Failed!');

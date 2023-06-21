@@ -5,8 +5,12 @@
         <div class="wrapper d-flex gap-2">
             <button class="btn btn-color d-lg-flex d-none" data-bs-toggle="modal" data-bs-target="#AddModal">Add New
                 Gallery</button>
-            <button class="btn btn-danger d-lg-flex d-none" data-bs-toggle="modal" data-bs-target="#DeleteModal">Delete All
-                Gallery</button>
+            @if (!is_null($gallery->image))
+                <button class="btn btn-danger d-lg-flex d-none" data-bs-toggle="modal" data-bs-target="#DeleteModal"
+                    data-id="{{ $gallery->id }}">Delete
+                    All
+                    Gallery</button>
+            @endif
         </div>
         <div class="d-xl-none hamburger-wrapper d-flex text-white align-self-center">
             <i class="fa-solid fa-bars"></i>
@@ -33,12 +37,10 @@
                         </tr>
                     </thead>
                     <tbody>
-                        @if ($galleries->count() == 0)
-                            <tr>
-                                <td colspan="1" class="text-center py-3">Image {{ $destination->name }} Not Found!</td>
-                            </tr>
-                        @else
-                            <tr>
+                        <tr>
+                            @if (is_null($gallery->image))
+                                <td colspan="1" class="text-center pt-3">Image Not Found!</td>
+                            @else
                                 <td class="p-0 pt-3">
                                     <div class="wrapper" style="columns: 4; column-gap: 20px;">
                                         @foreach ($images as $image)
@@ -49,8 +51,8 @@
                                         @endforeach
                                     </div>
                                 </td>
-                            </tr>
-                        @endif
+                            @endif
+                        </tr>
                     </tbody>
                 </table>
             </div>
@@ -94,13 +96,13 @@
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-body p-5">
-                        <div class="text-center fs-3 fw-medium title-font">Delete City</div>
-                        <div class="pt-3 text-center"> Do you really want to delete these city? This process cannot be
+                        <div class="text-center fs-3 fw-medium title-font">Delete Gallery</div>
+                        <div class="pt-3 text-center"> Do you really want to delete these gallery? This process cannot be
                             undone.
                         </div>
                         <div class="d-flex flex-row justify-content-center gap-2 pt-4">
                             <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Cancel Delete</button>
-                            <button type="submit" class="btn btn-color">Delete City</button>
+                            <button type="submit" class="btn btn-color">Delete Gallery</button>
                         </div>
                     </div>
                 </div>
