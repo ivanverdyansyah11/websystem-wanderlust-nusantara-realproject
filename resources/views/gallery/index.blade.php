@@ -30,7 +30,14 @@
                                 <tr>
                                     <td>{{ $loop->iteration }}</td>
                                     <td>{{ $destinations->name }}</td>
-                                    <td></td>
+                                    @php
+                                        $isEmpty = empty(array_filter($gallery_count[$i]));
+                                    @endphp
+                                    @if (!$isEmpty)
+                                        <td>{{ count($gallery_count[$i]) }}</td>
+                                    @else
+                                        <td>0</td>
+                                    @endif
                                     <td class=" flex-row gap-1 d-lg-flex d-none">
                                         <a href="/admin/gallery/{{ $destinations->id }}"
                                             class="btn btn-edit d-lg-flex d-none p-0">

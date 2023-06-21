@@ -27,6 +27,14 @@ class DashboardController extends Controller
                 return explode(',', $file->image);
             });
 
+        $gallery_count_all = Gallery::select('image')->get()
+            ->map(function ($file) {
+                return explode(',', $file->image);
+            })->toArray();
+
+        $mergedArray = array_merge(...$gallery_count_all);
+        $mergedArray = count($mergedArray);
+
         return view('dashboard.index', [
             'page' => 'Destination',
             'destinations' => Destination::all(),
@@ -35,6 +43,7 @@ class DashboardController extends Controller
             'gallery_count' => Gallery::count(),
             'text_history_1' => $text_history_1,
             'gallery_count_destination' => $gallery_count,
+            'gallery_count_all' => $mergedArray,
         ]);
     }
 }

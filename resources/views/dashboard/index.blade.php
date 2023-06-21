@@ -58,12 +58,12 @@
                     <div class="card card-dashboard-wrapper">
                         <div class="card-body card-dashboard-content d-flex flex-row gap-3 align-items-start">
                             <div class="img-card-dashboard-wrapper">
-                                <img src="{{ asset('assets/img/dashboard/icon1.svg') }}" class="img-fluid"
+                                <img src="{{ asset('assets/img/dashboard/icon4.svg') }}" class="img-fluid"
                                     alt="Menu Dashboard Icon" style="border-radius: 2px">
                             </div>
                             <div class="card-dashboard-name d-flex flex-column">
                                 <p class="card-dashboard-desc">Total Gallery</p>
-                                <p class="main-color fs-4 fw-bold ">{{ $gallery_count }}</p>
+                                <p class="main-color fs-4 fw-bold ">{{ $gallery_count_all }}</p>
                             </div>
                         </div>
                     </div>

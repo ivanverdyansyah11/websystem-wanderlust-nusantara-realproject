@@ -48,7 +48,14 @@
                                     <td>{{ $destinations->name }}</td>
                                     <td>{{ $destinations->location }}</td>
                                     <td>{{ $destinations->rating }}</td>
-                                    <td>{{ count($gallery_count[$i]) }}</td>
+                                    @php
+                                        $isEmpty = empty(array_filter($gallery_count[$i]));
+                                    @endphp
+                                    @if (!$isEmpty)
+                                        <td>{{ count($gallery_count[$i]) }}</td>
+                                    @else
+                                        <td>0</td>
+                                    @endif
                                     <td style="width: 300px">{{ $text_history_1[$i] }}</td>
                                     <td class=" flex-row gap-1 d-lg-flex d-none">
                                         <button class="btn btn-edit d-lg-flex d-none p-0" data-bs-toggle="modal"
