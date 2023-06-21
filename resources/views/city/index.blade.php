@@ -30,7 +30,6 @@
                             <td>No</td>
                             <td>Name</td>
                             <td>Image</td>
-                            <td>Total Destination</td>
                             <td>History</td>
                             <td></td>
                         </tr>
@@ -38,7 +37,7 @@
                     <tbody>
                         @if ($cities->count() == 0)
                             <tr>
-                                <td colspan="7" class="text-center py-3">Data Menu Not Found!</td>
+                                <td colspan="5" class="text-center py-3">Data Menu Not Found!</td>
                             </tr>
                         @else
                             @foreach ($cities as $i => $city)
@@ -49,7 +48,6 @@
                                         <img src="{{ asset('storage/' . $city->image) }}" alt="{{ $city->name }} image"
                                             width="150">
                                     </td>
-                                    <td>{{ $city->price }}</td>
                                     <td style="width: 300px">{{ $text_history_1[$i] }}</td>
                                     <td class=" flex-row gap-1 d-lg-flex d-none">
                                         <button class="btn btn-edit d-lg-flex d-none p-0" data-bs-toggle="modal"
