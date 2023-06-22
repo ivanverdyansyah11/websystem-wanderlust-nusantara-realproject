@@ -60,28 +60,27 @@
                     <div class="col-xl-6 col-lg-7 col-12">
                         <div class="badge-section">
                             <p class="main-color">
-                                Unraveling the Historical Treasures of All of City
+                                Discovering Historic Cities in {{ $city->name }}
                             </p>
                         </div>
                         <p class="fw-semibold display-4 mt-2 text-black">
-                            Unveiling Nusantara's Historic Gems, From City by City
+                            Unearthing the Charms of {{ $city->name }} Historic City
                         </p>
                         <article class="mt-3">
                             <p>
-                                Embark on a captivating journey through Nusantara's rich history as you explore our
-                                meticulously curated city categories on WanderlustNusantara's historical tourism
-                                website. From the ancient wonders of Yogyakarta to the colonial charm of Jakarta, each
-                                city reveals a unique chapter in Indonesia's storied past.
+                                Is a region in Indonesia that holds a rich tapestry of history, culture, and natural
+                                beauty. Situated in the heart of Java Island, this province boasts an enchanting blend
+                                of ancient temples, majestic palaces, and breathtaking landscapes.
                             </p>
                             <p class="mt-1">
-                                Immerse yourself in the architectural splendors, cultural treasures, and captivating
-                                narratives of each location as you navigate our comprehensive city guides. Whether you
-                                seek the spiritual serenity of Bali's temples or the remnants of ancient civilizations
-                                in Central Java,
+                                At the center of {{ $city->name }} lies the cultural and spiritual epicenter of
+                                Indonesia,
+                                Yogyakarta. This vibrant city is home to the magnificent Borobudur Temple, a UNESCO
+                                World Heritage site and one of the world's greatest Buddhist monuments.
                             </p>
                         </article>
                         <div class="mt-4 d-flex flex-row gap-3">
-                            <a href="#featured" class="btn btn-color">Explore Now</a>
+                            <a href="#recommend" class="btn btn-color">Explore Now</a>
                             <a href="/homepage"
                                 class="btn text-decoration-none btn-secondary d-flex flex-row align-items-center gap-2">
                                 Back to Home
@@ -93,50 +92,67 @@
                 </div>
             </div>
             <div class="hero-banner row  position-absolute d-none top-0 banner-background end-0 d-lg-inline-block">
-                <img src="{{ asset('assets/img-homepage/hero2-img.png') }}" alt="hero section image"
+                <img src="{{ asset('assets/img-homepage/hero3-img.png') }}" alt="hero section image"
                     class="w-100 h-100">
             </div>
         </section>
     </div>
 
     <main class="mt-1">
-        <section id="featured" class="city-section container">
+        <section class="recommendation-section container" id="recommend">
             <div class="top-section row gy-4">
                 <div class="col-md-6 col-lg-6 col-12">
                     <div class="d-flex flex-column">
                         <div class="badge-section">
                             <p class="fs-15 fw-semibold main-color">
-                                Discover the Hidden Archipelago Cities
+                                Know Historical Treasures in the City of {{ $city->name }}
                             </p>
                         </div>
                         <p class="mt-2 display-5 fw-semibold text-black">
-                            Find Out the Nusantara's Historic Cities
+                            Know Historical Treasures in the City of {{ $city->name }}
                         </p>
                     </div>
                 </div>
                 <div class="col-lg-1 d-lg-block d-none"></div>
                 <div class="col-lg-5 align-self-end col-md-6 col-12">
-                    Embark on an extraordinary voyage through Nusantara's history as you explore WanderlustNusantara's
-                    city categories. From the majestic ruins of Yogyakarta to the colonial charms of Jakarta.
+                    Welcome to WanderlustNusantara's enchanting landing page dedicated to the historical attractions of
+                    {{ $city->name }}. Immerse yourself in the timeless beauty and rich heritage of this captivating
+                    region as
+                    we unveil the hidden gems that lie within.
                 </div>
-            </div>
 
+            </div>
             <div
                 class="content-section mt-5 row row-cols-xl-4 gy-4 row-cols-xl-4 row-cols-lg-3 row-cols-md-2 row-cols-1">
-                @foreach ($cities as $city)
-                    <a href="/location/{{ $city->id }}" class="">
-                        <div class="card-img-recommendation position-relative">
-                            <div class="btm-text position-absolute bottom-0">
-                                <p class="text-white fw-semibold fs-5">{{ $city->name }}</p>
+
+                @foreach ($destinations as $destination)
+                    <div class="col">
+                        <a href="/destination/{{ $destination->id }}" class="">
+                            <div class="card-img-recommendation position-relative">
+                                <div class="top-text me-3 position-absolute gap-1 container end-0">
+                                    <div class="d-flex flex-row gap-1 align-items-center">
+                                        <img src="img/star.svg" alt="" class="" draggable="false">
+                                        <p class="rating fw-bold fs-15 text-white">{{ $destination->rating }}</p>
+                                    </div>
+                                </div>
+                                <div class="btm-text position-absolute bottom-0">
+                                    <p class="text-white fw-semibold fs-5">{{ $destination->name }}</p>
+                                    <div class="d-flex flex-row gap-1">
+                                        <img src="img/location.svg" alt="" class="" draggable="false">
+                                        <p class="text-white fs-14 fw-medium">{{ $destination->location }}</p>
+                                    </div>
+                                </div>
+                                <div class="center-img position-absolute">
+                                    <i class="fa-solid fa-magnifying-glass fs-2 text-white"></i>
+                                </div>
+                                <img src="{{ asset('storage/' . $destination->image) }}"
+                                    alt="{{ $destination->name }}"
+                                    class=" position-relative city img-place-recommendation">
                             </div>
-                            <div class="center-img position-absolute">
-                                <i class="fa-solid fa-magnifying-glass fs-2 text-white"></i>
-                            </div>
-                            <img src="{{ asset('storage/' . $city->image) }}" alt="{{ $city->name }}"
-                                class="w-100 position-relative city" style="border-radius: 20px">
-                        </div>
-                    </a>
+                        </a>
+                    </div>
                 @endforeach
+
             </div>
         </section>
 
@@ -213,7 +229,6 @@
             </div>
         </section>
     </main>
-
 
     <footer class="footer mt-5">
         <div class="container">

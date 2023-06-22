@@ -45,10 +45,11 @@ class HomepageController extends Controller
 
     public function locationDetail($id)
     {
-        return view('homepage.location', [
-            'page' => 'Destination Location',
+        return view('homepage.location-detail', [
+            'page' => 'Location Detail',
             'destination_all' => Destination::all(),
-            'cities' => City::all(),
+            'city' => City::where('id', $id)->first(),
+            'destinations' => Destination::where('cities_id', $id)->get(),
         ]);
     }
 
