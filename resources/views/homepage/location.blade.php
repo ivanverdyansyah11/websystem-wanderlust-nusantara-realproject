@@ -22,7 +22,7 @@
     <div class="top-section">
         <nav class="navbar navbar-expand-lg py-3">
             <div class="container">
-                <a class="navbar-brand" href="index.html"><img src="{{ asset('assets/img-homepage/logo.svg') }}"
+                <a class="navbar-brand" href="/homepage"><img src="{{ asset('assets/img-homepage/logo.svg') }}"
                         alt="" draggable="false"></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
@@ -32,7 +32,7 @@
                 <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link fw-semibold" href="#home">Home</a>
+                            <a class="nav-link fw-semibold" href="/homepage">Home</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link active fw-semibold" href="/location">Destination Location</a>

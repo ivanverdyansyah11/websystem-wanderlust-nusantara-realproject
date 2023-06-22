@@ -43,12 +43,28 @@ class HomepageController extends Controller
         ]);
     }
 
-    public function gallery()
+    public function locationDetail($id)
     {
         return view('homepage.location', [
             'page' => 'Destination Location',
             'destination_all' => Destination::all(),
             'cities' => City::all(),
+        ]);
+    }
+
+    public function gallery()
+    {
+        $gallery_count_all = Gallery::select('image')->get()
+            ->map(function ($file) {
+                return explode(',', $file->image);
+            })->toArray();
+
+        $mergedArray = array_merge(...$gallery_count_all);
+
+        return view('homepage.gallery', [
+            'page' => 'Gallery Documentation',
+            'destination_all' => Destination::all(),
+            'galleries' => $mergedArray,
         ]);
     }
 }
