@@ -6,7 +6,7 @@
     <meta name="viewport"
         content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>WanderlustNusantara</title>
+    <title>{{ $page }} Page | WonderlustNusantara</title>
     <link rel="icon" href="{{ asset('assets/img-homepage/logo.svg') }}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -32,22 +32,23 @@
                 <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link active fw-semibold" aria-current="page" href="index.html">Home</a>
+                            <a class="nav-link active fw-semibold" href="#home">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link fw-semibold" href="destination-location.html">Destination Location</a>
+                            <a class="nav-link fw-semibold" href="/location">Destination Location</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link fw-semibold" href="gallery-documentation.html">Gallery Documentation</a>
+                            <a class="nav-link fw-semibold" href="/gallery">Gallery Documentation</a>
                         </li>
                     </ul>
                 </div>
                 <div class="d-lg-flex justify-content-end d-none">
-                    <button class="btn btn-color d-flex flex-row align-items-center gap-2">
+                    <a href="https://wa.me/+62123456789" target="_blank"
+                        class="btn btn-color d-flex flex-row align-items-center gap-2">
                         contact us
                         <img src="{{ asset('assets/img-homepage/arr-btn.svg') }}" alt="" class=""
                             draggable="false">
-                    </button>
+                    </a>
                 </div>
             </div>
         </nav>
@@ -78,11 +79,11 @@
                             </p>
                         </article>
                         <div class="mt-4 d-flex flex-row gap-3">
-                            <button class="btn btn-color">Start Exploring</button>
-                            <button class="btn btn-secondary d-flex flex-row align-items-center gap-2">
+                            <a href="#about" class="btn btn-color">Start Exploring</a>
+                            <a href="/gallery" class="btn btn-secondary d-flex flex-row align-items-center gap-2">
                                 Check Gallery
                                 <img src="{{ asset('assets/img-homepage/arr-btn.svg') }}" draggable="false">
-                            </button>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -110,11 +111,11 @@
                         hidden gems and iconic landmarks of Nusantara.
                     </p>
                     <div class="mt-5">
-                        <button class="btn btn-color d-flex flex-row gap-2 align-items-center">
+                        <a href="/location" class="btn btn-color d-flex flex-row gap-2 align-items-center">
                             Destination Location
                             <img src="{{ asset('assets/img-homepage/arr-btn') }}.svg" alt="" class=""
                                 draggable="false">
-                        </button>
+                        </a>
                     </div>
                 </div>
                 <div class="col-lg-6 col-12">
@@ -296,21 +297,21 @@
                             <div class="col first-hr d-flex flex-row align-items-center">
                                 <div class="w-100 d-flex">
                                     <div class="d-flex flex-column align-items-center">
-                                        <p class="display-5 second-color fw-bolder">30+</p>
+                                        <p class="display-5 second-color fw-bolder">{{ $destination_count }}</p>
                                         <p class="fw-medium">Total Destination</p>
                                     </div>
                                 </div>
                             </div>
                             <div class="col">
                                 <div class="d-flex flex-column align-items-center  justify-content-center w-100 ">
-                                    <p class="display-5 second-color fw-bolder">572+</p>
+                                    <p class="display-5 second-color fw-bolder">{{ $city_count }}</p>
                                     <p class="fw-medium">Location Available</p>
                                 </div>
                             </div>
                             <div class="col second-hr d-flex flex-row   align-items-center">
                                 <div class="d-flex w-100 justify-content-end">
                                     <div class="d-flex flex-column align-items-center">
-                                        <p class="display-5 second-color fw-bolder">08</p>
+                                        <p class="display-5 second-color fw-bolder">{{ $gallery_count_all }}</p>
                                         <p class="fw-medium">Gallery Documentation</p>
                                     </div>
                                 </div>
@@ -337,35 +338,38 @@
                         Indonesia.
                     </p>
                     <div class="mt-5">
-                        <button class="btn btn-color d-flex flex-row gap-2 align-items-center">
+                        <a href="/gallery" class="btn btn-color d-flex flex-row gap-2 align-items-center">
                             More Documentation
-                            <img src="img/arr-btn.svg" alt="" class="" draggable="false">
-                        </button>
+                            <img src="{{ asset('assets/img-homepage/arr-btn.svg') }}" alt="" class=""
+                                draggable="false">
+                        </a>
                     </div>
                 </div>
                 <div class="col-lg-6 col-12">
                     <div class="swiper swiper-side pb-5">
                         <div class="swiper-wrapper">
 
-                            <div class="swiper-slide">
-                                <a href="detailLocation.html" class="">
-                                    <div class="card-img-recommendation position-relative">
-                                        <div class="btm-text position-absolute bottom-0">
-                                            <div class="d-flex flex-row gap-1">
-                                                <img src="img/location.svg" alt="" class=""
-                                                    draggable="false">
-                                                <p class="text-white fs-14 fw-medium">Nusa Penida Island</p>
+                            @foreach ($destination_all as $destination)
+                                <div class="swiper-slide">
+                                    <a href="/destination/{{ $destination->id }}" class="">
+                                        <div class="card-img-recommendation position-relative">
+                                            <div class="btm-text position-absolute bottom-0">
+                                                <div class="d-flex flex-row gap-1">
+                                                    <img src="{{ asset('assets/img-homepage/location.svg') }}"
+                                                        alt="" class="" draggable="false">
+                                                    <p class="text-white fs-14 fw-medium">{{ $destination->name }}</p>
+                                                </div>
                                             </div>
+                                            <div class="center-img position-absolute">
+                                                <i class="fa-solid fa-magnifying-glass fs-2 text-white"></i>
+                                            </div>
+                                            <img src="{{ asset('storage/' . $destination->image) }}"
+                                                alt="{{ $destination->name }}"
+                                                class="img-fluid position-relative image-recommendation">
                                         </div>
-                                        <div class="center-img position-absolute">
-                                            <i class="fa-solid fa-magnifying-glass fs-2 text-white"></i>
-                                        </div>
-                                        <img src="img/gallery1.png" alt="Nusa Penida"
-                                            class="img-fluid position-relative image-recommendation">
-                                    </div>
-                                </a>
-                            </div>
-
+                                    </a>
+                                </div>
+                            @endforeach
                         </div>
                         <div class="swiper-pagination d-flex justify-content-start"></div>
                     </div>
@@ -398,7 +402,6 @@
             <div class="content-section mt-5">
                 <div class="swiper swiper-center pb-5">
                     <div class="swiper-wrapper">
-
                         <div class="swiper-slide">
                             <div class="card-testi">
                                 <img src="{{ asset('assets/img-homepage/testi-decor.svg') }}" alt=""
@@ -408,21 +411,75 @@
                                     turned out to be a game-changer.”
                                 </p>
                                 <div class="d-flex flex-row align-items-center gap-2 mt-2">
-                                    <img src="img/testi1.png" alt="testimonial profile" class="">
+                                    <img src="{{ asset('assets/img-homepage/testi1.svg') }}"
+                                        alt="testimonial profile" class="">
                                     <div class="d-flex flex-column">
                                         <p class="second-color fs-15 fw-semibold">Rebecca Amessa</p>
                                         <p class="fw-medium fs-13">History Educator</p>
                                     </div>
                                 </div>
-
                             </div>
                         </div>
-
+                        <div class="swiper-slide">
+                            <div class="card-testi">
+                                <img src="{{ asset('assets/img-homepage/testi-decor.svg') }}" alt=""
+                                    draggable="false">
+                                <p class="fw-medium fs-15 mt-3">
+                                    “I highly recommend this historical tourism website to all history buffs out there.
+                                    Meticulously curated content.”
+                                </p>
+                                <div class="d-flex flex-row align-items-center gap-2 mt-2">
+                                    <img src="{{ asset('assets/img-homepage/testi2.svg') }}"
+                                        alt="testimonial profile" class="">
+                                    <div class="d-flex flex-column">
+                                        <p class="second-color fs-15 fw-semibold">Andrew Laurist</p>
+                                        <p class="fw-medium fs-13">Archaeologist</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="card-testi">
+                                <img src="{{ asset('assets/img-homepage/testi-decor.svg') }}" alt=""
+                                    draggable="false">
+                                <p class="fw-medium fs-15 mt-3">
+                                    “I can confidently say that this historical tourism website is a goldmine of
+                                    knowledge.”
+                                </p>
+                                <div class="d-flex flex-row align-items-center gap-2 mt-2">
+                                    <img src="{{ asset('assets/img-homepage/testi3.svg') }}"
+                                        alt="testimonial profile" class="">
+                                    <div class="d-flex flex-column">
+                                        <p class="second-color fs-15 fw-semibold">Sophia Divana</p>
+                                        <p class="fw-medium fs-13">History Enthusiast</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="card-testi">
+                                <img src="{{ asset('assets/img-homepage/testi-decor.svg') }}" alt=""
+                                    draggable="false">
+                                <p class="fw-medium fs-15 mt-3">
+                                    “I cannot thank this historical tourism website enough for the invaluable insights
+                                    it provided during my travels.”
+                                </p>
+                                <div class="d-flex flex-row align-items-center gap-2 mt-2">
+                                    <img src="{{ asset('assets/img-homepage/testi4.svg') }}"
+                                        alt="testimonial profile" class="">
+                                    <div class="d-flex flex-column">
+                                        <p class="second-color fs-15 fw-semibold">Jonathan Ronny</p>
+                                        <p class="fw-medium fs-13">Museum Curator</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <div class="swiper-pagination"></div>
                 </div>
             </div>
         </section>
+
         <section class="cta-section">
             <div class="cta-content container">
                 <div class="row gy-4">
@@ -431,16 +488,16 @@
                             Archipelagos</p>
                     </div>
                     <div class="col-md-6 col-12 align-self-end d-flex justify-content-end">
-                        <button class="btn btn-white d-flex flex-row gap-2 align-items-center">
+                        <a href="https://wa.me/+62123456789" target="_blank"
+                            class="btn btn-white d-flex flex-row gap-2 align-items-center">
                             connect with us
                             <img src="{{ asset('assets/img-homepage/arr-btn-black.svg') }}" alt=""
                                 class="" draggable="false">
-                        </button>
+                        </a>
                     </div>
                 </div>
             </div>
         </section>
-
     </main>
 
 
@@ -459,28 +516,28 @@
                                 journey through the enchanting landscapes
                             </p>
                         </div>
-                        <div class="d-flex flex-row pt-4 gap-3">
-                            <button class="btn footer-btn">
+                        <div class="d-flex flex-row pt-4 gap-2">
+                            <a target="_blank" href="https://www.instagram.com/" class="btn footer-btn">
                                 <i class="fa-brands fa-instagram the-arrow footer-color fs-6"></i>
-                            </button>
-                            <button class="btn footer-btn">
+                            </a>
+                            <a target="_blank" href="https://id-id.facebook.com/" class="btn footer-btn">
                                 <i class="fa-brands fa-facebook-f the-arrow footer-color fs-6"></i>
+                            </a>
                             </button>
-                            </button>
-                            <button class="btn footer-btn">
+                            <a target="_blank" href="https://twitter.com/" class="btn footer-btn">
                                 <i class="fa-brands fa-twitter the-arrow footer-color  fs-6"></i>
-                            </button>
+                            </a>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-2 col-md-6 col-12" style="width:fit-content;">
                     <p class="text-white title-font second-font fw-medium" style="font-size: 1.125rem;">Home Page</p>
                     <div class="d-flex flex-column pt-4">
-                        <a href="index.html" class="footer-color footer-link text-decoration-none">Home</a>
-                        <a href="destination-location.html"
-                            class="footer-color text-decoration-none footer-link pt-3">Destination Location</a>
-                        <a href="gallery-documentation.html"
-                            class="footer-color text-decoration-none footer-link pt-3">Gallery Documentation</a>
+                        <a href="/homepage" class="footer-color footer-link text-decoration-none">Home</a>
+                        <a href="/location" class="footer-color text-decoration-none footer-link pt-3">Destination
+                            Location</a>
+                        <a href="/gallery" class="footer-color text-decoration-none footer-link pt-3">Gallery
+                            Documentation</a>
                     </div>
                 </div>
                 <div class="col-lg-2 col-md-6 col-12" style="width:fit-content;">
@@ -498,9 +555,12 @@
                     <p class="text-white title-font second-font fw-medium" style="font-size: 1.125rem;">Our featured
                     </p>
                     <div class="d-flex flex-column pt-4">
-                        <p class="footer-color footer-link ">Island Paradise Retreat</p>
-                        <p class="footer-color footer-link pt-3">Cultural Heritage Expedition</p>
-                        <p class="footer-color footer-link pt-3">Jungle Adventure Trek</p>
+                        <a href="#featured" class="footer-color text-decoration-none footer-link ">Island Paradise
+                            Retreat</a>
+                        <a href="#featured" class="footer-color text-decoration-none footer-link pt-3">Cultural
+                            Heritage Expedition</a>
+                        <a href="#featured" class="footer-color text-decoration-none footer-link pt-3">Jungle
+                            Adventure Trek</a>
                     </div>
                 </div>
                 <div class="col-lg-2 col-md-6 col-12">
@@ -509,7 +569,8 @@
                     <div class="d-flex flex-column pt-4">
                         <p class="footer-color footer-link ">Terms & Conditions</p>
                         <p class="footer-color footer-link pt-3">Privacy Policy</p>
-                        <p class="footer-color footer-link pt-3">Contact Us</p>
+                        <a target="_blank" href="https://wa.me/+62123456789"
+                            class="footer-color footer-link pt-3">Contact Us</a>
                     </div>
                 </div>
                 <div class="d-flex justify-content-center flex-column mt-5 pt-5 pb-4">
@@ -523,7 +584,7 @@
 
     <div class="modal fade" id="benefitModal1" tabindex="-1" aria-labelledby="benefitModal1Label"
         aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-dialog">
             <div class="modal-content modal-menu ">
                 <div class="modal-header">
                     <p class="fs-5 fw-semibold">Island Paradise Retreat</p>
@@ -544,9 +605,10 @@
             </div>
         </div>
     </div>
+
     <div class="modal fade" id="benefitModal2" tabindex="-1" aria-labelledby="benefitModal2Label"
         aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-dialog">
             <div class="modal-content modal-menu ">
                 <div class="modal-header">
                     <p class="fs-5 fw-semibold">Cultural Heritage Expedition</p>
@@ -567,9 +629,10 @@
             </div>
         </div>
     </div>
+
     <div class="modal fade" id="benefitModal3" tabindex="-1" aria-labelledby="benefitModal3Label"
         aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-dialog">
             <div class="modal-content modal-menu ">
                 <div class="modal-header">
                     <p class="fs-5 fw-semibold">Jungle Adventure Trek</p>
@@ -591,9 +654,10 @@
             </div>
         </div>
     </div>
+
     <div class="modal fade" id="benefitModal4" tabindex="-1" aria-labelledby="benefitModal4Label"
         aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-dialog">
             <div class="modal-content modal-menu ">
                 <div class="modal-header">
                     <p class="fs-5 fw-semibold">Flavors of Nusantara Food Tour</p>
@@ -616,8 +680,8 @@
     </div>
 
     <script src="https://kit.fontawesome.com/9e88c62f38.js" crossorigin="anonymous"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.js"></script>
+    <script src="{{ asset('assets/js-homepage/popper.min.js') }}"></script>
+    <script src="{{ asset('assets/js-homepage/bootstrap.js') }}"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script>
         const swiperCenter = new Swiper('.swiper-center', {

@@ -29,6 +29,8 @@ Route::redirect('/admin', '/admin/dashboard');
 
 Route::controller(HomepageController::class)->group(function () {
     Route::get('/homepage', 'homepage')->name('homepage');
+    Route::get('/location', 'location')->name('location');
+    Route::get('/gallery', 'gallery')->name('gallery');
     Route::get('/destination/{id}', 'destinationDetail')->name('destination->detail');
 });
 
