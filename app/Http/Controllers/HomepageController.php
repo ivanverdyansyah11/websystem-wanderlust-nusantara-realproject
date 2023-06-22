@@ -68,4 +68,17 @@ class HomepageController extends Controller
             'galleries' => $mergedArray,
         ]);
     }
+
+    public function destinationDetail($id)
+    {
+        $images = Gallery::where('destinations_id', $id)->value('image');
+        $images = explode(',', $images);
+
+        return view('homepage.destination', [
+            'page' => 'Destination Detail',
+            'destination' => Destination::where('id', $id)->first(),
+            'recommendations' => Destination::whereNotIn('id', [$id])->take(5)->get(),
+            'gallery' => $images,
+        ]);
+    }
 }

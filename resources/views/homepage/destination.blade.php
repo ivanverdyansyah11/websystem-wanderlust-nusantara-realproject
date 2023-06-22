@@ -35,10 +35,10 @@
                             <a class="nav-link fw-semibold" href="/homepage">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link fw-semibold" href="/location">Destination Location</a>
+                            <a class="nav-link active fw-semibold" href="/location">Destination Location</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active fw-semibold" href="/gallery">Gallery Documentation</a>
+                            <a class="nav-link fw-semibold" href="/gallery">Gallery Documentation</a>
                         </li>
                     </ul>
                 </div>
@@ -60,28 +60,30 @@
                     <div class="col-xl-6 col-lg-7 col-12">
                         <div class="badge-section">
                             <p class="main-color">
-                                Capturing the Spirit of Nusantara's History
+                                Discover the Legacy of {{ $destination->name }}
                             </p>
                         </div>
                         <p class="fw-semibold display-4 mt-2 text-black">
-                            Connecting with the Legends of Nusantara History
+                            Unveiling the Secrets of {{ $destination->name }}
                         </p>
                         <article class="mt-3">
                             <p>
-                                Embark on a captivating journey through Nusantara's rich history as you explore our
-                                meticulously curated city categories on WanderlustNusantara's historical tourism
-                                website. From the ancient wonders of Yogyakarta to the colonial charm of Jakarta, each
-                                city reveals a unique chapter in Indonesia's storied past.
+                                Welcome to {{ $destination->name }}, a captivating destination with a rich historical
+                                heritage.
+                                Located in {{ $destination->location }}, entices visitors with its stunning
+                                architecture,
+                                cultural wealth, and stories that transcend time.
                             </p>
                             <p class="mt-1">
-                                Immerse yourself in the architectural splendors, cultural treasures, and captivating
-                                narratives of each location as you navigate our comprehensive city guides. Whether you
-                                seek the spiritual serenity of Bali's temples or the remnants of ancient civilizations
-                                in Central Java,
+                                Invites you to delve deeper into the hidden tales behind its remarkable historical
+                                structures.Through interactive activities or expert guides, you will be introduced to
+                                fascinating stories about {{ $destination->name }} and the precious relics that have
+                                endured for
+                                centuries.
                             </p>
                         </article>
                         <div class="mt-4 d-flex flex-row gap-3">
-                            <a href="#gallery" class="btn btn-color">Explore Now</a>
+                            <a href="#featured" class="btn btn-color">Explore Now</a>
                             <a href="/homepage"
                                 class="btn text-decoration-none btn-secondary d-flex flex-row align-items-center gap-2">
                                 Back to Home
@@ -93,42 +95,135 @@
                 </div>
             </div>
             <div class="hero-banner row  position-absolute d-none top-0 banner-background end-0 d-lg-inline-block">
-                <img src="{{ asset('assets/img-homepage/hero3-img.png') }}" alt="hero section image"
-                    class="w-100 h-100">
+                <img src="{{ asset('storage/' . $destination->image) }}" alt="hero section image"
+                    class="w-100 h-100 hero-banner">
             </div>
         </section>
     </div>
+
     <main class="mt-1">
-        <section class="gallery-section container" id="gallery">
+        <section id="featured" class="gallery-section container">
             <div class="top-section row gy-4">
                 <div class="col-md-6 col-lg-6 col-12">
                     <div class="d-flex flex-column">
                         <div class="badge-section">
                             <p class="fs-15 fw-semibold main-color">
-                                Know Historical Treasures in the City of Jawa Tengah
+                                {{ $destination->name }} Documentation
                             </p>
                         </div>
                         <p class="mt-2 display-5 fw-semibold text-black">
-                            Know Historical Treasures in the City of Jawa Tengah
+                            Gallery of Beautiful {{ $destination->name }}
                         </p>
                     </div>
                 </div>
                 <div class="col-lg-1 d-lg-block d-none"></div>
                 <div class="col-lg-5 align-self-end col-md-6 col-12">
-                    Welcome to WanderlustNusantara's enchanting landing page dedicated to the historical attractions of
-                    Jawa Tengah. Immerse yourself in the timeless beauty and rich heritage of this captivating region as
-                    we unveil the hidden gems that lie within.
+                    Welcome to the Gallery of {{ $destination->name }}, where the wonders of Nusantara's rich history
+                    come to
+                    life. This carefully curated collection showcases the beauty, grandeur, and significance of
+                    {{ $destination->name }} and its historical counterparts.
                 </div>
 
             </div>
             <div class="content-section mt-5">
                 <div class="wrapper" style="columns: 4; column-gap: 20px;">
-                    @foreach ($galleries as $gallery)
+                    @foreach ($gallery as $image)
                         <div class="box mb-3" style="width: 100%;">
-                            <img src="{{ asset('storage/' . $gallery) }}" alt="{{ $gallery }}"
+                            <img src="{{ asset('storage/' . $image) }}" alt="{{ $image }}"
                                 style="max-width: 100% !important;" class="rounded-1">
                         </div>
                     @endforeach
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="about-section position-relative">
+            <div class="bg-section"></div>
+            <div class="row banner-section position-absolute d-none top-0 banner-background start-0 d-lg-inline-block">
+                <img src="{{ asset('storage/' . $destination->image) }}" alt="about section image"
+                    class="w-100 h-100 banner-section">
+            </div>
+            <div class="container position-relative">
+                <div class="row justify-content-end">
+                    <div class="col-xl-6 col-lg-7 col-12">
+                        <div class="badge-section">
+                            <p class="main-color fs-15 fw-semibold">
+                                {{ $destination->name }} History
+                            </p>
+                        </div>
+                        <p class="fw-semibold display-5 mt-1 text-black">
+                            Historical Tourism of {{ $destination->name }}
+                        </p>
+                        <article class="mt-3">
+                            <p>
+                                {{ $destination->history_1 }}
+                            </p>
+                            <p class="mt-1">
+                                {{ $destination->history_2 }}
+                            </p>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="recommendation-section container">
+            <div class="top-section row gy-4">
+                <div class="col-md-6 col-lg-6 col-12">
+                    <div class="d-flex flex-column">
+                        <div class="badge-section">
+                            <p class="fs-13 fw-medium main-color">
+                                Other Historical Treasures
+                            </p>
+                        </div>
+                        <p class="mt-2 display-5 fw-semibold text-black">
+                            Find Out Other Historical Treasures
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-1 d-lg-block d-none"></div>
+                <div class="col-lg-5 align-self-end col-md-6 col-12">
+                    <p>
+                        Our tour history testimonials section showcases the awe-inspiring experiences of our delighted
+                        travelers who have discovered the hidden stories and secrets of this remarkable archipelago.
+                    </p>
+                </div>
+            </div>
+            <div class="content-section mt-5">
+                <div class="swiper swiper-center pb-5">
+                    <div class="swiper-wrapper">
+                        @foreach ($recommendations as $recommend)
+                            <div class="swiper-slide">
+                                <a href="/destination/{{ $recommend->id }}" class="">
+                                    <div class="card-img-recommendation position-relative">
+                                        <div class="top-text me-3 position-absolute gap-1 container end-0">
+                                            <div class="d-flex flex-row gap-1 align-items-center">
+                                                <img src="{{ asset('assets/img-homepage/star.svg') }}" alt=""
+                                                    class="" draggable="false">
+                                                <p class="rating fw-bold fs-15 text-white">{{ $recommend->rating }}
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="btm-text position-absolute bottom-0">
+                                            <p class="text-white fw-semibold fs-5">{{ $recommend->name }}</p>
+                                            <div class="d-flex flex-row gap-1">
+                                                <img src="{{ asset('assets/img-homepage/location.svg') }}"
+                                                    alt="" class="" draggable="false">
+                                                <p class="text-white fs-14 fw-medium">{{ $recommend->location }}</p>
+                                            </div>
+                                        </div>
+                                        <div class="center-img position-absolute">
+                                            <i class="fa-solid fa-magnifying-glass fs-2 text-white"></i>
+                                        </div>
+                                        <img src="{{ asset('storage/' . $recommend->image) }}"
+                                            alt="{{ $recommend->name }}"
+                                            class=" position-relative city img-place-recommendation">
+                                    </div>
+                                </a>
+                            </div>
+                        @endforeach
+                    </div>
+                    <div class="swiper-pagination"></div>
                 </div>
             </div>
         </section>
