@@ -46,7 +46,7 @@
                                     <td>{{ $city->name }}</td>
                                     <td>
                                         <img src="{{ asset('storage/' . $city->image) }}" alt="{{ $city->name }} image"
-                                            width="150">
+                                            width="120">
                                     </td>
                                     <td style="width: 300px">{{ $text_history_1[$i] }}</td>
                                     <td class=" flex-row gap-1 d-lg-flex d-none">

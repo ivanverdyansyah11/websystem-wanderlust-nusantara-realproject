@@ -37,7 +37,7 @@ class DashboardController extends Controller
 
         return view('dashboard.index', [
             'page' => 'Destination',
-            'destinations' => Destination::all(),
+            'destinations' => Destination::latest()->take(4)->get(),
             'destination_count' => Destination::count(),
             'city_count' => City::count(),
             'gallery_count' => Gallery::count(),

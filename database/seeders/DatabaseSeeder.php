@@ -43,38 +43,10 @@ class DatabaseSeeder extends Seeder
         ]);
 
         City::create([
-            'name' => 'East Java',
-            'image' => 'city-image',
-            'history_1' => "The region's history dates back to ancient times when it was inhabited by indigenous communities. During the 8th and 9th centuries, East Java witnessed the rise of the powerful Mataram Kingdom, which played a crucial role in the spread of Buddhism and Hinduism in the region. The kingdom left behind notable archaeological sites, including the majestic temples of Prambanan and Candi Sukuh.",
-            'history_2' => 'In the 13th century, East Java was ruled by the Majapahit Empire, one of the largest and most powerful empires in Southeast Asia. Under the leadership of King Hayam Wuruk and his prime minister, Gajah Mada, the Majapahit Empire reached its peak, embracing Hindu-Buddhist culture and spreading its influence across the archipelago.',
-        ]);
-
-        City::create([
-            'name' => 'South Sumatra',
-            'image' => 'city-image',
-            'history_1' => "The region of South Sumatra has been inhabited since prehistoric times, with evidence of human settlements dating back thousands of years. Throughout history, the area was influenced by various kingdoms and empires.",
-            'history_2' => 'During the 7th to 14th centuries, the region was part of the Srivijaya Empire, a powerful maritime kingdom that controlled trade in the Southeast Asian region. Srivijaya, with its capital in Palembang, left a significant impact on the culture and trade routes of the region. In the 14th century, the Majapahit Empire from Java gained influence over South Sumatra. This Hindu-Buddhist empire brought its rich cultural traditions to the region, leaving behind remnants such as temple ruins and inscriptions.',
-        ]);
-
-        City::create([
-            'name' => 'Yogyakarta',
-            'image' => 'city-image',
-            'history_1' => "Yogyakarta traces its roots back to the Mataram Sultanate, which was established in the late 16th century. The Mataram Sultanate played a crucial role in the spread of Islam in Java and was a powerful kingdom in Central Java. It experienced its golden age during the reign of Sultan Agung, who expanded the empire's territories and constructed notable architectural landmarks.",
-            'history_2' => 'In the 18th century, the Mataram Sultanate split into two rivaling courts, the Surakarta Sultanate (Kasunanan) and the Yogyakarta Sultanate (Pakualaman). Yogyakarta became the capital of the latter and remains the seat of the current Sultan of Yogyakarta.',
-        ]);
-
-        City::create([
             'name' => 'Bali',
             'image' => 'city-image',
             'history_1' => "The earliest traces of human habitation on the island of Bali date back to at least 2000 BCE. The Austronesian-speaking people settled in Bali, bringing with them their customs, beliefs, and agricultural practices.",
             'history_2' => 'Bali was influenced by Indian traders and Hindu-Buddhist kingdoms from the neighboring island of Java. The Majapahit Empire, based in East Java, had a significant impact on Bali, introducing Hinduism and the Javanese courtly culture in the 14th century. During the 16th century, Bali experienced a series of fragmented kingdoms and principalities. These small kingdoms were often in conflict with each other, competing for power and influence on the island.',
-        ]);
-
-        City::create([
-            'name' => 'West Java',
-            'image' => 'city-image',
-            'history_1' => "The region of West Java has been inhabited since prehistoric times. Archaeological evidence suggests that human settlements existed in the area as early as the Neolithic period. During the classical period, West Java was part of the Tarumanagara Kingdom, which flourished from the 4th to the 7th century.",
-            'history_2' => 'In the 7th century, the Sunda Kingdom emerged as a powerful Hindu-Buddhist kingdom in West Java. It reached its peak of influence in the 14th century under the rule of King Hayam Wuruk. The Sunda Kingdom had close ties with the Majapahit Empire from East Java.',
         ]);
 
         City::create([
@@ -86,7 +58,7 @@ class DatabaseSeeder extends Seeder
 
         Destination::create([
             'id' => '1',
-            'cities_id' => '8',
+            'cities_id' => '4',
             'name' => 'Candi Borobudur',
             'location' => 'Magelang, Jawa Tengah',
             'rating' => '5.0',
@@ -101,7 +73,7 @@ class DatabaseSeeder extends Seeder
 
         Destination::create([
             'id' => '2',
-            'cities_id' => '8',
+            'cities_id' => '4',
             'name' => 'Candi Prambanan',
             'location' => 'Magelang, Jawa Tengah',
             'rating' => '4.8',
@@ -116,7 +88,7 @@ class DatabaseSeeder extends Seeder
 
         Destination::create([
             'id' => '3',
-            'cities_id' => '8',
+            'cities_id' => '4',
             'name' => 'Keraton Kasunanan Solo',
             'location' => 'Magelang, Jawa Tengah',
             'rating' => '4.6 ',
@@ -131,7 +103,7 @@ class DatabaseSeeder extends Seeder
 
         Destination::create([
             'id' => '4',
-            'cities_id' => '8',
+            'cities_id' => '4',
             'name' => 'Candi Sukuh',
             'location' => 'Magelang, Jawa Tengah',
             'rating' => '4.5',
@@ -142,6 +114,96 @@ class DatabaseSeeder extends Seeder
 
         Gallery::create([
             'destinations_id' => '4',
+        ]);
+
+        Destination::create([
+            'id' => '5',
+            'cities_id' => '1',
+            'name' => 'Old Town Jakarta',
+            'location' => 'Taman Sari, West Jakarta',
+            'rating' => '4.3',
+            'image' => 'destination-image',
+            'history_1' => "Is a historical gem that reflects the city's colonial past. This area was once the heart of Batavia, the capital of the Dutch East Indies. Strolling through Kota Tua, you will encounter well-preserved buildings that showcase Dutch architectural influences, such as the Fatahillah Square, Jakarta History Museum, and the iconic Batavia Café.",
+            'history_2' => "These structures transport you back to the 17th century, allowing you to imagine the bustling trading port that Jakarta once was. Kota Tua is not only a visual delight but also a hub of cultural activities, including street performances, art exhibitions, and traditional culinary experiences, offering visitors a unique glimpse into Jakarta's historical and cultural heritage.",
+        ]);
+
+        Gallery::create([
+            'destinations_id' => '5',
+        ]);
+
+        Destination::create([
+            'id' => '6',
+            'cities_id' => '1',
+            'name' => 'National Monument',
+            'location' => 'Gambir, Central Jakarta',
+            'rating' => '5.0',
+            'image' => 'destination-image',
+            'history_1' => "The construction of the monument began in 1961 under the direction of Indonesia's first President, Sukarno, and was completed in 1975. The purpose of the monument was to commemorate the country's struggle for independence and symbolize the spirit of unity and nationalism.",
+            'history_2' => 'The design of the Monumen Nasional is inspired by Indonesian culture and symbolism. The monument stands at a height of 132 meters and is topped with a flame-shaped gold-covered bronze statue, representing the spirit of freedom. The shape of the monument resembles a rice pestle, known as "lempung" in the local language, which holds cultural significance in Indonesian society.',
+        ]);
+
+        Gallery::create([
+            'destinations_id' => '6',
+        ]);
+
+        Destination::create([
+            'id' => '7',
+            'cities_id' => '2',
+            'name' => 'Istana Pagaruyung',
+            'location' => 'Tanah Datar, West Sumatra',
+            'rating' => '4.6',
+            'image' => 'destination-image',
+            'history_1' => "Located in Tanjung Emas, Batusangkar, Istana Pagaruyung is a reconstruction of the royal palace of the ancient Pagaruyung Kingdom. The original palace was believed to have been built in the 17th century but was tragically destroyed by fire in 2007.",
+            'history_2' => 'The current palace showcases the traditional Minangkabau architecture, characterized by its distinctive curved roofs. Visitors can explore the grand halls, traditional artifacts, and historical displays within the palace, immersing themselves in the regal heritage of West Sumatra.',
+        ]);
+
+        Gallery::create([
+            'destinations_id' => '7',
+        ]);
+
+        Destination::create([
+            'id' => '8',
+            'cities_id' => '2',
+            'name' => 'Jam Gadang',
+            'location' => 'Bukittinggi, West Sumatra',
+            'rating' => '4.5',
+            'image' => 'destination-image',
+            'history_1' => "Situated in the heart of Bukittinggi, Jam Gadang is a prominent landmark and a symbol of the city. This iconic clock tower was built by the Dutch colonial government in 1926 and serves as a reminder of the region's historical ties with the colonial era.",
+            'history_2' => 'The tower features a unique blend of architectural styles, combining Indonesian, European, and Minangkabau influences. Visitors can admire the intricate details of the clock tower, climb to its top for panoramic views of the surrounding area, and learn about its historical significance through informative displays.',
+        ]);
+
+        Gallery::create([
+            'destinations_id' => '8',
+        ]);
+
+        Destination::create([
+            'id' => '9',
+            'cities_id' => '3',
+            'name' => 'Pura Besakih',
+            'location' => 'Karangasem, Bali',
+            'rating' => '5.0',
+            'image' => 'destination-image',
+            'history_1' => "Pura Besakih, also known as the Besakih Temple or the Mother Temple of Bali, holds significant historical and cultural importance in the island's heritage. The temple's history dates back more than a thousand years, making it one of the oldest and holiest Hindu temples in Bali.",
+            'history_2' => 'Legend has it that Pura Besakih was built during the 8th century, believed to be a sacred site chosen by the gods. Over the centuries, the temple complex has undergone several expansions and renovations, reflecting the cultural and religious evolution of Bali. Pura Besakih has survived numerous volcanic eruptions and natural disasters, symbolizing the resilience and devotion of the Balinese people.',
+        ]);
+
+        Gallery::create([
+            'destinations_id' => '9',
+        ]);
+
+        Destination::create([
+            'id' => '10',
+            'cities_id' => '3',
+            'name' => 'Taman Ayun Temple',
+            'location' => 'Mengwi, Bali',
+            'rating' => '4.8',
+            'image' => 'destination-image',
+            'history_1' => "Taman Ayun, which translates to 'beautiful garden,' was originally built as a private temple for the Mengwi Kingdom's royalty. It served as a sacred site for the kings and their families to worship their ancestors and the Hindu deities. The temple's unique architectural style, known as the Mengwi architectural style, showcases a fusion of Balinese and Javanese influences.",
+            'history_2' => 'The temple complex is characterized by its spacious and well-manicured gardens, surrounded by a large moat that symbolizes the cosmic ocean. The main temple structure, known as the Pura Utama, is elevated and features multiple layers of intricately carved wooden gates and shrines. The exquisite carvings depict mythological figures, floral motifs, and scenes from Hindu epics.',
+        ]);
+
+        Gallery::create([
+            'destinations_id' => '10',
         ]);
     }
 }

@@ -1,0 +1,681 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>WanderlustNusantara</title>
+    <link rel="icon" href="{{ asset('assets/img-homepage/logo.svg') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset('assets/css-homepage/bootstrap.css') }} ">
+    <link rel="stylesheet" href="{{ asset('assets/css-homepage/style.css') }}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+</head>
+
+<body>
+    <div class="top-section">
+        <nav class="navbar navbar-expand-lg py-3">
+            <div class="container">
+                <a class="navbar-brand" href="index.html"><img src="{{ asset('assets/img-homepage/logo.svg') }}"
+                        alt="" draggable="false"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active fw-semibold" aria-current="page" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link fw-semibold" href="destination-location.html">Destination Location</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link fw-semibold" href="gallery-documentation.html">Gallery Documentation</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="d-lg-flex justify-content-end d-none">
+                    <button class="btn btn-color d-flex flex-row align-items-center gap-2">
+                        contact us
+                        <img src="{{ asset('assets/img-homepage/arr-btn.svg') }}" alt="" class=""
+                            draggable="false">
+                    </button>
+                </div>
+            </div>
+        </nav>
+
+        <section class="hero-section position-relative">
+            <div class="bg-section"></div>
+            <div class="container position-relative">
+                <div class="row justify-content-start">
+                    <div class="col-xl-6 col-lg-7 col-12">
+                        <div class="badge-section">
+                            <p class="main-color">
+                                Discover the Hidden Treasures of Nusantara
+                            </p>
+                        </div>
+                        <p class="fw-semibold display-4 mt-2 text-black">
+                            Explore, Discover, and Indulge in the Beauty of Nusantara
+                        </p>
+                        <article class="mt-3">
+                            <p>
+                                Welcome to WanderlustNusantara, where we invite you to embark on an extraordinary
+                                journey through the enchanting landscapes and vibrant cultures of Nusantara. Get ready
+                                to satisfy your wanderlust as we curate immersive and unforgettable tours that showcase
+                                the hidden gems and iconic landmarks of this breathtaking archipelago.
+                            </p>
+                            <p class="mt-1">
+                                We believe that travel is not just about visiting destinations, but about creating
+                                lifelong memories and forging connections with the places we explore.
+                            </p>
+                        </article>
+                        <div class="mt-4 d-flex flex-row gap-3">
+                            <button class="btn btn-color">Start Exploring</button>
+                            <button class="btn btn-secondary d-flex flex-row align-items-center gap-2">
+                                Check Gallery
+                                <img src="{{ asset('assets/img-homepage/arr-btn.svg') }}" draggable="false">
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-banner row  position-absolute d-none top-0 banner-background end-0 d-lg-inline-block">
+                <img src="{{ asset('assets/img-homepage/hero-img') }}.png" alt="hero section image" class="w-100 h-100">
+            </div>
+        </section>
+    </div>
+
+    <main class="mt-1">
+        <section id="recommendation" class="recommendation-section container">
+            <div class="row">
+                <div class="col-lg-6 col-12">
+                    <p class="badge-section main-color fs-15 fw-semibold">
+                        Recommendations Based on Rating Given
+                    </p>
+                    <h4 class="text-black mt-1 display-5 fw-semibold">
+                        Recommendation Place’s Nusantara Destinations
+                    </h4>
+                    <p class="fw-medium">
+                        At WanderlustNusantara, we have handpicked the most breathtaking destinations across Nusantara
+                        to offer you an unforgettable travel experience. Whether you seek pristine beaches, ancient
+                        temples, or vibrant cities, our destination tours will take you on a remarkable journey to the
+                        hidden gems and iconic landmarks of Nusantara.
+                    </p>
+                    <div class="mt-5">
+                        <button class="btn btn-color d-flex flex-row gap-2 align-items-center">
+                            Destination Location
+                            <img src="{{ asset('assets/img-homepage/arr-btn') }}.svg" alt="" class=""
+                                draggable="false">
+                        </button>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-12">
+                    <div class="swiper swiper-side pb-5">
+                        <div class="swiper-wrapper">
+                            @foreach ($destinations as $destination)
+                                <div class="swiper-slide">
+                                    <a href="/destination/{{ $destination->id }}">
+                                        <div class="card-img-recommendation position-relative">
+                                            <div class="top-text me-3 position-absolute gap-1 container end-0">
+                                                <div class="d-flex flex-row gap-1 align-items-center">
+                                                    <img src="{{ asset('assets/img-homepage/star.svg') }}"
+                                                        alt="" class="" draggable="false">
+                                                    <p class="rating fw-bold fs-15 text-white">
+                                                        {{ $destination->rating }}</p>
+                                                </div>
+                                            </div>
+                                            <div class="btm-text position-absolute bottom-0">
+                                                <p class="text-white fw-semibold fs-5">{{ $destination->name }}</p>
+                                                <div class="d-flex flex-row gap-1">
+                                                    <img src="{{ asset('assets/img-homepage/location.svg') }}"
+                                                        alt="" class="" draggable="false">
+                                                    <p class="text-white fs-14 fw-medium">{{ $destination->location }}
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="center-img position-absolute">
+                                                <i class="fa-solid fa-magnifying-glass fs-2 text-white"></i>
+                                            </div>
+                                            <img src="{{ asset('storage/' . $destination->image) }}"
+                                                alt="candi borobudur"
+                                                class="img-fluid position-relative image-recommendation">
+                                        </div>
+                                    </a>
+                                </div>
+                            @endforeach
+                        </div>
+                        <div class="swiper-pagination d-flex justify-content-start"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="featured" class="benefit-section container">
+            <div class="top-section row gy-4">
+                <div class="col-md-6 col-lg-6 col-12">
+                    <div class="d-flex flex-column">
+                        <div class="badge-section">
+                            <p class="fs-15 fw-semibold main-color">
+                                Best Featured We Offer to Our Visitors
+                            </p>
+                        </div>
+                        <p class="mt-2 display-5 fw-semibold text-black">
+                            Explore the Best of Nusantara's Destinations
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-1 d-lg-block d-none"></div>
+                <div class="col-lg-5 align-self-end col-md-6 col-12">
+                    Embark on an Extraordinary Journey with WanderlustNusantara and Explore the Best of Nusantara's
+                    Destinations. Immerse Yourself in the Vibrant Culture, and Unforgettable Experiences that Await.
+                </div>
+
+            </div>
+            <div class="content-section mt-5 row row-cols-xl-4 gy-4 row-cols-lg-3 row-cols-md-2 row-cols-1">
+                <div class="col">
+                    <div class="card-benefit">
+                        <img src="{{ asset('assets/img-homepage/benefit1.svg') }}" alt="" class=""
+                            draggable="false">
+                        <div class="d-flex flex-column mt-3">
+                            <p class="fs-17 fw-semibold text-black">Island Paradise Retreat</p>
+                            <p class="fs-15 fw-medium">
+                                Immerse yourself in the pristine beauty of Nusantara's islands with our Island Paradise
+                                Retreat tour.
+                            </p>
+                            <button data-bs-toggle="modal" data-bs-target="#benefitModal1"
+                                class="btn d-flex flex-row btn-text-secondary gap-2 align-items-center p-0 mt-2 fs-14 fw-medium">
+                                More Detail
+                                <img src="{{ asset('assets/img-homepage/arr-btn-text.svg') }}" alt=""
+                                    class="" draggable="false">
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card-benefit">
+                        <img src="{{ asset('assets/img-homepage/benefit2.svg') }}" alt="" class=""
+                            draggable="false">
+                        <div class="d-flex flex-column mt-3">
+                            <p class="fs-17 fw-semibold text-black">Cultural Heritage Expedition</p>
+                            <p class="fs-15 fw-medium">
+                                Dive into the rich cultural tapestry of Nusantara with our Cultural Heritage Expedition
+                                tour.
+                            </p>
+                            <button data-bs-target="#benefitModal2" data-bs-toggle="modal"
+                                class="btn d-flex flex-row btn-text-secondary gap-2 align-items-center p-0 mt-2 fs-14 fw-medium">
+                                More Detail
+                                <img src="{{ asset('assets/img-homepage/arr-btn-text.svg') }}" alt=""
+                                    class="" draggable="false">
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card-benefit">
+                        <img src="{{ asset('assets/img-homepage/benefit3.svg') }}" alt="" class=""
+                            draggable="false">
+                        <div class="d-flex flex-column mt-3">
+                            <p class="fs-17 fw-semibold text-black">Jungle Adventure Trek</p>
+                            <p class="fs-15 fw-medium">
+                                Embark on an adrenaline-pumping Jungle Adventure Trek through the lush rainforests of
+                                Nusantara.
+                            </p>
+                            <button data-bs-toggle="modal" data-bs-target="#benefitModal3"
+                                class="btn d-flex flex-row btn-text-secondary gap-2 align-items-center p-0 mt-2 fs-14 fw-medium">
+                                More Detail
+                                <img src="{{ asset('assets/img-homepage/arr-btn-text.svg') }}" alt=""
+                                    class="" draggable="false">
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card-benefit">
+                        <img src="{{ asset('assets/img-homepage/benefit4.svg') }}" alt="" class=""
+                            draggable="false">
+                        <div class="d-flex flex-column mt-3">
+                            <p class="fs-17 fw-semibold text-black">Flavors of Nusantara Food Tour</p>
+                            <p class="fs-15 fw-medium">
+                                Indulge your taste buds in a culinary exploration with our Flavors of Nusantara Food
+                                Tour.
+                            </p>
+                            <button data-bs-toggle="modal" data-bs-target="#benefitModal4"
+                                class="btn d-flex flex-row btn-text-secondary gap-2 align-items-center p-0 mt-2 fs-14 fw-medium">
+                                More Detail
+                                <img src="{{ asset('assets/img-homepage/arr-btn-text.svg') }}" alt=""
+                                    class="" draggable="false">
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="about-section position-relative">
+            <div class="bg-section"></div>
+            <div class="row banner-section position-absolute d-none top-0 banner-background start-0 d-lg-inline-block">
+                <img src="{{ asset('assets/img-homepage/about-img.png') }}" alt="about section image"
+                    class="w-100 h-100">
+            </div>
+            <div class="container position-relative">
+                <div class="row justify-content-end">
+                    <div class="col-xl-6 col-lg-7 col-12">
+                        <div class="badge-section">
+                            <p class="main-color fs-15 fw-semibold">
+                                Dedicated to Unveiling Nusantara's Remarkable History
+                            </p>
+                        </div>
+                        <p class="fw-semibold display-5 mt-1 text-black">
+                            Discover the Essence of Nusantara with Us
+                        </p>
+                        <article class="mt-3">
+                            <p>
+                                At WanderlustNusantara, we are passionate about showcasing the true essence of
+                                Nusantara's diverse landscapes, rich culture, and warm hospitality. With our expertly
+                                curated tours, we invite you to embark on a transformative journey that goes beyond
+                                ordinary travel experiences.
+                            </p>
+                            <p class="mt-1">
+                                Immerse yourself in the vibrant traditions of Nusantara as our knowledgeable guides take
+                                you to iconic landmarks, hidden gems, and off-the-beaten-path destinations. Experience
+                                the authentic flavors of local cuisine, witness captivating cultural performances, and
+                                engage with local communities.
+                            </p>
+                        </article>
+
+                        <div
+                            class="mt-4 d-flex row row-cols-md-3 row-cols-1 gy-4 justify-content-lg-center align-items-center">
+                            <div class="col first-hr d-flex flex-row align-items-center">
+                                <div class="w-100 d-flex">
+                                    <div class="d-flex flex-column align-items-center">
+                                        <p class="display-5 second-color fw-bolder">30+</p>
+                                        <p class="fw-medium">Total Destination</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="d-flex flex-column align-items-center  justify-content-center w-100 ">
+                                    <p class="display-5 second-color fw-bolder">572+</p>
+                                    <p class="fw-medium">Location Available</p>
+                                </div>
+                            </div>
+                            <div class="col second-hr d-flex flex-row   align-items-center">
+                                <div class="d-flex w-100 justify-content-end">
+                                    <div class="d-flex flex-column align-items-center">
+                                        <p class="display-5 second-color fw-bolder">08</p>
+                                        <p class="fw-medium">Gallery Documentation</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="gallery-section container">
+            <div class="row">
+                <div class="col-lg-6 col-12">
+                    <p class="badge-section main-color fs-15 fw-semibold">
+                        A Pictorial Journey Through Historical Tapestry
+                    </p>
+                    <h4 class="text-black mt-1 display-5 fw-semibold">
+                        Gallery of Beautiful Archipelago Places
+                    </h4>
+                    <p class="fw-medium">
+                        Immerse yourself in the captivating gallery of WanderlustNusantara's historical tourism website,
+                        where the rich tapestry of Nusantara's heritage comes to life. Explore a visual feast of ancient
+                        ruins, majestic temples, and cultural landmarks that showcase the remarkable history of
+                        Indonesia.
+                    </p>
+                    <div class="mt-5">
+                        <button class="btn btn-color d-flex flex-row gap-2 align-items-center">
+                            More Documentation
+                            <img src="img/arr-btn.svg" alt="" class="" draggable="false">
+                        </button>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-12">
+                    <div class="swiper swiper-side pb-5">
+                        <div class="swiper-wrapper">
+
+                            <div class="swiper-slide">
+                                <a href="detailLocation.html" class="">
+                                    <div class="card-img-recommendation position-relative">
+                                        <div class="btm-text position-absolute bottom-0">
+                                            <div class="d-flex flex-row gap-1">
+                                                <img src="img/location.svg" alt="" class=""
+                                                    draggable="false">
+                                                <p class="text-white fs-14 fw-medium">Nusa Penida Island</p>
+                                            </div>
+                                        </div>
+                                        <div class="center-img position-absolute">
+                                            <i class="fa-solid fa-magnifying-glass fs-2 text-white"></i>
+                                        </div>
+                                        <img src="img/gallery1.png" alt="Nusa Penida"
+                                            class="img-fluid position-relative image-recommendation">
+                                    </div>
+                                </a>
+                            </div>
+
+                        </div>
+                        <div class="swiper-pagination d-flex justify-content-start"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="testi" class="testi-section container">
+            <div class="top-section row gy-4">
+                <div class="col-md-6 col-lg-6 col-12">
+                    <div class="d-flex flex-column">
+                        <div class="badge-section">
+                            <p class="fs-13 fw-medium main-color">
+                                Explore Nusantara's Living History
+                            </p>
+                        </div>
+                        <p class="mt-2 display-5 fw-semibold text-black">
+                            Unveiling the Stories of Nusantara's Rich History
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-1 d-lg-block d-none"></div>
+                <div class="col-lg-5 align-self-end col-md-6 col-12">
+                    <p>
+                        Our tour history testimonials section showcases the awe-inspiring experiences of our delighted
+                        travelers who have discovered the hidden stories and secrets of this remarkable archipelago.
+                    </p>
+                </div>
+            </div>
+            <div class="content-section mt-5">
+                <div class="swiper swiper-center pb-5">
+                    <div class="swiper-wrapper">
+
+                        <div class="swiper-slide">
+                            <div class="card-testi">
+                                <img src="{{ asset('assets/img-homepage/testi-decor.svg') }}" alt=""
+                                    draggable="false">
+                                <p class="fw-medium fs-15 mt-3">
+                                    “I stumbled upon this historical tourism website while planning my trip, and it
+                                    turned out to be a game-changer.”
+                                </p>
+                                <div class="d-flex flex-row align-items-center gap-2 mt-2">
+                                    <img src="img/testi1.png" alt="testimonial profile" class="">
+                                    <div class="d-flex flex-column">
+                                        <p class="second-color fs-15 fw-semibold">Rebecca Amessa</p>
+                                        <p class="fw-medium fs-13">History Educator</p>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+        </section>
+        <section class="cta-section">
+            <div class="cta-content container">
+                <div class="row gy-4">
+                    <div class="col-md-6 col-12">
+                        <p class="display-5 text-white fw-semibold">Get to Know More About the History of Other
+                            Archipelagos</p>
+                    </div>
+                    <div class="col-md-6 col-12 align-self-end d-flex justify-content-end">
+                        <button class="btn btn-white d-flex flex-row gap-2 align-items-center">
+                            connect with us
+                            <img src="{{ asset('assets/img-homepage/arr-btn-black.svg') }}" alt=""
+                                class="" draggable="false">
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+
+    <footer class="footer mt-5">
+        <div class="container">
+            <div class="footer-content pb-3 row gy-5">
+                <div class="col-lg-4 col-md-6 col-12 ">
+                    <div class="d-flex flex-column">
+                        <div class="d-flex flex-column">
+                            <div class="">
+                                <img src="{{ asset('assets/img-homepage/logo.svg') }}" class="img-fluid"
+                                    alt="logo">
+                            </div>
+                            <p class="footer-color pt-3 footer-desc">
+                                Welcome to WanderlustNusantara, where we invite you to embark on an extraordinary
+                                journey through the enchanting landscapes
+                            </p>
+                        </div>
+                        <div class="d-flex flex-row pt-4 gap-3">
+                            <button class="btn footer-btn">
+                                <i class="fa-brands fa-instagram the-arrow footer-color fs-6"></i>
+                            </button>
+                            <button class="btn footer-btn">
+                                <i class="fa-brands fa-facebook-f the-arrow footer-color fs-6"></i>
+                            </button>
+                            </button>
+                            <button class="btn footer-btn">
+                                <i class="fa-brands fa-twitter the-arrow footer-color  fs-6"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 col-12" style="width:fit-content;">
+                    <p class="text-white title-font second-font fw-medium" style="font-size: 1.125rem;">Home Page</p>
+                    <div class="d-flex flex-column pt-4">
+                        <a href="index.html" class="footer-color footer-link text-decoration-none">Home</a>
+                        <a href="destination-location.html"
+                            class="footer-color text-decoration-none footer-link pt-3">Destination Location</a>
+                        <a href="gallery-documentation.html"
+                            class="footer-color text-decoration-none footer-link pt-3">Gallery Documentation</a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 col-12" style="width:fit-content;">
+                    <p class="text-white title-font second-font fw-medium" style="font-size: 1.125rem;">Quick Link</p>
+                    <div class="d-flex flex-column pt-4">
+                        <a href="#recommendation"
+                            class="footer-color footer-link text-decoration-none ">Recommendation Place</a>
+                        <a href="#featured" class="footer-color footer-link pt-3 text-decoration-none">Our
+                            Featured</a>
+                        <a href="#about" class="footer-color footer-link pt-3 text-decoration-none">About Us</a>
+                        <a href="#testi" class="footer-color footer-link pt-3 text-decoration-none">Testimonial</a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 col-12">
+                    <p class="text-white title-font second-font fw-medium" style="font-size: 1.125rem;">Our featured
+                    </p>
+                    <div class="d-flex flex-column pt-4">
+                        <p class="footer-color footer-link ">Island Paradise Retreat</p>
+                        <p class="footer-color footer-link pt-3">Cultural Heritage Expedition</p>
+                        <p class="footer-color footer-link pt-3">Jungle Adventure Trek</p>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 col-12">
+                    <p class="text-white title-font second-font fw-medium" style="font-size: 1.125rem;">Help & guide
+                    </p>
+                    <div class="d-flex flex-column pt-4">
+                        <p class="footer-color footer-link ">Terms & Conditions</p>
+                        <p class="footer-color footer-link pt-3">Privacy Policy</p>
+                        <p class="footer-color footer-link pt-3">Contact Us</p>
+                    </div>
+                </div>
+                <div class="d-flex justify-content-center flex-column mt-5 pt-5 pb-4">
+                    <hr class="hr-footer opacity-100 bg-opacity-100 w-100">
+                    <p class="text-center fs-14" style="color: rgba(255, 255, 255, 0.32)">Copyright © 2023
+                        WanderlustNusantara</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="modal fade" id="benefitModal1" tabindex="-1" aria-labelledby="benefitModal1Label"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content modal-menu ">
+                <div class="modal-header">
+                    <p class="fs-5 fw-semibold">Island Paradise Retreat</p>
+                </div>
+                <div class="modal-body">
+                    <p class="">
+                        Immerse yourself in the pristine beauty of Nusantara's islands with our Island Paradise Retreat
+                        tour. Explore breathtaking white-sand beaches, swim in crystal-clear turquoise waters, and
+                        indulge in island-hopping adventures. Experience ultimate relaxation and rejuvenation as you
+                        soak up the sun and immerse yourself in the tropical paradise of Nusantara.
+
+                    </p>
+                </div>
+                <div class="modal-footer d-flex justify-content-start">
+                    <button type="button" class="btn btn-secondary mt-2 btn-sm fs-15 fw-medium"
+                        data-bs-dismiss="modal">Back to Page</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="benefitModal2" tabindex="-1" aria-labelledby="benefitModal2Label"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content modal-menu ">
+                <div class="modal-header">
+                    <p class="fs-5 fw-semibold">Cultural Heritage Expedition</p>
+                </div>
+                <div class="modal-body">
+                    <p class="">
+                        Dive into the rich cultural tapestry of Nusantara with our Cultural Heritage Expedition tour.
+                        Visit ancient temples, explore traditional villages, and witness mesmerizing cultural
+                        performances. Delve into the customs, traditions, and history of the region as you interact with
+                        local communities and discover the fascinating heritage of Nusantara.
+
+                    </p>
+                </div>
+                <div class="modal-footer d-flex justify-content-start">
+                    <button type="button" class="btn btn-secondary mt-2 btn-sm fs-15 fw-medium"
+                        data-bs-dismiss="modal">Back to Page</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="benefitModal3" tabindex="-1" aria-labelledby="benefitModal3Label"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content modal-menu ">
+                <div class="modal-header">
+                    <p class="fs-5 fw-semibold">Jungle Adventure Trek</p>
+                </div>
+                <div class="modal-body">
+                    <p class="">
+                        Embark on an adrenaline-pumping Jungle Adventure Trek through the lush rainforests of Nusantara.
+                        Trek through dense jungles, encounter exotic wildlife, and marvel at stunning waterfalls.
+                        Experience the thrill of zip-lining, river rafting, and night camping in the heart of nature.
+                        Get ready for an unforgettable adventure in the untamed wilderness of Nusantara.
+
+
+                    </p>
+                </div>
+                <div class="modal-footer d-flex justify-content-start">
+                    <button type="button" class="btn btn-secondary mt-2 btn-sm fs-15 fw-medium"
+                        data-bs-dismiss="modal">Back to Page</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="benefitModal4" tabindex="-1" aria-labelledby="benefitModal4Label"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content modal-menu ">
+                <div class="modal-header">
+                    <p class="fs-5 fw-semibold">Flavors of Nusantara Food Tour</p>
+                </div>
+                <div class="modal-body">
+                    <p class="">
+                        Indulge your taste buds in a culinary exploration with our Flavors of Nusantara Food Tour.
+                        Sample a diverse range of mouthwatering local cuisines, from savory street food to exquisite
+                        traditional dishes. Delight in cooking classes, market visits, and authentic dining experiences.
+                        Discover the vibrant flavors and culinary secrets that make Nusantara a gastronomic paradise.
+                    </p>
+                </div>
+                <div class="modal-footer d-flex justify-content-start">
+                    <button type="button" class="btn btn-secondary mt-2 btn-sm fs-15 fw-medium"
+                        data-bs-dismiss="modal">Back to Page</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <script src="https://kit.fontawesome.com/9e88c62f38.js" crossorigin="anonymous"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script>
+        const swiperCenter = new Swiper('.swiper-center', {
+            speed: 500,
+            loop: true,
+            pagination: {
+                el: ".swiper-pagination",
+            },
+            breakpoints: {
+                1: {
+                    slidesPerView: 1,
+                    spaceBetween: 0
+                },
+                500: {
+                    slidesPerView: 2,
+                    spaceBetween: 20
+                },
+                900: {
+                    slidesPerView: 3,
+                    spaceBetween: 20
+                },
+                1100: {
+                    slidesPerView: 4,
+                    spaceBetween: 20
+                }
+            }
+        })
+        const swiperSide = new Swiper('.swiper-side', {
+            speed: 500,
+            loop: true,
+            pagination: {
+                el: ".swiper-pagination",
+            },
+            breakpoints: {
+                1: {
+                    slidesPerView: 1,
+                    spaceBetween: 0
+                },
+                500: {
+                    slidesPerView: 2.2,
+                    spaceBetween: 20
+                },
+                900: {
+                    slidesPerView: 1.5,
+                    spaceBetween: 20
+                },
+                1100: {
+                    slidesPerView: 1.8,
+                    spaceBetween: 20
+                },
+                1300: {
+                    slidesPerView: 2,
+                    spaceBetween: 20
+                },
+
+            }
+        })
+    </script>
+</body>
+
+</html>

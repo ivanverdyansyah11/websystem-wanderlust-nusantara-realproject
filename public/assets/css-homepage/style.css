@@ -1,6 +1,6 @@
 :root{
-    --primary-color:rgba(187, 24, 7, 1);
-    --dark-color: rgba(39, 43, 44, 1);
+    --primary-color:rgba(63, 149, 236, 1);
+    --secondary-color:rgba(239, 169, 87, 1);
 }
 
 /*general style start */
@@ -31,9 +31,12 @@
 .main-color{
     color: var(--primary-color);
 }
-
+.second-color{
+    color: var(--secondary-color) !important;
+}
 
 body{
+
     font-family: 'Urbanist', sans-serif;
     color: rgba(28, 37, 32, 1);
     overflow-x: hidden;
@@ -44,6 +47,9 @@ body::-webkit-scrollbar{
 p{
     margin-bottom: 0 !important;
     color: rgba(39, 43, 44, 0.76);
+
+}
+.desc-color{
 
 }
 .btn{
@@ -63,15 +69,16 @@ p{
     transition: 0.2s;
     width: fit-content;
 }
-.btn-dark{
-    background-color: var(--dark-color) !important;
+.btn-secondary{
+    background-color: var(--secondary-color) !important;
     color: white !important;
     transition: 0.2s;
     width: fit-content;
 }
 .btn:hover{
-  opacity: 0.94;
+  filter: brightness(108%);
 }
+
 .btn-text{
     color: var(--primary-color) !important;
     padding: 0 !important;
@@ -81,99 +88,63 @@ p{
     font-size: 12px;
 }
 .badge-section{
-    padding: 9px 20px;
-    background: rgba(187, 24, 7, 0.12);
+    text-transform: uppercase;
     color: var(--primary-color) !important;
     border-radius: 9999px;
     width: fit-content;
+    font-weight: 600;
+}
+.benefit-section{
+    /*padding-top: 1000px;*/
 }
 section.position-relative{
     padding: 72px 0;
 }
+.recommendation-section,
 .benefit-section,
 .about-section,
-.restaurant-section,
-.history-section,
-.menu-section,
+.city-section,
+.gallery-section,
 .testi-section,
 .faq-section,
-.cta-section,
-.step-section,
-.menu-recommendation-section,
-.menu-history-section{
+.cta-section{
     margin-top: 122px;
 }
 .menu-recommendation-section{
     margin-bottom: 122px;
 }
+.top-section{
+    max-height: 100vh !important;
+}
+
 .bg-section{
-    background-color: #f7f7f7 !important;
+    background-color: rgba(249, 249, 249, 1) !important;
     height: 100% !important;
     width: 100% !important;
+    max-height: 100vh !important;
     position: absolute !important;
     top: 0 !important;
+    /*max-height: 604px !important;*/
 }
 .banner-background{
     max-width: 42% !important;
-    height: 100%;
 }
 .hero-banner{
-    background-image: url('../img-homepage/hero-img.png');
-    width: 42% !important;
+    width: 42vw !important;
     height: 100% !important;
+    max-height: 100vh !important;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    object-fit: cover;
 }
-.about-banner{
-    background-image: url('../img-homepage/abt-img.png');
-    width: 42% !important;
+.banner-section{
+    width: 42vw !important;
     height: 100% !important;
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
+   object-fit: cover;
 }
-.history-banner{
-    background-image: url('../img-homepage/history-img.png');
-    width: 42% !important;
-    height: 100% !important;
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-.testi-banner{
-    background-image: url('../img-homepage/testi-img.png');
-    width: 42% !important;
-    height: 100% !important;
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-.cta-banner{
-    background-image: url('../img-homepage/cta-img.png');
-    width: 42% !important;
-    height: 100% !important;
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-.detail-hero-banner{
-    background-image: url('../img-homepage/detail-hero.png');
-    width: 42% !important;
-    height: 100% !important;
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-.img-hero{
-    height: 653px !important;
-}
-.img-about{
-    height: 604px;
-}
-.img-testi{
-    height: 629px;
-}
+
+
 .swiper-pagination-bullet-active{
     background: rgba(77, 80, 81, 1) !important;
     width: 30px !important;
@@ -182,18 +153,12 @@ section.position-relative{
 
 }
 .card-benefit,
-.card-restaurant,
-.card-menu,
-.card-step{
-    background: #f7f7f7;
-    padding: 18px;
-    border-radius: 2px;
-}
 .card-testi{
-    background: white !important;
-    padding: 18px !important;
-    border-radius: 2px !important;
+    background: rgba(249, 249, 249, 1);
+    padding: 20px;
+    border-radius: 20px;
 }
+
 .btn-sm{
     padding: 12px 29px !important;
 }
@@ -204,66 +169,170 @@ section.position-relative{
 }
 
 .modal-menu{
-    padding: 36px 36px !important;
+    /*padding: 20px  !important;*/
     max-width: 800px;
     width: 100%;
-    border-radius: 20px;
+    border-radius: 10px;
 }
-.input-text{
-    padding: 18px 24px;
-    border: none;
-    background: #f0f0f0;
-    border-radius: 2px !important;
-    color: #A4A4A4;
-    font-size: 14.6px;
-    font-weight: 500 !important;
-}
-.input-text::placeholder {
-    color: #A4A4A4;
-}
-.wrapper-number {
-    width: 52px;
-    height: 52px;
-    border-radius: 3px;
-    background-color: #F1DEDC;
-}
-.wrapper-number p {
-    font-size: 24px;
-    font-weight: bold;
-    color: #BB1807;
-}
-textarea::-webkit-scrollbar{
-    display: none;
-}
-.accordion-button::after {
-    background-image: url("../img-homepage/accordion-open.svg");
-    transform: scale(1)!important;
-    position: absolute;
-    right: 0;
-}
-.accordion-button:not(.collapsed)::after {
-    background-image: url('../img-homepage/acoordion-collapse.svg');
-    justify-content: end;
-}
-.accordion-item{
-    /*width: 530px;*/
-    border:none;
-    /*border-bottom: 2px solid rgba(239, 142, 44, 0.18);!important;*/
-    background-color:#f9f9f9!important;
-    border-radius: 0!important;
-    padding: 16px;
-}
-.accordion-button {
-    background-color: transparent!important;
-    color: black!important;
-    box-shadow: none!important;
-}
-.accordion-collapse{
-    border-top: 1px solid rgba(39, 43, 44, 0.1);
-    padding-top: 10px;
-}
+
 .input-text:focus{
     outline: none;
+}
+.card-img-recommendation{
+    border-radius: 20px !important;
+    width: fit-content;
+    transition: 0.2s;
+}
+.img-recommendation{
+    width: 292px;
+    height: 400px;
+}
+.top-text{
+    top: 16px;
+    width: fit-content;
+    padding: 5px 12px;
+    border-radius: 99999px;
+    background: rgba(0, 0, 0, 0.22);
+    z-index: 999999999
+}
+.btm-text{
+    z-index: 9999999999;
+    margin-bottom: 20px;
+    margin-left: 20px;
+}
+.image-recommendation{
+    width: 292px;
+    height: 400px;
+    border-radius: 20px;
+    object-fit: cover;
+}
+.card-img-recommendation:hover{
+    filter: brightness(87%);
+    cursor: pointer;
+}
+.btn-text-secondary{
+    color: var(--secondary-color) !important;
+    width: fit-content;
+    transition: 0.2s;
+}
+.img-place-recommendation{
+    width: 295px;
+    height: 295px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+.grid-place-recommendation{
+    -moz-column-count: 1 !important;
+    -webkit-column-count: 1 !important;
+    column-count: 1 !important;
+    -moz-column-gap: 20px;
+    -webkit-column-gap: 20px;
+    column-gap: 20px;
+}
+.grid-content{
+    display: inline-block;
+    margin-top: 24px;
+
+}
+@media (min-width: 500px) and (max-width: 900px){
+    .first-hr:after{
+        display: flex;
+        content: '';
+        height: 40px;
+        width: 2px;
+        background-color: var(--secondary-color);
+    }
+    .second-hr:before{
+        display: flex;
+        content: '';
+        height: 40px;
+        width: 2px;
+        background-color: var(--secondary-color);
+    }
+    .grid-place-recommendation{
+        -moz-column-count: 2 !important;
+        -webkit-column-count: 2 !important;
+        column-count: 2 !important;
+        -moz-column-gap: 20px;
+        -webkit-column-gap: 20px;
+        column-gap: 20px;
+    }
+}
+@media (min-width: 901px) and (max-width: 1300px){
+    .first-hr:after{
+        display: flex;
+        content: '';
+        height: 40px;
+        width: 2px;
+        background-color: var(--secondary-color);
+    }
+    .second-hr:before{
+        display: flex;
+        content: '';
+        height: 40px;
+        width: 2px;
+        background-color: var(--secondary-color);
+    }
+    .grid-place-recommendation{
+        -moz-column-count: 3 !important;
+        -webkit-column-count: 3 !important;
+        column-count: 3 !important;
+        -moz-column-gap: 20px;
+        -webkit-column-gap: 20px;
+        column-gap: 20px;
+    }
+}
+@media (min-width: 1301px){
+    .first-hr:after{
+        display: flex;
+        content: '';
+        height: 40px;
+        width: 2px;
+        background-color: var(--secondary-color);
+    }
+    .second-hr:before{
+        display: flex;
+        content: '';
+        height: 40px;
+        width: 2px;
+        background-color: var(--secondary-color);
+    }
+    .grid-place-recommendation{
+        -moz-column-count: 4 !important;
+        -webkit-column-count: 4 !important;
+        column-count: 4 !important;
+        -moz-column-gap: 0px;
+        -webkit-column-gap: 0px;
+        column-gap: 0px;
+    }
+}
+.cta-section{
+    background: rgba(39, 43, 44, 1);
+    padding-top: 56px;
+    padding-bottom: 56px;
+    border-bottom: 3px solid rgba(255, 255, 255, 0.1);
+    color: white !important;
+}
+.btn-white{
+    background: white !important;
+    color: rgba(39, 43, 44, 1) !important;
+}
+.center-img{
+    left: 43%;
+    bottom: 47%;
+    visibility: hidden;
+    z-index: 999999;
+}
+.card-img-recommendation:hover .top-text, .card-img-recommendation:hover .btm-text{
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0.2s, opacity 0.2s linear;
+}
+.card-img-recommendation:hover .center-img{
+    visibility: visible;
+    opacity: 1;
+    transition: visibility 0.2s, opacity 0.2s linear;
+
 }
 /*general style end */
 
@@ -315,9 +384,6 @@ textarea::-webkit-scrollbar{
 .footer-btn:hover i{
     color: rgba(39, 43, 44, 1) !important;
 }
-.footer-link{
-    text-decoration: none;
-}
 .footer-link:hover{
     filter: brightness(120%);
     cursor: pointer;
@@ -326,3 +392,5 @@ textarea::-webkit-scrollbar{
     color: rgba(255, 255, 255, 0.26);
 }
 /*footer section end*/
+
+

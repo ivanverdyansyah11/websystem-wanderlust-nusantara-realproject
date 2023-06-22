@@ -29,8 +29,7 @@ Route::redirect('/admin', '/admin/dashboard');
 
 Route::controller(HomepageController::class)->group(function () {
     Route::get('/homepage', 'homepage')->name('homepage');
-    Route::get('/homepage/detail-menu/{id}', 'detailMenu')->name('detail-menu');
-    Route::get('/detail/{id}', 'history')->name('detail-menu');
+    Route::get('/destination/{id}', 'destinationDetail')->name('destination->detail');
 });
 
 Route::middleware(['guest'])->prefix('admin')->group(function () {
