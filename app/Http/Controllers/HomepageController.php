@@ -33,4 +33,22 @@ class HomepageController extends Controller
             'gallery_count_all' => $mergedArray,
         ]);
     }
+
+    public function location()
+    {
+        return view('homepage.location', [
+            'page' => 'Destination Location',
+            'destination_all' => Destination::all(),
+            'cities' => City::all(),
+        ]);
+    }
+
+    public function gallery()
+    {
+        return view('homepage.location', [
+            'page' => 'Destination Location',
+            'destination_all' => Destination::all(),
+            'cities' => City::all(),
+        ]);
+    }
 }
