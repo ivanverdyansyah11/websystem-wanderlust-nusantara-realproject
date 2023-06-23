@@ -68,16 +68,16 @@
                         </p>
                         <article class="mt-3">
                             <p>
-                                Embark on a captivating journey through Nusantara's rich history as you explore our
-                                meticulously curated city categories on WanderlustNusantara's historical tourism
-                                website. From the ancient wonders of Yogyakarta to the colonial charm of Jakarta, each
-                                city reveals a unique chapter in Indonesia's storied past.
+                                From the majestic Puri Agung Semarapura, the former royal palace that witnessed the
+                                heroic puputan battle against the Dutch, to the captivating Taman Gili Kerta Gosa, where
+                                ancient court cases were judged and engraved on its magnificent ceiling, each location
+                                holds a unique piece of Klungkung's history.
                             </p>
                             <p class="mt-1">
-                                Immerse yourself in the architectural splendors, cultural treasures, and captivating
-                                narratives of each location as you navigate our comprehensive city guides. Whether you
-                                seek the spiritual serenity of Bali's temples or the remnants of ancient civilizations
-                                in Central Java,
+                                Explore the sacred Pura Goa Lawah, known for its bat-filled cave and its connection to
+                                the protective deity Dewa Naga Basuki. Marvel at the ancient Pura Penataran Sasih, the
+                                oldest temple in Klungkung, revered by locals for its historical and spiritual
+                                significance.
                             </p>
                         </article>
                         <div class="mt-4 d-flex flex-row gap-3">
@@ -93,7 +93,7 @@
                 </div>
             </div>
             <div class="hero-banner row  position-absolute d-none top-0 banner-background end-0 d-lg-inline-block">
-                <img src="{{ asset('assets/img-homepage/hero2-img.png') }}" alt="hero section image"
+                <img src="{{ asset('assets/img-homepage/hero2-img.jpg') }}" alt="hero section image"
                     class="w-100 h-100">
             </div>
         </section>

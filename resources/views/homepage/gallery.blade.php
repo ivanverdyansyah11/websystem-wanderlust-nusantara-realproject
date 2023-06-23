@@ -68,16 +68,16 @@
                         </p>
                         <article class="mt-3">
                             <p>
-                                Embark on a captivating journey through Nusantara's rich history as you explore our
-                                meticulously curated city categories on WanderlustNusantara's historical tourism
-                                website. From the ancient wonders of Yogyakarta to the colonial charm of Jakarta, each
-                                city reveals a unique chapter in Indonesia's storied past.
+                                Welcome to the Gallery section of our landing page, where you can embark on a visual
+                                adventure through the historic wonders of Klungkung. This curated collection of
+                                captivating images offers a glimpse into the rich tapestry of Klungkung's history,
+                                allowing you to immerse yourself in its cultural heritage.
                             </p>
                             <p class="mt-1">
-                                Immerse yourself in the architectural splendors, cultural treasures, and captivating
-                                narratives of each location as you navigate our comprehensive city guides. Whether you
-                                seek the spiritual serenity of Bali's temples or the remnants of ancient civilizations
-                                in Central Java,
+                                Browse through a diverse range of photographs and illustrations, capturing the
+                                architectural beauty, intricate details, and awe-inspiring landscapes of Klungkung's
+                                historic sites. From the grandeur of Puri Agung Semarapura to the exquisite carvings of
+                                Taman Gili Kerta Gosa, each image tells a unique story of Klungkung's past.
                             </p>
                         </article>
                         <div class="mt-4 d-flex flex-row gap-3">
@@ -105,19 +105,19 @@
                     <div class="d-flex flex-column">
                         <div class="badge-section">
                             <p class="fs-15 fw-semibold main-color">
-                                Know Historical Treasures in the City of Jawa Tengah
+                                Capturing the Essence of Klungkung's History in Frames
                             </p>
                         </div>
                         <p class="mt-2 display-5 fw-semibold text-black">
-                            Know Historical Treasures in the City of Jawa Tengah
+                            Exploring Klungkung's Historic Gallery
                         </p>
                     </div>
                 </div>
                 <div class="col-lg-1 d-lg-block d-none"></div>
                 <div class="col-lg-5 align-self-end col-md-6 col-12">
-                    Welcome to WanderlustNusantara's enchanting landing page dedicated to the historical attractions of
-                    Jawa Tengah. Immerse yourself in the timeless beauty and rich heritage of this captivating region as
-                    we unveil the hidden gems that lie within.
+                    Through this Gallery section, we invite you to explore Klungkung's historical treasures through a
+                    visual narrative. Let the images transport you back in time, evoking a sense of wonder and
+                    admiration for the cultural legacy that continues to thrive in Klungkung.
                 </div>
 
             </div>

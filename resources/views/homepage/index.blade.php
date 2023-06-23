@@ -89,7 +89,7 @@
                 </div>
             </div>
             <div class="hero-banner row  position-absolute d-none top-0 banner-background end-0 d-lg-inline-block">
-                <img src="{{ asset('assets/img-homepage/hero-img') }}.png" alt="hero section image" class="w-100 h-100">
+                <img src="{{ asset('assets/img-homepage/hero-img.jpg') }}" alt="hero section image" class="w-100 h-100">
             </div>
         </section>
     </div>
