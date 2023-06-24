@@ -600,7 +600,7 @@
                 </div>
                 <div class="modal-footer d-flex justify-content-start">
                     <button type="button" class="btn btn-secondary mt-2 btn-sm fs-15 fw-medium"
-                        data-bs-dismiss="modal">Back to Page</button>
+                        data-bs-dismiss="modal">Close Modal</button>
                 </div>
             </div>
         </div>
@@ -624,7 +624,7 @@
                 </div>
                 <div class="modal-footer d-flex justify-content-start">
                     <button type="button" class="btn btn-secondary mt-2 btn-sm fs-15 fw-medium"
-                        data-bs-dismiss="modal">Back to Page</button>
+                        data-bs-dismiss="modal">Close Modal</button>
                 </div>
             </div>
         </div>
@@ -649,7 +649,7 @@
                 </div>
                 <div class="modal-footer d-flex justify-content-start">
                     <button type="button" class="btn btn-secondary mt-2 btn-sm fs-15 fw-medium"
-                        data-bs-dismiss="modal">Back to Page</button>
+                        data-bs-dismiss="modal">Close Modal</button>
                 </div>
             </div>
         </div>
@@ -672,7 +672,7 @@
                 </div>
                 <div class="modal-footer d-flex justify-content-start">
                     <button type="button" class="btn btn-secondary mt-2 btn-sm fs-15 fw-medium"
-                        data-bs-dismiss="modal">Back to Page</button>
+                        data-bs-dismiss="modal">Close Modal</button>
                 </div>
             </div>
         </div>
