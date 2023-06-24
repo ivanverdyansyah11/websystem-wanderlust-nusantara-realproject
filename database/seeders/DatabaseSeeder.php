@@ -29,42 +29,35 @@ class DatabaseSeeder extends Seeder
         ]);
 
         City::create([
-            'name' => 'Jakarta',
+            'name' => 'Semarapura',
             'image' => 'city-image',
-            'history_1' => 'The history of Jakarta, the capital city of Indonesia, is a fascinating tale that spans centuries and reflects the influences of different cultures and empires. The area that is now Jakarta has been inhabited since ancient times. The region witnessed the rise and fall of several Hindu-Buddhist kingdoms, including Tarumanagara and Sunda. These kingdoms played a significant role in trade and maritime activities in the region.',
-            'history_2' => 'In the 13th century, the region came under the influence of the powerful Majapahit Empire, which was based in East Java. The Majapahit Empire brought prosperity and cultural development to the area, leaving behind important archaeological sites.',
+            'history_1' => 'Semarapura was once the capital of the powerful Klungkung Kingdom, which reached its peak in the 17th century. The kingdom was ruled by the royal family of Klungkung, known as the Dewa Agung, who held great influence over the island.',
+            'history_2' => "One of the most renowned events in Semarapura's history is the Battle of Klungkung, also known as the Puputan Klungkung, which took place in 1908. Facing the Dutch colonial forces, the royal family and their loyal followers chose to fight to the death rather than surrender. The puputan is regarded as a heroic last stand and a symbol of resistance against colonial rule.",
         ]);
 
         City::create([
-            'name' => 'West Sumatra',
+            'name' => 'Sangkan Gunung',
             'image' => 'city-image',
-            'history_1' => 'The region of West Sumatra has been inhabited since prehistoric times. The earliest known kingdom in the area was the Dharmasraya Kingdom, which thrived in the 11th century. It was followed by the Pagaruyung Kingdom, known for its distinctive Minangkabau culture.',
-            'history_2' => 'During the 14th century, the Minangkabau people, renowned for their matrilineal society and unique architectural style, established the Minangkabau Kingdom. The kingdom reached its peak under the rule of Adityawarman, who was known for his contributions to literature and the arts.',
+            'history_1' => "Klungkung regency, which includes Desa Sangkan Gunung, has historical significance in Bali as it was once the seat of the powerful Klungkung Kingdom, also known as the Kingdom of Gelgel. The Gelgel Kingdom rose to prominence in the 17th century and played a significant role in shaping the political and cultural landscape of Bali.",
+            'history_2' => 'Under the rule of the Gelgel Kingdom, Klungkung became an important center for arts, culture, and governance. It was known for its royal court, palaces, temples, and artistic achievements. However, in the late 19th century, the Klungkung Kingdom faced a significant challenge with the arrival of the Dutch colonial forces.',
         ]);
 
         City::create([
-            'name' => 'Bali',
+            'name' => 'Dawan',
             'image' => 'city-image',
-            'history_1' => "The earliest traces of human habitation on the island of Bali date back to at least 2000 BCE. The Austronesian-speaking people settled in Bali, bringing with them their customs, beliefs, and agricultural practices.",
-            'history_2' => 'Bali was influenced by Indian traders and Hindu-Buddhist kingdoms from the neighboring island of Java. The Majapahit Empire, based in East Java, had a significant impact on Bali, introducing Hinduism and the Javanese courtly culture in the 14th century. During the 16th century, Bali experienced a series of fragmented kingdoms and principalities. These small kingdoms were often in conflict with each other, competing for power and influence on the island.',
-        ]);
-
-        City::create([
-            'name' => 'Central Java',
-            'image' => 'city-image',
-            'history_1' => "The history of Jawa Tengah can be traced back to ancient times. The area was inhabited by various indigenous communities, including the Kalingga Kingdom in the 6th century. During the classical period, Jawa Tengah was part of the powerful Sailendra and Mataram Kingdoms, which were centers of Buddhism and Hinduism in the region.",
-            'history_2' => "In the 16th century, Islam began to spread in Jawa Tengah, and several Islamic Sultanates emerged, such as the Sultanate of Demak and the Sultanate of Pajang. These Sultanates played a crucial role in the spread of Islam in Java and became influential centers of trade and culture.",
+            'history_1' => "Dawan was traditionally known as a strategic coastal area and was home to fishing communities that thrived on the abundant marine resources. The coastal villages played a vital role in the region's economy and trade networks, contributing to the overall prosperity of Klungkung.",
+            'history_2' => 'During the Dutch colonial era, Dawan, like the rest of Bali, came under Dutch influence. The Dutch established their presence in Bali and introduced new administrative systems. However, Dawan maintained its cultural identity and preserved its traditional practices despite external influences.',
         ]);
 
         Destination::create([
             'id' => '1',
-            'cities_id' => '4',
-            'name' => 'Candi Borobudur',
-            'location' => 'Magelang, Jawa Tengah',
+            'cities_id' => '1',
+            'name' => 'Taman Wisata Kertha Gosa',
+            'location' => 'Semarapura, Klungkung',
             'rating' => '5.0',
             'image' => 'destination-image',
-            'history_1' => "Candi Borobudur was built during the Sailendra Dynasty in the 8th and 9th centuries. It is believed that the construction began around 780 AD and took several decades to complete. The temple was commissioned by the ruling dynasty to showcase their devotion to Buddhism and serve as a place of worship and pilgrimage.",
-            'history_2' => "Candi Borobudur is an exceptional example of Mahayana Buddhist architecture. It consists of nine stacked platforms, topped by a central dome. The temple is adorned with intricate relief carvings that depict various scenes from Buddhist teachings and Javanese life. The design of the temple reflects a fusion of Indian and indigenous Indonesian architectural styles.",
+            'history_1' => "The history of Kertha Gosa dates back to the 18th century when it served as the royal court of the Klungkung Kingdom. It was a place where the king and his councilors gathered to discuss matters of governance, justice, and cultural affairs.",
+            'history_2' => 'One of the most notable features of Kertha Gosa is the Kerta Gosa pavilion. Kerta Gosa, meaning "place where justice is held," was used as a court of law where disputes were settled and justice was administered based on traditional Balinese legal principles. The pavilion is renowned for its elaborately painted ceilings depicting scenes from Hindu epics such as the Mahabharata and Ramayana, as well as various moral and ethical teachings.',
         ]);
 
         Gallery::create([
@@ -73,13 +66,13 @@ class DatabaseSeeder extends Seeder
 
         Destination::create([
             'id' => '2',
-            'cities_id' => '4',
-            'name' => 'Candi Prambanan',
-            'location' => 'Magelang, Jawa Tengah',
-            'rating' => '4.8',
+            'cities_id' => '1',
+            'name' => 'Monumen Puputan Klungkung',
+            'location' => 'Semarapura, Klungkung',
+            'rating' => '5.0',
             'image' => 'destination-image',
-            'history_1' => "Candi Prambanan was built during the 9th century by the rulers of the Mataram Kingdom, specifically during the reign of Rakai Pikatan. The temple complex was dedicated to the Trimurti, the Hindu trinity of Brahma, Vishnu, and Shiva. It is believed that Candi Prambanan was constructed as a grand royal project to showcase the power and influence of the Mataram Kingdom.",
-            'history_2' => "Candi Prambanan is renowned for its stunning architecture, characterized by tall and intricately carved spires (shikharas) that reach towards the sky. The temple complex consists of several individual temples, with the central compound dedicated to Lord Shiva. The temples are adorned with elaborate relief carvings depicting scenes from Hindu epics, such as the Ramayana and Mahabharata.",
+            'history_1' => "The Puputan Klungkung was a tragic event in Bali's history that unfolded during the Dutch colonial era. Facing threats of invasion and demands for surrender by the Dutch forces, the royal family of Klungkung, along with their followers, chose to engage in a desperate battle rather than submit to colonial rule.",
+            'history_2' => 'The battle took place within the Klungkung Palace complex, which was the seat of the Klungkung Kingdom. The royal family, led by the ruler, Dewa Agung Jambe, fought valiantly against the overwhelming Dutch forces. Despite being outnumbered and outgunned, they displayed unwavering bravery and determination.',
         ]);
 
         Gallery::create([
@@ -88,13 +81,13 @@ class DatabaseSeeder extends Seeder
 
         Destination::create([
             'id' => '3',
-            'cities_id' => '4',
-            'name' => 'Keraton Kasunanan Solo',
-            'location' => 'Magelang, Jawa Tengah',
-            'rating' => '4.6 ',
+            'cities_id' => '1',
+            'name' => 'Museum Seni Klasik dan Modern Nyoman Gunarsa',
+            'location' => 'Semarapura, Klungkung',
+            'rating' => '4.9',
             'image' => 'destination-image',
-            'history_1' => "The Keraton Kasunanan Solo was founded in 1745 by Susuhunan Pakubuwono II, who established the Kasunanan Kingdom in Solo after a period of political and territorial disputes in the Mataram Sultanate. The palace served as the residence of the royal family and the center of Javanese court culture and governance.",
-            'history_2' => "The Kasunanan Kingdom of Solo was an offshoot of the Mataram Sultanate, which played a significant role in shaping the Javanese culture and history. The Keraton Kasunanan Solo adopted many of the courtly traditions, rituals, and architectural styles of the Mataram Sultanate.",
+            'history_1' => "The museum showcases a vast collection of classical and modern artworks, primarily focusing on traditional Balinese art forms. Nyoman Gunarsa dedicated his life to the preservation and promotion of Balinese art, and the museum serves as a testament to his passion and artistic vision.",
+            'history_2' => 'Nyoman Gunarsa was born in Klungkung in 1944 and developed a deep appreciation for Balinese art and culture from a young age. He trained in traditional Balinese painting techniques and went on to explore various artistic styles and mediums. His artworks often depict scenes from Balinese mythology, folklore, and daily life, capturing the essence and vibrancy of Balinese culture.',
         ]);
 
         Gallery::create([
@@ -103,13 +96,13 @@ class DatabaseSeeder extends Seeder
 
         Destination::create([
             'id' => '4',
-            'cities_id' => '4',
-            'name' => 'Candi Sukuh',
-            'location' => 'Magelang, Jawa Tengah',
-            'rating' => '4.5',
+            'cities_id' => '1',
+            'name' => 'Pura Taman Sari',
+            'location' => 'Semarapura, Klungkung',
+            'rating' => '4.7',
             'image' => 'destination-image',
-            'history_1' => "Candi Sukuh was built during the 15th century, towards the end of the Majapahit Empire's rule in Java. It is believed to have been constructed under the patronage of King Brawijaya V, who was known for his interest in mysticism and esoteric beliefs. The temple's architecture and design deviate from the typical Javanese Hindu temple style, showcasing a blend of Hindu-Buddhist and indigenous Javanese influences.",
-            'history_2' => "Candi Sukuh is known for its distinctive pyramid-like structure, reminiscent of Mesoamerican stepped pyramids. The temple's design includes various stone reliefs, sculptures, and symbolic motifs that depict scenes from Hindu mythology and Javanese cosmology. It is believed that Candi Sukuh served as a place for spiritual rituals and ceremonies associated with fertility and ancestral worship.",
+            'history_1' => "Pura Taman Sari was built during the reign of the Klungkung Kingdom in the 18th century. It served as part of the royal complex and was dedicated to the worship of the Hindu gods. The temple was originally constructed as a place for the royal family to perform religious ceremonies and rituals.",
+            'history_2' => "One of the most notable features of Pura Taman Sari is the Kertha Gosa Pavilion, which is located within the temple complex. The pavilion served as a court of justice during the Klungkung Kingdom era. It was here that important decisions were made, disputes were settled, and justice was administered.",
         ]);
 
         Gallery::create([
@@ -119,12 +112,12 @@ class DatabaseSeeder extends Seeder
         Destination::create([
             'id' => '5',
             'cities_id' => '1',
-            'name' => 'Old Town Jakarta',
-            'location' => 'Taman Sari, West Jakarta',
-            'rating' => '4.3',
+            'name' => 'Puri Klungkung',
+            'location' => 'Semarapura, Klungkung',
+            'rating' => '4.8',
             'image' => 'destination-image',
-            'history_1' => "Is a historical gem that reflects the city's colonial past. This area was once the heart of Batavia, the capital of the Dutch East Indies. Strolling through Kota Tua, you will encounter well-preserved buildings that showcase Dutch architectural influences, such as the Fatahillah Square, Jakarta History Museum, and the iconic Batavia Café.",
-            'history_2' => "These structures transport you back to the 17th century, allowing you to imagine the bustling trading port that Jakarta once was. Kota Tua is not only a visual delight but also a hub of cultural activities, including street performances, art exhibitions, and traditional culinary experiences, offering visitors a unique glimpse into Jakarta's historical and cultural heritage.",
+            'history_1' => "Puri Klungkung was the residence of the ruling dynasty of the Klungkung Kingdom, also known as the Kingdom of Gelgel. The Gelgel Kingdom rose to power in the 17th century and played a significant role in shaping the political and cultural landscape of Bali.",
+            'history_2' => "The Klungkung Kingdom reached its peak of power and influence under the reign of Dewa Agung Jambe, also known as Dewa Agung Made. He was a revered king who implemented various reforms and advancements during his rule. Dewa Agung Jambe is particularly remembered for his patronage of arts, literature, and the preservation of Balinese culture.",
         ]);
 
         Gallery::create([
@@ -133,13 +126,13 @@ class DatabaseSeeder extends Seeder
 
         Destination::create([
             'id' => '6',
-            'cities_id' => '1',
-            'name' => 'National Monument',
-            'location' => 'Gambir, Central Jakarta',
-            'rating' => '5.0',
+            'cities_id' => '3',
+            'name' => 'Goa Jepang',
+            'location' => 'Dawan, Klungkung',
+            'rating' => '4.6',
             'image' => 'destination-image',
-            'history_1' => "The construction of the monument began in 1961 under the direction of Indonesia's first President, Sukarno, and was completed in 1975. The purpose of the monument was to commemorate the country's struggle for independence and symbolize the spirit of unity and nationalism.",
-            'history_2' => 'The design of the Monumen Nasional is inspired by Indonesian culture and symbolism. The monument stands at a height of 132 meters and is topped with a flame-shaped gold-covered bronze statue, representing the spirit of freedom. The shape of the monument resembles a rice pestle, known as "lempung" in the local language, which holds cultural significance in Indonesian society.',
+            'history_1' => "During World War II, the Japanese forces occupied Indonesia, including the island of Bali. They used Goa Jepang as a strategic underground base and bunker. The cave was constructed by the Japanese army as a defensive outpost and shelter.",
+            'history_2' => "Goa Jepang served as a military complex with tunnels, rooms, and storage areas. It was primarily used for military operations, communications, and storage of weapons and supplies. The strategic location of Goa Jepang allowed the Japanese forces to monitor the surrounding areas and maintain control over the region.",
         ]);
 
         Gallery::create([
@@ -148,62 +141,17 @@ class DatabaseSeeder extends Seeder
 
         Destination::create([
             'id' => '7',
-            'cities_id' => '2',
-            'name' => 'Istana Pagaruyung',
-            'location' => 'Tanah Datar, West Sumatra',
-            'rating' => '4.6',
+            'cities_id' => '3',
+            'name' => 'Pura Goa Lawah',
+            'location' => 'Dawan, Klungkung',
+            'rating' => '4.8',
             'image' => 'destination-image',
-            'history_1' => "Located in Tanjung Emas, Batusangkar, Istana Pagaruyung is a reconstruction of the royal palace of the ancient Pagaruyung Kingdom. The original palace was believed to have been built in the 17th century but was tragically destroyed by fire in 2007.",
-            'history_2' => 'The current palace showcases the traditional Minangkabau architecture, characterized by its distinctive curved roofs. Visitors can explore the grand halls, traditional artifacts, and historical displays within the palace, immersing themselves in the regal heritage of West Sumatra.',
+            'history_1' => "The history of Pura Goa Lawah dates back to ancient times and is closely tied to Balinese mythology and folklore. Legend has it that the temple was created by the sage Empu Kuturan during his mission to establish temples across Bali. According to the mythology, the cave beneath the temple is believed to be a passageway for a mythical snake god called Naga Basuki, who protects the island from evil spirits.",
+            'history_2' => 'The name "Goa Lawah" translates to "bat cave" in Indonesian. The temple gets its name from the thousands of bats that reside within the cave, creating a unique and awe-inspiring sight for visitors. The bats are considered sacred and are believed to be the guardians of the temple.',
         ]);
 
         Gallery::create([
             'destinations_id' => '7',
-        ]);
-
-        Destination::create([
-            'id' => '8',
-            'cities_id' => '2',
-            'name' => 'Jam Gadang',
-            'location' => 'Bukittinggi, West Sumatra',
-            'rating' => '4.5',
-            'image' => 'destination-image',
-            'history_1' => "Situated in the heart of Bukittinggi, Jam Gadang is a prominent landmark and a symbol of the city. This iconic clock tower was built by the Dutch colonial government in 1926 and serves as a reminder of the region's historical ties with the colonial era.",
-            'history_2' => 'The tower features a unique blend of architectural styles, combining Indonesian, European, and Minangkabau influences. Visitors can admire the intricate details of the clock tower, climb to its top for panoramic views of the surrounding area, and learn about its historical significance through informative displays.',
-        ]);
-
-        Gallery::create([
-            'destinations_id' => '8',
-        ]);
-
-        Destination::create([
-            'id' => '9',
-            'cities_id' => '3',
-            'name' => 'Pura Besakih',
-            'location' => 'Karangasem, Bali',
-            'rating' => '5.0',
-            'image' => 'destination-image',
-            'history_1' => "Pura Besakih, also known as the Besakih Temple or the Mother Temple of Bali, holds significant historical and cultural importance in the island's heritage. The temple's history dates back more than a thousand years, making it one of the oldest and holiest Hindu temples in Bali.",
-            'history_2' => 'Legend has it that Pura Besakih was built during the 8th century, believed to be a sacred site chosen by the gods. Over the centuries, the temple complex has undergone several expansions and renovations, reflecting the cultural and religious evolution of Bali. Pura Besakih has survived numerous volcanic eruptions and natural disasters, symbolizing the resilience and devotion of the Balinese people.',
-        ]);
-
-        Gallery::create([
-            'destinations_id' => '9',
-        ]);
-
-        Destination::create([
-            'id' => '10',
-            'cities_id' => '3',
-            'name' => 'Taman Ayun Temple',
-            'location' => 'Mengwi, Bali',
-            'rating' => '4.8',
-            'image' => 'destination-image',
-            'history_1' => "Taman Ayun, which translates to 'beautiful garden,' was originally built as a private temple for the Mengwi Kingdom's royalty. It served as a sacred site for the kings and their families to worship their ancestors and the Hindu deities. The temple's unique architectural style, known as the Mengwi architectural style, showcases a fusion of Balinese and Javanese influences.",
-            'history_2' => 'The temple complex is characterized by its spacious and well-manicured gardens, surrounded by a large moat that symbolizes the cosmic ocean. The main temple structure, known as the Pura Utama, is elevated and features multiple layers of intricately carved wooden gates and shrines. The exquisite carvings depict mythological figures, floral motifs, and scenes from Hindu epics.',
-        ]);
-
-        Gallery::create([
-            'destinations_id' => '10',
         ]);
     }
 }
