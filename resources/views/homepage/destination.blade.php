@@ -251,7 +251,93 @@
         </section>
     </main>
 
-
+    <footer class="footer mt-5">
+        <div class="container">
+            <div class="footer-content pb-3 row gy-5">
+                <div class="col-lg-4 col-md-6 col-12 ">
+                    <div class="d-flex flex-column">
+                        <div class="d-flex flex-column">
+                            <div class="">
+                                <img src="{{ asset('assets/img-homepage/logo.svg') }}" class="img-fluid"
+                                    alt="logo">
+                            </div>
+                            <p class="footer-color pt-3 footer-desc">
+                                @lang('messages.footer_description')
+                            </p>
+                        </div>
+                        <div class="d-flex flex-row pt-4 gap-2">
+                            <a target="_blank" href="https://www.instagram.com/" class="btn footer-btn">
+                                <i class="fa-brands fa-instagram the-arrow footer-color fs-6"></i>
+                            </a>
+                            <a target="_blank" href="https://id-id.facebook.com/" class="btn footer-btn">
+                                <i class="fa-brands fa-facebook-f the-arrow footer-color fs-6"></i>
+                            </a>
+                            </button>
+                            <a target="_blank" href="https://twitter.com/" class="btn footer-btn">
+                                <i class="fa-brands fa-twitter the-arrow footer-color  fs-6"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 col-12" style="width:fit-content;">
+                    <p class="text-white title-font second-font fw-medium" style="font-size: 1.125rem;">
+                        @lang('messages.footer_subtitle1')</p>
+                    <div class="d-flex flex-column pt-4">
+                        <a href="/homepage"
+                            class="footer-color footer-link text-decoration-none">@lang('messages.nav_link1')</a>
+                        <a href="/location"
+                            class="footer-color text-decoration-none footer-link pt-3">@lang('messages.nav_link2')</a>
+                        <a href="/gallery"
+                            class="footer-color text-decoration-none footer-link pt-3">@lang('messages.nav_link3')</a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 col-12" style="width:fit-content;">
+                    <p class="text-white title-font second-font fw-medium" style="font-size: 1.125rem;">
+                        @lang('messages.footer_subtitle2')</p>
+                    <div class="d-flex flex-column pt-4">
+                        <a href="/homepage#recommendation"
+                            class="footer-color footer-link text-decoration-none ">@lang('messages.footer_item2_link1')</a>
+                        <a href="/homepage#featured"
+                            class="footer-color footer-link pt-3 text-decoration-none">@lang('messages.footer_item2_link2')</a>
+                        <a href="/homepage#about"
+                            class="footer-color footer-link pt-3 text-decoration-none">@lang('messages.footer_item2_link3')</a>
+                        <a href="/homepage#testi"
+                            class="footer-color footer-link pt-3 text-decoration-none">@lang('messages.footer_item2_link4')</a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 col-12">
+                    <p class="text-white title-font second-font fw-medium" style="font-size: 1.125rem;">
+                        @lang('messages.footer_subtitle3')
+                    </p>
+                    <div class="d-flex flex-column pt-4">
+                        <a href="/homepage#featured"
+                            class="footer-color text-decoration-none footer-link ">@lang('messages.featured_item1')</a>
+                        <a href="/homepage#featured"
+                            class="footer-color text-decoration-none footer-link pt-3">@lang('messages.featured_item2')</a>
+                        <a href="/homepage#featured"
+                            class="footer-color text-decoration-none footer-link pt-3">@lang('messages.featured_item3')</a>
+                        <a href="/homepage#featured"
+                            class="footer-color text-decoration-none footer-link pt-3">@lang('messages.featured_item4')</a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 col-12">
+                    <p class="text-white title-font second-font fw-medium" style="font-size: 1.125rem;">
+                        @lang('messages.footer_subtitle4')</p>
+                    <div class="d-flex flex-column pt-4">
+                        <p class="footer-color footer-link ">@lang('messages.footer_item4_link1')</p>
+                        <p class="footer-color footer-link pt-3">@lang('messages.footer_item4_link2')</p>
+                        <a target="_blank" href="https://wa.me/+62123456789"
+                            class="footer-color footer-link pt-3 text-decoration-none">@lang('messages.footer_item4_link3')</a>
+                    </div>
+                </div>
+                <div class="d-flex justify-content-center flex-column mt-5 pt-5 pb-4">
+                    <hr class="hr-footer opacity-100 bg-opacity-100 w-100">
+                    <p class="text-center fs-14" style="color: rgba(255, 255, 255, 0.32)">Copyright © 2023
+                        WanderlustNusantara</p>
+                </div>
+            </div>
+        </div>
+    </footer>
 
     <script src="https://kit.fontawesome.com/9e88c62f38.js" crossorigin="anonymous"></script>
     <script src="{{ asset('assets/js-homepage/popper.min.js') }}"></script>
