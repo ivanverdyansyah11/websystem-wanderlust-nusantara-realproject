@@ -114,5 +114,8 @@ return [
     'description2_gallery_destination' => ", di mana keajaiban sejarah Nusantara yang kaya menjadi hidup.Koleksi yang dikuratori dengan cermat ini menampilkan keindahan, kemegahan, dan pentingnya",
     'description3_gallery_destination' => "dan rekan -rekan historisnya.",
 
+    'subtitle_history_destination' => 'Sejarah',
+    'title_history_destination' => 'Pariwisata sejarah',
+
     'modal_close' => "Tutup Modal",
 ];
