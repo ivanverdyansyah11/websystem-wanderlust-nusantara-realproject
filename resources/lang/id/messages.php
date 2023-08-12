@@ -84,5 +84,9 @@ return [
     'description1_gallery' => "Selamat datang di bagian galeri halaman arahan kami, di mana Anda dapat memulai petualangan visual melalui keajaiban bersejarah Klungkung.Koleksi gambar menawan yang dikuratori ini menawarkan pandangan sekilas ke dalam permadani yang kaya sejarah Klungkung, memungkinkan Anda untuk membenamkan diri dalam warisan budayanya.",
     'description2_gallery' => "Telusuri berbagai foto dan ilustrasi, menangkap keindahan arsitektur, detail rumit, dan pemandangan menakjubkan dari situs bersejarah Klungkung.Dari kemegahan Puri Agung Semarapura hingga ukiran indah Taman Gili Kerta Gosa, setiap gambar menceritakan kisah unik masa lalu Klungkung.",
 
+    'galleries_subtitle' => "Menangkap esensi sejarah Klungkung dalam bingkai",
+    'galleries_title' => "Menjelajahi Galeri Bersejarah Klungkung",
+    'galleries_description' => "Melalui bagian galeri ini, kami mengundang Anda untuk menjelajahi harta sejarah Klungkung melalui narasi visual.Biarkan gambar mengangkut Anda ke masa lalu, membangkitkan rasa keajaiban dan kekaguman terhadap warisan budaya yang terus berkembang di Klungkung.",
+
     'modal_close' => "Tutup Modal",
 ];
