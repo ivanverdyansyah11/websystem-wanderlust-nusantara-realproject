@@ -50,4 +50,17 @@ return [
 
     'cta_title' => "Kenali lebih banyak tentang sejarah kepulauan lainnya",
     'cta_button' => "Terhubung Dengan Kami",
+
+    'footer_description' => "Selamat datang di Wanderlust Nusantara, tempat kami mengundang Anda untuk memulai perjalanan yang luar biasa melalui pemandangan yang mempesona",
+    'footer_subtitle1' => "Halaman Beranda",
+    'footer_subtitle2' => "Tautan Cepat",
+    'footer_item2_link1' => "Tempat Rekomendasi",
+    'footer_item2_link2' => "Unggulan Kami",
+    'footer_item2_link3' => "Tentang Kami",
+    'footer_item2_link4' => "Kesaksian",
+    'footer_subtitle3' => "Unggulan Kami",
+    'footer_subtitle4' => "Bantuan & Panduan",
+    'footer_item4_link1' => "Syarat & Ketentuan",
+    'footer_item4_link2' => "Kebijakan Pribadi",
+    'footer_item4_link3' => "Hubungi Kami",
 ];

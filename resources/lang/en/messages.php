@@ -50,4 +50,17 @@ return [
 
     'cta_title' => "Get to Know More About the History of Other Archipelagos",
     'cta_button' => "Connect With Us",
+
+    'footer_description' => "Welcome to WanderlustNusantara, where we invite you to embark on an extraordinary journey through the enchanting landscapes",
+    'footer_subtitle1' => "Home Page",
+    'footer_subtitle2' => "Quick Link",
+    'footer_item2_link1' => "Recommendation Place",
+    'footer_item2_link2' => "Our Featured",
+    'footer_item2_link3' => "About Us",
+    'footer_item2_link4' => "Testimonial",
+    'footer_subtitle3' => "Our Featured",
+    'footer_subtitle4' => "Help & Guide",
+    'footer_item4_link1' => "Terms & Conditions",
+    'footer_item4_link2' => "Privacy Policy",
+    'footer_item4_link3' => "Contact Us",
 ];
