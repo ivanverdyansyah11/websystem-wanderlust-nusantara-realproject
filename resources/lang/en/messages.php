@@ -117,5 +117,9 @@ return [
     'subtitle_history_destination' => 'History',
     'title_history_destination' => 'Historical Tourism of',
 
+    'subtitle_recommendation_destination' => 'Other Historical Treasures',
+    'title_recommendation_destination' => 'Find Out Other Historical Treasures',
+    'description_recommendation_destination' => 'Our tour history testimonials section showcases the awe-inspiring experiences of our delighted travelers who have discovered the hidden stories and secrets of this remarkable archipelago.',
+
     'modal_close' => "Close Modal",
 ];

@@ -178,19 +178,18 @@
                     <div class="d-flex flex-column">
                         <div class="badge-section">
                             <p class="fs-13 fw-medium main-color">
-                                Other Historical Treasures
+                                @lang('messages.subtitle_recommendation_destination')
                             </p>
                         </div>
                         <p class="mt-2 display-5 fw-semibold text-black">
-                            Find Out Other Historical Treasures
+                            @lang('messages.title_recommendation_destination')
                         </p>
                     </div>
                 </div>
                 <div class="col-lg-1 d-lg-block d-none"></div>
                 <div class="col-lg-5 align-self-end col-md-6 col-12">
                     <p>
-                        Our tour history testimonials section showcases the awe-inspiring experiences of our delighted
-                        travelers who have discovered the hidden stories and secrets of this remarkable archipelago.
+                        @lang('messages.description_recommendation_destination')
                     </p>
                 </div>
             </div>
@@ -237,13 +236,12 @@
             <div class="cta-content container">
                 <div class="row gy-4">
                     <div class="col-md-6 col-12">
-                        <p class="display-5 text-white fw-semibold">Get to Know More About the History of Other
-                            Archipelagos</p>
+                        <p class="display-5 text-white fw-semibold">@lang('messages.cta_title')</p>
                     </div>
                     <div class="col-md-6 col-12 align-self-end d-flex justify-content-end">
                         <a href="https://wa.me/+62123456789" target="_blank"
                             class="btn btn-white d-flex flex-row gap-2 align-items-center">
-                            connect with us
+                            @lang('messages.cta_button')
                             <img src="{{ asset('assets/img-homepage/arr-btn-black.svg') }}" alt=""
                                 class="" draggable="false">
                         </a>

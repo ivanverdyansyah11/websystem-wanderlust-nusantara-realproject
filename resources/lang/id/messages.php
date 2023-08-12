@@ -117,5 +117,9 @@ return [
     'subtitle_history_destination' => 'Sejarah',
     'title_history_destination' => 'Pariwisata sejarah',
 
+    'subtitle_recommendation_destination' => 'Harta historis lainnya',
+    'title_recommendation_destination' => 'Cari tahu harta sejarah lainnya',
+    'description_recommendation_destination' => 'Bagian Tur Sejarah Tur kami menampilkan pengalaman menakjubkan dari para pelancong kami yang senang yang telah menemukan kisah-kisah tersembunyi dan rahasia kepulauan yang luar biasa ini.',
+
     'modal_close' => "Tutup Modal",
 ];
