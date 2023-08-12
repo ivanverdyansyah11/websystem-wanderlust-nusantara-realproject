@@ -174,18 +174,17 @@
                     <div class="d-flex flex-column">
                         <div class="badge-section">
                             <p class="fs-15 fw-semibold main-color">
-                                Best Featured We Offer to Our Visitors
+                                @lang('messages.featured_subtitle')
                             </p>
                         </div>
                         <p class="mt-2 display-5 fw-semibold text-black">
-                            Explore the Best of Nusantara's Destinations
+                            @lang('messages.featured_title')
                         </p>
                     </div>
                 </div>
                 <div class="col-lg-1 d-lg-block d-none"></div>
                 <div class="col-lg-5 align-self-end col-md-6 col-12">
-                    Embark on an Extraordinary Journey with WanderlustNusantara and Explore the Best of Nusantara's
-                    Destinations. Immerse Yourself in the Vibrant Culture, and Unforgettable Experiences that Await.
+                    @lang('messages.featured_description')
                 </div>
 
             </div>
@@ -195,14 +194,13 @@
                         <img src="{{ asset('assets/img-homepage/benefit1.svg') }}" alt="" class=""
                             draggable="false">
                         <div class="d-flex flex-column mt-3">
-                            <p class="fs-17 fw-semibold text-black">Island Paradise Retreat</p>
+                            <p class="fs-17 fw-semibold text-black">@lang('messages.featured_item1')</p>
                             <p class="fs-15 fw-medium">
-                                Immerse yourself in the pristine beauty of Nusantara's islands with our Island Paradise
-                                Retreat tour.
+                                @lang('messages.featured_description1')
                             </p>
                             <button data-bs-toggle="modal" data-bs-target="#benefitModal1"
                                 class="btn d-flex flex-row btn-text-secondary gap-2 align-items-center p-0 mt-2 fs-14 fw-medium">
-                                More Detail
+                                @lang('messages.featured_button')
                                 <img src="{{ asset('assets/img-homepage/arr-btn-text.svg') }}" alt=""
                                     class="" draggable="false">
                             </button>
@@ -214,14 +212,13 @@
                         <img src="{{ asset('assets/img-homepage/benefit2.svg') }}" alt="" class=""
                             draggable="false">
                         <div class="d-flex flex-column mt-3">
-                            <p class="fs-17 fw-semibold text-black">Cultural Heritage Expedition</p>
+                            <p class="fs-17 fw-semibold text-black">@lang('messages.featured_item2')</p>
                             <p class="fs-15 fw-medium">
-                                Dive into the rich cultural tapestry of Nusantara with our Cultural Heritage Expedition
-                                tour.
+                                @lang('messages.featured_description2')
                             </p>
                             <button data-bs-target="#benefitModal2" data-bs-toggle="modal"
                                 class="btn d-flex flex-row btn-text-secondary gap-2 align-items-center p-0 mt-2 fs-14 fw-medium">
-                                More Detail
+                                @lang('messages.featured_button')
                                 <img src="{{ asset('assets/img-homepage/arr-btn-text.svg') }}" alt=""
                                     class="" draggable="false">
                             </button>
@@ -233,14 +230,13 @@
                         <img src="{{ asset('assets/img-homepage/benefit3.svg') }}" alt="" class=""
                             draggable="false">
                         <div class="d-flex flex-column mt-3">
-                            <p class="fs-17 fw-semibold text-black">Jungle Adventure Trek</p>
+                            <p class="fs-17 fw-semibold text-black">@lang('messages.featured_item3')</p>
                             <p class="fs-15 fw-medium">
-                                Embark on an adrenaline-pumping Jungle Adventure Trek through the lush rainforests of
-                                Nusantara.
+                                @lang('messages.featured_description3')
                             </p>
                             <button data-bs-toggle="modal" data-bs-target="#benefitModal3"
                                 class="btn d-flex flex-row btn-text-secondary gap-2 align-items-center p-0 mt-2 fs-14 fw-medium">
-                                More Detail
+                                @lang('messages.featured_button')
                                 <img src="{{ asset('assets/img-homepage/arr-btn-text.svg') }}" alt=""
                                     class="" draggable="false">
                             </button>
@@ -252,14 +248,13 @@
                         <img src="{{ asset('assets/img-homepage/benefit4.svg') }}" alt="" class=""
                             draggable="false">
                         <div class="d-flex flex-column mt-3">
-                            <p class="fs-17 fw-semibold text-black">Flavors of Nusantara Food Tour</p>
+                            <p class="fs-17 fw-semibold text-black">@lang('messages.featured_item4')</p>
                             <p class="fs-15 fw-medium">
-                                Indulge your taste buds in a culinary exploration with our Flavors of Nusantara Food
-                                Tour.
+                                @lang('messages.featured_description4')
                             </p>
                             <button data-bs-toggle="modal" data-bs-target="#benefitModal4"
                                 class="btn d-flex flex-row btn-text-secondary gap-2 align-items-center p-0 mt-2 fs-14 fw-medium">
-                                More Detail
+                                @lang('messages.featured_button')
                                 <img src="{{ asset('assets/img-homepage/arr-btn-text.svg') }}" alt=""
                                     class="" draggable="false">
                             </button>
