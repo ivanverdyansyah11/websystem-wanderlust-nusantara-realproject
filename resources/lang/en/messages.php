@@ -47,4 +47,7 @@ return [
     'testimoni_subtitle' => "Explore Nusantara's Living History",
     'testimoni_title' => "Unveiling the Stories of Nusantara's Rich History",
     'testimoni_description' => "Our tour history testimonials section showcases the awe-inspiring experiences of our delighted travelers who have discovered the hidden stories and secrets of this remarkable archipelago.",
+
+    'cta_title' => "Get to Know More About the History of Other Archipelagos",
+    'cta_button' => "Connect With Us",
 ];

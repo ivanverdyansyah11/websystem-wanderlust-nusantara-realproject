@@ -47,4 +47,7 @@ return [
     'testimoni_subtitle' => "Jelajahi Sejarah Hidup Nusantara",
     'testimoni_title' => "Mengungkap kisah sejarah Nusantara yang kaya",
     'testimoni_description' => "Bagian Tur Sejarah Tur kami menampilkan pengalaman menakjubkan dari para pelancong kami yang senang yang telah menemukan kisah-kisah tersembunyi dan rahasia kepulauan yang luar biasa ini.",
+
+    'cta_title' => "Kenali lebih banyak tentang sejarah kepulauan lainnya",
+    'cta_button' => "Terhubung Dengan Kami",
 ];
