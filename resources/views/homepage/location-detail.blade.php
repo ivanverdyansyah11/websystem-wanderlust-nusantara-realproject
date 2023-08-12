@@ -32,23 +32,38 @@
                 <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link fw-semibold" href="/homepage">Home</a>
+                            <a class="nav-link fw-semibold" href="#home">@lang('messages.nav_link1')</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active fw-semibold" href="/location">Destination Location</a>
+                            <a class="nav-link active fw-semibold" href="/location">@lang('messages.nav_link2')</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link fw-semibold" href="/gallery">Gallery Documentation</a>
+                            <a class="nav-link fw-semibold" href="/gallery">@lang('messages.nav_link3')</a>
                         </li>
                     </ul>
                 </div>
-                <div class="d-lg-flex justify-content-end d-none">
+                <div class="d-lg-flex justify-content-end d-none gap-2">
                     <a href="https://wa.me/+62123456789" target="_blank"
-                        class="btn btn-color d-flex flex-row align-items-center gap-2">
-                        contact us
+                        class="btn btn-color d-flex flex-row align-items-center gap-2"
+                        style="height: fit-content; padding: 13px 22px;">
+                        @lang('messages.nav_button')
                         <img src="{{ asset('assets/img-homepage/arr-btn.svg') }}" alt="" class=""
                             draggable="false">
                     </a>
+                    <div class="dropdown">
+                        <button class="btn btn-dark dropdown-toggle" style="height: fit-content; padding: 13px 22px;"
+                            type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            {{ strtoupper(session('locale')) ?? strtoupper(config('app.locale')) }}
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item"
+                                    href="{{ route('switch-language', ['locale' => 'id']) }}">ID</a>
+                            </li>
+                            <li><a class="dropdown-item"
+                                    href="{{ route('switch-language', ['locale' => 'en']) }}">EN</a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </nav>
@@ -60,30 +75,25 @@
                     <div class="col-xl-6 col-lg-7 col-12">
                         <div class="badge-section">
                             <p class="main-color">
-                                Discovering Historic Cities in {{ $city->name }}
+                                @lang('messages.subtitle_locations') {{ $city->name }}
                             </p>
                         </div>
                         <p class="fw-semibold display-4 mt-2 text-black">
-                            Unearthing the Charms of {{ $city->name }} Historic City
+                            @lang('messages.title1_locations') {{ $city->name }} @lang('messages.title2_locations')
                         </p>
                         <article class="mt-3">
                             <p>
-                                Is a region in Indonesia that holds a rich tapestry of history, culture, and natural
-                                beauty. Situated in the heart of Java Island, this province boasts an enchanting blend
-                                of ancient temples, majestic palaces, and breathtaking landscapes.
+                                @lang('messages.description1_locations')
                             </p>
                             <p class="mt-1">
-                                At the center of {{ $city->name }} lies the cultural and spiritual epicenter of
-                                Indonesia,
-                                Yogyakarta. This vibrant city is home to the magnificent Borobudur Temple, a UNESCO
-                                World Heritage site and one of the world's greatest Buddhist monuments.
+                                @lang('messages.description2_locations') {{ $city->name }} @lang('messages.description3_locations')
                             </p>
                         </article>
                         <div class="mt-4 d-flex flex-row gap-3">
-                            <a href="#recommend" class="btn btn-color">Explore Now</a>
+                            <a href="#recommend" class="btn btn-color">@lang('messages.button1_location')</a>
                             <a href="/homepage"
                                 class="btn text-decoration-none btn-secondary d-flex flex-row align-items-center gap-2">
-                                Back to Home
+                                @lang('messages.button2_location')
                                 <img src="{{ asset('assets/img-homepage/arr-btn.svg') }}" alt="" class=""
                                     draggable="false">
                             </a>

@@ -88,5 +88,12 @@ return [
     'galleries_title' => "Menjelajahi Galeri Bersejarah Klungkung",
     'galleries_description' => "Melalui bagian galeri ini, kami mengundang Anda untuk menjelajahi harta sejarah Klungkung melalui narasi visual.Biarkan gambar mengangkut Anda ke masa lalu, membangkitkan rasa keajaiban dan kekaguman terhadap warisan budaya yang terus berkembang di Klungkung.",
 
+    'subtitle_locations' => 'Menemukan kota -kota bersejarah di',
+    'title1_locations' => "Menggali pesona",
+    'title2_locations' => "Kota bersejarah",
+    'description1_locations' => "Adalah wilayah di Indonesia yang memiliki permadani yang kaya akan sejarah, budaya, dan keindahan alam.Terletak di jantung Pulau Jawa, provinsi ini menawarkan perpaduan yang memikat antara kuil -kuil kuno, istana yang megah, dan pemandangan yang menakjubkan.",
+    'description2_locations' => 'Di tengah',
+    'description3_locations' => "terletak pusat budaya dan spiritual Indonesia, Yogyakarta.Kota yang semarak ini adalah rumah bagi Kuil Borobudur yang megah, situs warisan dunia UNESCO dan salah satu monumen Buddha terhebat di dunia.",
+
     'modal_close' => "Tutup Modal",
 ];

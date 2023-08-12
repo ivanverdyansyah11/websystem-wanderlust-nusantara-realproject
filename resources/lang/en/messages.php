@@ -88,5 +88,12 @@ return [
     'galleries_title' => "Exploring Klungkung's Historic Gallery",
     'galleries_description' => "Through this Gallery section, we invite you to explore Klungkung's historical treasures through a visual narrative. Let the images transport you back in time, evoking a sense of wonder and admiration for the cultural legacy that continues to thrive in Klungkung.",
 
+    'subtitle_locations' => 'Discovering Historic Cities in',
+    'title1_locations' => "Unearthing the Charms of",
+    'title2_locations' => "Historic City",
+    'description1_locations' => "Is a region in Indonesia that holds a rich tapestry of history, culture, and natural beauty. Situated in the heart of Java Island, this province boasts an enchanting blend of ancient temples, majestic palaces, and breathtaking landscapes.",
+    'description2_locations' => 'At the center of',
+    'description3_locations' => "lies the cultural and spiritual epicenter of Indonesia, Yogyakarta. This vibrant city is home to the magnificent Borobudur Temple, a UNESCO World Heritage site and one of the world's greatest Buddhist monuments.",
+
     'modal_close' => "Close Modal",
 ];
