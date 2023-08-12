@@ -30,4 +30,12 @@ return [
     'featured_item4' => 'Flavors of Nusantara Food Tour',
     'featured_description4' => 'Indulge your taste buds in a culinary exploration with our Flavors of Nusantara Food Tour.',
     'featured_button' => 'More Detail',
+
+    'about_subtitle' => 'Dedicated to Unveiling Nusantara"s Remarkable History',
+    'about_title' => 'Discover the Essence of Nusantara with Us',
+    'about_description1' => "At WanderlustNusantara, we are passionate about showcasing the true essence of Nusantara's diverse landscapes, rich culture, and warm hospitality. With our expertly curated tours, we invite you to embark on a transformative journey that goes beyond ordinary travel experiences.",
+    'about_description2' => "Immerse yourself in the vibrant traditions of Nusantara as our knowledgeable guides take you to iconic landmarks, hidden gems, and off-the-beaten-path destinations. Experience the authentic flavors of local cuisine, witness captivating cultural performances, and engage with local communities.",
+    'about_caption1' => 'Total Destination',
+    'about_caption2' => 'Location Available',
+    'about_caption3' => 'Gallery Documentation',
 ];

@@ -275,24 +275,18 @@
                     <div class="col-xl-6 col-lg-7 col-12">
                         <div class="badge-section">
                             <p class="main-color fs-15 fw-semibold">
-                                Dedicated to Unveiling Nusantara's Remarkable History
+                                @lang('messages.about_subtitle')
                             </p>
                         </div>
                         <p class="fw-semibold display-5 mt-1 text-black">
-                            Discover the Essence of Nusantara with Us
+                            @lang('messages.about_title')
                         </p>
                         <article class="mt-3">
                             <p>
-                                At WanderlustNusantara, we are passionate about showcasing the true essence of
-                                Nusantara's diverse landscapes, rich culture, and warm hospitality. With our expertly
-                                curated tours, we invite you to embark on a transformative journey that goes beyond
-                                ordinary travel experiences.
+                                @lang('messages.about_description1')
                             </p>
                             <p class="mt-1">
-                                Immerse yourself in the vibrant traditions of Nusantara as our knowledgeable guides take
-                                you to iconic landmarks, hidden gems, and off-the-beaten-path destinations. Experience
-                                the authentic flavors of local cuisine, witness captivating cultural performances, and
-                                engage with local communities.
+                                @lang('messages.about_description2')
                             </p>
                         </article>
 
@@ -302,21 +296,21 @@
                                 <div class="w-100 d-flex">
                                     <div class="d-flex flex-column align-items-center">
                                         <p class="display-5 second-color fw-bolder">{{ $destination_count }}</p>
-                                        <p class="fw-medium">Total Destination</p>
+                                        <p class="fw-medium">@lang('messages.about_caption1')</p>
                                     </div>
                                 </div>
                             </div>
                             <div class="col">
                                 <div class="d-flex flex-column align-items-center  justify-content-center w-100 ">
                                     <p class="display-5 second-color fw-bolder">{{ $city_count }}</p>
-                                    <p class="fw-medium">Location Available</p>
+                                    <p class="fw-medium">@lang('messages.about_caption2')</p>
                                 </div>
                             </div>
                             <div class="col second-hr d-flex flex-row   align-items-center">
                                 <div class="d-flex w-100 justify-content-end">
                                     <div class="d-flex flex-column align-items-center">
                                         <p class="display-5 second-color fw-bolder">{{ $gallery_count_all }}</p>
-                                        <p class="fw-medium">Gallery Documentation</p>
+                                        <p class="fw-medium">@lang('messages.about_caption3')</p>
                                     </div>
                                 </div>
                             </div>

@@ -30,4 +30,12 @@ return [
     'featured_item4' => 'Rasa Tur Makanan Nusantara',
     'featured_description4' => 'Manjakan selera Anda dalam eksplorasi kuliner dengan citarasa tur makanan Nusantara kami.',
     'featured_button' => 'Lebih Detail',
+
+    'about_subtitle' => 'Didedikasikan untuk meluncurkan sejarah Nusantara yang luar biasa',
+    'about_title' => 'Temukan esensi Nusantara bersama kami',
+    'about_description1' => "Di Wanderlustnusantara, kami bersemangat untuk menampilkan esensi sejati lanskap Nusantara yang beragam, budaya yang kaya, dan keramahtamahan yang hangat.Dengan tur kami yang dikuratori secara ahli, kami mengundang Anda untuk memulai perjalanan transformatif yang melampaui pengalaman perjalanan biasa.",
+    'about_description2' => "Benamkan diri Anda dalam tradisi Nusantara yang semarak ketika pemandu kami yang berpengetahuan luas membawa Anda ke landmark ikonik, permata tersembunyi, dan tujuan jalur yang tidak diputuskan.Rasakan rasa otentik masakan lokal, saksikan penampilan budaya yang memikat, dan terlibat dengan komunitas lokal.",
+    'about_caption1' => 'Total Tujuan',
+    'about_caption2' => 'Lokasi Tersedia',
+    'about_caption3' => 'Dokumentasi Galeri',
 ];
