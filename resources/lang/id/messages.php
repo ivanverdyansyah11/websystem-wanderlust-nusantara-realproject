@@ -79,5 +79,10 @@ return [
     'category_title' => "Cari tahu kota -kota bersejarah Nusantara",
     'category_description' => "Memulai perjalanan yang luar biasa melalui sejarah Nusantara saat Anda menjelajahi kategori kota Wanderlustnusantara.Dari reruntuhan agung Yogyakarta hingga pesona kolonial Jakarta.",
 
+    'subtitle_gallery' => "Menangkap semangat sejarah Nusantara",
+    'title_gallery' => "Menghubungkan dengan Legenda Sejarah Nusantara",
+    'description1_gallery' => "Selamat datang di bagian galeri halaman arahan kami, di mana Anda dapat memulai petualangan visual melalui keajaiban bersejarah Klungkung.Koleksi gambar menawan yang dikuratori ini menawarkan pandangan sekilas ke dalam permadani yang kaya sejarah Klungkung, memungkinkan Anda untuk membenamkan diri dalam warisan budayanya.",
+    'description2_gallery' => "Telusuri berbagai foto dan ilustrasi, menangkap keindahan arsitektur, detail rumit, dan pemandangan menakjubkan dari situs bersejarah Klungkung.Dari kemegahan Puri Agung Semarapura hingga ukiran indah Taman Gili Kerta Gosa, setiap gambar menceritakan kisah unik masa lalu Klungkung.",
+
     'modal_close' => "Tutup Modal",
 ];

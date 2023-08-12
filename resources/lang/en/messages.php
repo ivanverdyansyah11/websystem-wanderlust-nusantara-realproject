@@ -79,5 +79,10 @@ return [
     'category_title' => "Find Out the Nusantara's Historic Cities",
     'category_description' => "Embark on an extraordinary voyage through Nusantara's history as you explore WanderlustNusantara's city categories. From the majestic ruins of Yogyakarta to the colonial charms of Jakarta.",
 
+    'subtitle_gallery' => "Capturing the Spirit of Nusantara's History",
+    'title_gallery' => "Connecting with the Legends of Nusantara History",
+    'description1_gallery' => "Welcome to the Gallery section of our landing page, where you can embark on a visual adventure through the historic wonders of Klungkung. This curated collection of captivating images offers a glimpse into the rich tapestry of Klungkung's history, allowing you to immerse yourself in its cultural heritage.",
+    'description2_gallery' => "Browse through a diverse range of photographs and illustrations, capturing the architectural beauty, intricate details, and awe-inspiring landscapes of Klungkung's historic sites. From the grandeur of Puri Agung Semarapura to the exquisite carvings of Taman Gili Kerta Gosa, each image tells a unique story of Klungkung's past.",
+
     'modal_close' => "Close Modal",
 ];
