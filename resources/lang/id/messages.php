@@ -11,7 +11,7 @@ return [
     'description1_home' => 'Selamat datang di Wanderlustnusantara, di mana kami mengundang Anda untuk memulai perjalanan yang luar biasa melalui pemandangan yang mempesona dan budaya Nusantara yang semarak.Bersiaplah untuk memuaskan nafsu berkelana Anda saat kami mengkuratori tur yang mendalam dan tak terlupakan yang memamerkan permata tersembunyi dan landmark ikonik dari kepulauan yang menakjubkan ini.',
     'description2_home' => 'Kami percaya bahwa perjalanan bukan hanya tentang mengunjungi tujuan, tetapi tentang menciptakan kenangan seumur hidup dan menjalin koneksi dengan tempat -tempat yang kami jelajahi.',
     'button1_home' => 'Mulailah menjelajahi',
-    'button2_home' => 'Periksa galeri',
+    'button2_home' => 'Periksa Galeri',
 
     'recommendation_subtitle' => 'Rekomendasi berdasarkan peringkat yang diberikan',
     'recommendation_title' => 'Tempat Rekomendasi Tujuan Nusantara',
