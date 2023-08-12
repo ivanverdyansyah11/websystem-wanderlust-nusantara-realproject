@@ -587,20 +587,14 @@
         <div class="modal-dialog">
             <div class="modal-content modal-menu ">
                 <div class="modal-header">
-                    <p class="fs-5 fw-semibold">Island Paradise Retreat</p>
+                    <p class="fs-5 fw-semibold">@lang('messages.featured_item1')</p>
                 </div>
                 <div class="modal-body">
-                    <p class="">
-                        Immerse yourself in the pristine beauty of Nusantara's islands with our Island Paradise Retreat
-                        tour. Explore breathtaking white-sand beaches, swim in crystal-clear turquoise waters, and
-                        indulge in island-hopping adventures. Experience ultimate relaxation and rejuvenation as you
-                        soak up the sun and immerse yourself in the tropical paradise of Nusantara.
-
-                    </p>
+                    <p class="">@lang('messages.featured_descriptionAll1')</p>
                 </div>
                 <div class="modal-footer d-flex justify-content-start">
                     <button type="button" class="btn btn-secondary mt-2 btn-sm fs-15 fw-medium"
-                        data-bs-dismiss="modal">Close Modal</button>
+                        data-bs-dismiss="modal">@lang('messages.modal_close')</button>
                 </div>
             </div>
         </div>
@@ -611,20 +605,14 @@
         <div class="modal-dialog">
             <div class="modal-content modal-menu ">
                 <div class="modal-header">
-                    <p class="fs-5 fw-semibold">Cultural Heritage Expedition</p>
+                    <p class="fs-5 fw-semibold">@lang('messages.featured_item2')</p>
                 </div>
                 <div class="modal-body">
-                    <p class="">
-                        Dive into the rich cultural tapestry of Nusantara with our Cultural Heritage Expedition tour.
-                        Visit ancient temples, explore traditional villages, and witness mesmerizing cultural
-                        performances. Delve into the customs, traditions, and history of the region as you interact with
-                        local communities and discover the fascinating heritage of Nusantara.
-
-                    </p>
+                    <p class="">@lang('messages.featured_descriptionAll2')</p>
                 </div>
                 <div class="modal-footer d-flex justify-content-start">
                     <button type="button" class="btn btn-secondary mt-2 btn-sm fs-15 fw-medium"
-                        data-bs-dismiss="modal">Close Modal</button>
+                        data-bs-dismiss="modal">@lang('messages.modal_close')</button>
                 </div>
             </div>
         </div>
@@ -635,21 +623,14 @@
         <div class="modal-dialog">
             <div class="modal-content modal-menu ">
                 <div class="modal-header">
-                    <p class="fs-5 fw-semibold">Jungle Adventure Trek</p>
+                    <p class="fs-5 fw-semibold">@lang('messages.featured_item3')</p>
                 </div>
                 <div class="modal-body">
-                    <p class="">
-                        Embark on an adrenaline-pumping Jungle Adventure Trek through the lush rainforests of Nusantara.
-                        Trek through dense jungles, encounter exotic wildlife, and marvel at stunning waterfalls.
-                        Experience the thrill of zip-lining, river rafting, and night camping in the heart of nature.
-                        Get ready for an unforgettable adventure in the untamed wilderness of Nusantara.
-
-
-                    </p>
+                    <p class="">@lang('messages.featured_descriptionAll3')</p>
                 </div>
                 <div class="modal-footer d-flex justify-content-start">
                     <button type="button" class="btn btn-secondary mt-2 btn-sm fs-15 fw-medium"
-                        data-bs-dismiss="modal">Close Modal</button>
+                        data-bs-dismiss="modal">@lang('messages.modal_close')</button>
                 </div>
             </div>
         </div>
@@ -660,19 +641,14 @@
         <div class="modal-dialog">
             <div class="modal-content modal-menu ">
                 <div class="modal-header">
-                    <p class="fs-5 fw-semibold">Flavors of Nusantara Food Tour</p>
+                    <p class="fs-5 fw-semibold">@lang('messages.featured_item4')</p>
                 </div>
                 <div class="modal-body">
-                    <p class="">
-                        Indulge your taste buds in a culinary exploration with our Flavors of Nusantara Food Tour.
-                        Sample a diverse range of mouthwatering local cuisines, from savory street food to exquisite
-                        traditional dishes. Delight in cooking classes, market visits, and authentic dining experiences.
-                        Discover the vibrant flavors and culinary secrets that make Nusantara a gastronomic paradise.
-                    </p>
+                    <p class="">@lang('messages.featured_descriptionAll4')</p>
                 </div>
                 <div class="modal-footer d-flex justify-content-start">
                     <button type="button" class="btn btn-secondary mt-2 btn-sm fs-15 fw-medium"
-                        data-bs-dismiss="modal">Close Modal</button>
+                        data-bs-dismiss="modal">@lang('messages.modal_close')</button>
                 </div>
             </div>
         </div>

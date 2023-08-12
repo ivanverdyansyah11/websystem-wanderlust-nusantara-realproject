@@ -23,12 +23,16 @@ return [
     'featured_description' => 'Mulai dalam perjalanan yang luar biasa dengan Wanderlust Nusantara dan jelajahi yang terbaik dari tujuan Nusantara. Tenggelamkan diri Anda dalam budaya yang semarak, dan pengalaman yang tak terlupakan yang menunggu.',
     'featured_item1' => 'Retret Paradise Pulau',
     'featured_description1' => 'Benamkan diri Anda dalam keindahan murni pulau -pulau Nusantara dengan Tur Retret Paradise Pulau kami.',
+    'featured_descriptionAll1' => "Benamkan diri Anda dalam keindahan murni pulau -pulau Nusantara dengan Tur Retret Paradise Pulau kami.Jelajahi pantai pasir putih yang menakjubkan, berenang di perairan pirus sejernih kristal, dan menikmati petualangan yang melompat-lompat di pulau.Rasakan relaksasi dan peremajaan tertinggi saat Anda menyerap matahari dan membenamkan diri di surga tropis Nusantara.",
     'featured_item2' => 'Ekspedisi Warisan Budaya',
     'featured_description2' => 'Selami permadani budaya Nusantara yang kaya dengan Tur Ekspedisi Warisan Budaya kami.',
+    'featured_descriptionAll2' => "Selami permadani budaya Nusantara yang kaya dengan Tur Ekspedisi Warisan Budaya kami.Kunjungi kuil -kuil kuno, jelajahi desa -desa tradisional, dan saksikan pertunjukan budaya yang memukau.Menggali ke dalam kebiasaan, tradisi, dan sejarah wilayah saat Anda berinteraksi dengan komunitas lokal dan menemukan warisan Nusantara yang menarik.",
     'featured_item3' => 'Trek petualangan hutan',
     'featured_description3' => 'Memulai perjalanan petualangan hutan adrenalin yang memompa melalui hutan hujan Nusantara yang subur.',
+    'featured_descriptionAll3' => "Memulai perjalanan petualangan hutan adrenalin yang memompa melalui hutan hujan Nusantara yang subur.Perjalanan melalui hutan lebat, menghadapi satwa liar eksotis, dan kagum di air terjun yang menakjubkan.Nikmati sensasi zip-lining, arung jeram, dan berkemah malam di jantung alam.Bersiaplah untuk petualangan yang tak terlupakan di hutan belantara Nusantara yang liar.",
     'featured_item4' => 'Rasa Tur Makanan Nusantara',
     'featured_description4' => 'Manjakan selera Anda dalam eksplorasi kuliner dengan citarasa tur makanan Nusantara kami.',
+    'featured_descriptionAll4' => "Manjakan selera Anda dalam eksplorasi kuliner dengan citarasa tur makanan Nusantara kami.Cicipi beragam masakan lokal yang menggiurkan, dari makanan jalanan yang gurih hingga hidangan tradisional yang indah.Senang kelas memasak, kunjungan pasar, dan pengalaman bersantap otentik.Temukan rasa yang semarak dan rahasia kuliner yang menjadikan Nusantara surga gastronomi.",
     'featured_button' => 'Lebih Detail',
 
     'about_subtitle' => 'Didedikasikan untuk meluncurkan sejarah Nusantara yang luar biasa',
@@ -63,4 +67,6 @@ return [
     'footer_item4_link1' => "Syarat & Ketentuan",
     'footer_item4_link2' => "Kebijakan Pribadi",
     'footer_item4_link3' => "Hubungi Kami",
+
+    'modal_close' => "Tutup Modal",
 ];

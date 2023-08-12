@@ -23,12 +23,16 @@ return [
     'featured_description' => 'Embark on an Extraordinary Journey with WanderlustNusantara and Explore the Best of Nusantara"s Destinations. Immerse Yourself in the Vibrant Culture, and Unforgettable Experiences that Await.',
     'featured_item1' => 'Island Paradise Retreat',
     'featured_description1' => 'Immerse yourself in the pristine beauty of Nusantara"s islands with our Island Paradise Retreat tour.',
+    'featured_descriptionAll1' => "Immerse yourself in the pristine beauty of Nusantara's islands with our Island Paradise Retreat tour. Explore breathtaking white-sand beaches, swim in crystal-clear turquoise waters, and indulge in island-hopping adventures. Experience ultimate relaxation and rejuvenation as you soak up the sun and immerse yourself in the tropical paradise of Nusantara.",
     'featured_item2' => 'Cultural Heritage Expedition',
     'featured_description2' => 'Dive into the rich cultural tapestry of Nusantara with our Cultural Heritage Expedition tour.',
+    'featured_descriptionAll2' => "Dive into the rich cultural tapestry of Nusantara with our Cultural Heritage Expedition tour. Visit ancient temples, explore traditional villages, and witness mesmerizing cultural performances. Delve into the customs, traditions, and history of the region as you interact with local communities and discover the fascinating heritage of Nusantara.",
     'featured_item3' => 'Jungle Adventure Trek',
     'featured_description3' => 'Embark on an adrenaline-pumping Jungle Adventure Trek through the lush rainforests of Nusantara.',
+    'featured_descriptionAll3' => "Embark on an adrenaline-pumping Jungle Adventure Trek through the lush rainforests of Nusantara. Trek through dense jungles, encounter exotic wildlife, and marvel at stunning waterfalls. Experience the thrill of zip-lining, river rafting, and night camping in the heart of nature. Get ready for an unforgettable adventure in the untamed wilderness of Nusantara.",
     'featured_item4' => 'Flavors of Nusantara Food Tour',
     'featured_description4' => 'Indulge your taste buds in a culinary exploration with our Flavors of Nusantara Food Tour.',
+    'featured_descriptionAll4' => "Indulge your taste buds in a culinary exploration with our Flavors of Nusantara Food Tour. Sample a diverse range of mouthwatering local cuisines, from savory street food to exquisite traditional dishes. Delight in cooking classes, market visits, and authentic dining experiences. Discover the vibrant flavors and culinary secrets that make Nusantara a gastronomic paradise.",
     'featured_button' => 'More Detail',
 
     'about_subtitle' => 'Dedicated to Unveiling Nusantara"s Remarkable History',
@@ -63,4 +67,6 @@ return [
     'footer_item4_link1' => "Terms & Conditions",
     'footer_item4_link2' => "Privacy Policy",
     'footer_item4_link3' => "Contact Us",
+
+    'modal_close' => "Close Modal",
 ];
