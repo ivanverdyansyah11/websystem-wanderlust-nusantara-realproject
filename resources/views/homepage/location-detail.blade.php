@@ -115,26 +115,21 @@
                     <div class="d-flex flex-column">
                         <div class="badge-section">
                             <p class="fs-15 fw-semibold main-color">
-                                Know Historical Treasures in the City of {{ $city->name }}
+                                @lang('messages.subtitle_category_locations')
                             </p>
                         </div>
                         <p class="mt-2 display-5 fw-semibold text-black">
-                            Know Historical Treasures in the City of {{ $city->name }}
+                            @lang('messages.title_category_locations') {{ $city->name }}
                         </p>
                     </div>
                 </div>
                 <div class="col-lg-1 d-lg-block d-none"></div>
                 <div class="col-lg-5 align-self-end col-md-6 col-12">
-                    Welcome to WanderlustNusantara's enchanting landing page dedicated to the historical attractions of
-                    {{ $city->name }}. Immerse yourself in the timeless beauty and rich heritage of this captivating
-                    region as
-                    we unveil the hidden gems that lie within.
+                    @lang('messages.description1_category_locations') {{ $city->name }}@lang('messages.description2_category_locations')
                 </div>
-
             </div>
             <div
                 class="content-section mt-5 row row-cols-xl-4 gy-4 row-cols-xl-4 row-cols-lg-3 row-cols-md-2 row-cols-1">
-
                 @foreach ($destinations as $destination)
                     <div class="col">
                         <a href="/destination/{{ $destination->id }}" class="">
@@ -162,7 +157,6 @@
                         </a>
                     </div>
                 @endforeach
-
             </div>
         </section>
 

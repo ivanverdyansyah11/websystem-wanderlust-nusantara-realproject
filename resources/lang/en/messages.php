@@ -95,5 +95,10 @@ return [
     'description2_locations' => 'At the center of',
     'description3_locations' => "lies the cultural and spiritual epicenter of Indonesia, Yogyakarta. This vibrant city is home to the magnificent Borobudur Temple, a UNESCO World Heritage site and one of the world's greatest Buddhist monuments.",
 
+    'subtitle_category_locations' => 'Know Historical Treasures',
+    'title_category_locations' => "Know Historical Treasures in the City of",
+    'description1_category_locations' => "Welcome to WanderlustNusantara's enchanting landing page dedicated to the historical attractions of",
+    'description2_category_locations' => '. Immerse yourself in the timeless beauty and rich heritage of this captivating region as we unveil the hidden gems that lie within.',
+
     'modal_close' => "Close Modal",
 ];
