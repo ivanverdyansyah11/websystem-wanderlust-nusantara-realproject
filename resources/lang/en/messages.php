@@ -68,5 +68,12 @@ return [
     'footer_item4_link2' => "Privacy Policy",
     'footer_item4_link3' => "Contact Us",
 
+    'subtitle_location' => 'Unraveling the Historical Treasures of All of City',
+    'title_location' => "Unveiling Nusantara's Historic Gems, From City by City",
+    'description1_location' => "From the majestic Puri Agung Semarapura, the former royal palace that witnessed the heroic puputan battle against the Dutch, to the captivating Taman Gili Kerta Gosa, where ancient court cases were judged and engraved on its magnificent ceiling, each location holds a unique piece of Klungkung's history.",
+    'description2_location' => 'Explore the sacred Pura Goa Lawah, known for its bat-filled cave and its connection to the protective deity Dewa Naga Basuki. Marvel at the ancient Pura Penataran Sasih, the oldest temple in Klungkung, revered by locals for its historical and spiritual significance.',
+    'button1_location' => 'Explore Now',
+    'button2_location' => 'Back to Home',
+
     'modal_close' => "Close Modal",
 ];

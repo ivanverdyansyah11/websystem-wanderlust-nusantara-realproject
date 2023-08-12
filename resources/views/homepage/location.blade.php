@@ -32,23 +32,38 @@
                 <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link fw-semibold" href="/homepage">Home</a>
+                            <a class="nav-link fw-semibold" href="#home">@lang('messages.nav_link1')</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active fw-semibold" href="/location">Destination Location</a>
+                            <a class="nav-link active fw-semibold" href="/location">@lang('messages.nav_link2')</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link fw-semibold" href="/gallery">Gallery Documentation</a>
+                            <a class="nav-link fw-semibold" href="/gallery">@lang('messages.nav_link3')</a>
                         </li>
                     </ul>
                 </div>
-                <div class="d-lg-flex justify-content-end d-none">
+                <div class="d-lg-flex justify-content-end d-none gap-2">
                     <a href="https://wa.me/+62123456789" target="_blank"
-                        class="btn btn-color d-flex flex-row align-items-center gap-2">
-                        contact us
+                        class="btn btn-color d-flex flex-row align-items-center gap-2"
+                        style="height: fit-content; padding: 13px 22px;">
+                        @lang('messages.nav_button')
                         <img src="{{ asset('assets/img-homepage/arr-btn.svg') }}" alt="" class=""
                             draggable="false">
                     </a>
+                    <div class="dropdown">
+                        <button class="btn btn-dark dropdown-toggle" style="height: fit-content; padding: 13px 22px;"
+                            type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            {{ strtoupper(session('locale')) ?? strtoupper(config('app.locale')) }}
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item"
+                                    href="{{ route('switch-language', ['locale' => 'id']) }}">ID</a>
+                            </li>
+                            <li><a class="dropdown-item"
+                                    href="{{ route('switch-language', ['locale' => 'en']) }}">EN</a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </nav>
@@ -60,31 +75,21 @@
                     <div class="col-xl-6 col-lg-7 col-12">
                         <div class="badge-section">
                             <p class="main-color">
-                                Unraveling the Historical Treasures of All of City
+                                @lang('messages.subtitle_location')
                             </p>
                         </div>
                         <p class="fw-semibold display-4 mt-2 text-black">
-                            Unveiling Nusantara's Historic Gems, From City by City
+                            @lang('messages.title_location')
                         </p>
                         <article class="mt-3">
-                            <p>
-                                From the majestic Puri Agung Semarapura, the former royal palace that witnessed the
-                                heroic puputan battle against the Dutch, to the captivating Taman Gili Kerta Gosa, where
-                                ancient court cases were judged and engraved on its magnificent ceiling, each location
-                                holds a unique piece of Klungkung's history.
-                            </p>
-                            <p class="mt-1">
-                                Explore the sacred Pura Goa Lawah, known for its bat-filled cave and its connection to
-                                the protective deity Dewa Naga Basuki. Marvel at the ancient Pura Penataran Sasih, the
-                                oldest temple in Klungkung, revered by locals for its historical and spiritual
-                                significance.
-                            </p>
+                            <p>@lang('messages.description1_location')</p>
+                            <p class="mt-1">@lang('messages.description2_location')</p>
                         </article>
                         <div class="mt-4 d-flex flex-row gap-3">
-                            <a href="#featured" class="btn btn-color">Explore Now</a>
+                            <a href="#featured" class="btn btn-color">@lang('messages.button1_location')</a>
                             <a href="/homepage"
                                 class="btn text-decoration-none btn-secondary d-flex flex-row align-items-center gap-2">
-                                Back to Home
+                                @lang('messages.button2_location')
                                 <img src="{{ asset('assets/img-homepage/arr-btn.svg') }}" alt="" class=""
                                     draggable="false">
                             </a>
