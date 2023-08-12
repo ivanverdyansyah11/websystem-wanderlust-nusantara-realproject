@@ -108,5 +108,14 @@ return [
     'destination_description4' => 'Invites you to delve deeper into the hidden tales behind its remarkable historical structures.Through interactive activities or expert guides, you will be introduced to fascinating stories about',
     'destination_description5' => 'and the precious relics that have endured for centuries.',
 
+    'subtitle_gallery_destination' => 'Documentation',
+    'title_gallery_destination' => 'Gallery of Beautiful',
+    'description1_gallery_destination' => 'Welcome to the Gallery of',
+    'description2_gallery_destination' => ", where the wonders of Nusantara's rich history come to life. This carefully curated collection showcases the beauty, grandeur, and significance of",
+    'description3_gallery_destination' => "and its historical counterparts.",
+
+    'subtitle_history_destination' => 'History',
+    'title_history_destination' => 'Historical Tourism of',
+
     'modal_close' => "Close Modal",
 ];

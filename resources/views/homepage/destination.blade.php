@@ -116,22 +116,19 @@
                     <div class="d-flex flex-column">
                         <div class="badge-section">
                             <p class="fs-15 fw-semibold main-color">
-                                {{ $destination->name }} Documentation
+                                {{ $destination->name }} @lang('messages.subtitle_gallery_destination')
                             </p>
                         </div>
                         <p class="mt-2 display-5 fw-semibold text-black">
-                            Gallery of Beautiful {{ $destination->name }}
+                            @lang('messages.title_gallery_destination') {{ $destination->name }}
                         </p>
                     </div>
                 </div>
                 <div class="col-lg-1 d-lg-block d-none"></div>
                 <div class="col-lg-5 align-self-end col-md-6 col-12">
-                    Welcome to the Gallery of {{ $destination->name }}, where the wonders of Nusantara's rich history
-                    come to
-                    life. This carefully curated collection showcases the beauty, grandeur, and significance of
-                    {{ $destination->name }} and its historical counterparts.
+                    @lang('messages.description1_gallery_destination') {{ $destination->name }}@lang('messages.description2_gallery_destination')
+                    {{ $destination->name }} @lang('messages.description3_gallery_destination')
                 </div>
-
             </div>
             <div class="content-section mt-5">
                 <div class="wrapper" style="columns: 4; column-gap: 20px;">
@@ -156,11 +153,11 @@
                     <div class="col-xl-6 col-lg-7 col-12">
                         <div class="badge-section">
                             <p class="main-color fs-15 fw-semibold">
-                                {{ $destination->name }} History
+                                {{ $destination->name }} @lang('messages.subtitle_history_destination')
                             </p>
                         </div>
                         <p class="fw-semibold display-5 mt-1 text-black">
-                            Historical Tourism of {{ $destination->name }}
+                            @lang('messages.title_history_destination') {{ $destination->name }}
                         </p>
                         <article class="mt-3">
                             <p>

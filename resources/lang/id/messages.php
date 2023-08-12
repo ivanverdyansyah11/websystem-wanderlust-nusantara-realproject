@@ -108,5 +108,11 @@ return [
     'destination_description4' => 'Mengundang Anda untuk mempelajari lebih dalam ke dalam kisah tersembunyi di balik struktur historisnya yang luar biasa. Melalui kegiatan interaktif atau panduan ahli, Anda akan diperkenalkan dengan cerita yang menarik tentang',
     'destination_description5' => 'dan peninggalan berharga yang telah bertahan selama berabad -abad.',
 
+    'subtitle_gallery_destination' => 'Dokumentasi',
+    'title_gallery_destination' => 'Galeri Cantik',
+    'description1_gallery_destination' => 'Selamat datang di galeri',
+    'description2_gallery_destination' => ", di mana keajaiban sejarah Nusantara yang kaya menjadi hidup.Koleksi yang dikuratori dengan cermat ini menampilkan keindahan, kemegahan, dan pentingnya",
+    'description3_gallery_destination' => "dan rekan -rekan historisnya.",
+
     'modal_close' => "Tutup Modal",
 ];
