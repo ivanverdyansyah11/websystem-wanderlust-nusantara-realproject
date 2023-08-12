@@ -138,13 +138,12 @@
             <div class="cta-content container">
                 <div class="row gy-4">
                     <div class="col-md-6 col-12">
-                        <p class="display-5 text-white fw-semibold">Get to Know More About the History of Other
-                            Archipelagos</p>
+                        <p class="display-5 text-white fw-semibold">@lang('messages.cta_title')</p>
                     </div>
                     <div class="col-md-6 col-12 align-self-end d-flex justify-content-end">
                         <a href="https://wa.me/+62123456789" target="_blank"
                             class="btn btn-white d-flex flex-row gap-2 align-items-center">
-                            connect with us
+                            @lang('messages.cta_button')
                             <img src="{{ asset('assets/img-homepage/arr-btn-black.svg') }}" alt=""
                                 class="" draggable="false">
                         </a>
