@@ -100,5 +100,13 @@ return [
     'description1_category_locations' => "Welcome to WanderlustNusantara's enchanting landing page dedicated to the historical attractions of",
     'description2_category_locations' => '. Immerse yourself in the timeless beauty and rich heritage of this captivating region as we unveil the hidden gems that lie within.',
 
+    'destination_subtitle' => 'Discover the Legacy of',
+    'destination_title' => 'Unveiling the Secrets of',
+    'destination_description1' => 'Welcome to',
+    'destination_description2' => ', a captivating destination with a rich historical heritage. Located in',
+    'destination_description3' => ', entices visitors with its stunning architecture, cultural wealth, and stories that transcend time.',
+    'destination_description4' => 'Invites you to delve deeper into the hidden tales behind its remarkable historical structures.Through interactive activities or expert guides, you will be introduced to fascinating stories about',
+    'destination_description5' => 'and the precious relics that have endured for centuries.',
+
     'modal_close' => "Close Modal",
 ];

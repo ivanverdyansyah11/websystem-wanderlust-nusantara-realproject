@@ -32,23 +32,38 @@
                 <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link fw-semibold" href="/homepage">Home</a>
+                            <a class="nav-link fw-semibold" href="#home">@lang('messages.nav_link1')</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active fw-semibold" href="/location">Destination Location</a>
+                            <a class="nav-link active fw-semibold" href="/location">@lang('messages.nav_link2')</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link fw-semibold" href="/gallery">Gallery Documentation</a>
+                            <a class="nav-link fw-semibold" href="/gallery">@lang('messages.nav_link3')</a>
                         </li>
                     </ul>
                 </div>
-                <div class="d-lg-flex justify-content-end d-none">
+                <div class="d-lg-flex justify-content-end d-none gap-2">
                     <a href="https://wa.me/+62123456789" target="_blank"
-                        class="btn btn-color d-flex flex-row align-items-center gap-2">
-                        contact us
+                        class="btn btn-color d-flex flex-row align-items-center gap-2"
+                        style="height: fit-content; padding: 13px 22px;">
+                        @lang('messages.nav_button')
                         <img src="{{ asset('assets/img-homepage/arr-btn.svg') }}" alt="" class=""
                             draggable="false">
                     </a>
+                    <div class="dropdown">
+                        <button class="btn btn-dark dropdown-toggle" style="height: fit-content; padding: 13px 22px;"
+                            type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            {{ strtoupper(session('locale')) ?? strtoupper(config('app.locale')) }}
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item"
+                                    href="{{ route('switch-language', ['locale' => 'id']) }}">ID</a>
+                            </li>
+                            <li><a class="dropdown-item"
+                                    href="{{ route('switch-language', ['locale' => 'en']) }}">EN</a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </nav>
@@ -60,33 +75,26 @@
                     <div class="col-xl-6 col-lg-7 col-12">
                         <div class="badge-section">
                             <p class="main-color">
-                                Discover the Legacy of {{ $destination->name }}
+                                @lang('messages.destination_subtitle') {{ $destination->name }}
                             </p>
                         </div>
                         <p class="fw-semibold display-4 mt-2 text-black">
-                            Unveiling the Secrets of {{ $destination->name }}
+                            @lang('messages.destination_title') {{ $destination->name }}
                         </p>
                         <article class="mt-3">
                             <p>
-                                Welcome to {{ $destination->name }}, a captivating destination with a rich historical
-                                heritage.
-                                Located in {{ $destination->location }}, entices visitors with its stunning
-                                architecture,
-                                cultural wealth, and stories that transcend time.
+                                @lang('messages.destination_description1') {{ $destination->name }}@lang('messages.destination_description2')
+                                {{ $destination->location }}@lang('messages.destination_description3')
                             </p>
                             <p class="mt-1">
-                                Invites you to delve deeper into the hidden tales behind its remarkable historical
-                                structures.Through interactive activities or expert guides, you will be introduced to
-                                fascinating stories about {{ $destination->name }} and the precious relics that have
-                                endured for
-                                centuries.
+                                @lang('messages.destination_description4') {{ $destination->name }} @lang('messages.destination_description5')
                             </p>
                         </article>
                         <div class="mt-4 d-flex flex-row gap-3">
-                            <a href="#featured" class="btn btn-color">Explore Now</a>
+                            <a href="#featured" class="btn btn-color">@lang('messages.button1_location')</a>
                             <a href="/homepage"
                                 class="btn text-decoration-none btn-secondary d-flex flex-row align-items-center gap-2">
-                                Back to Home
+                                @lang('messages.button2_location')
                                 <img src="{{ asset('assets/img-homepage/arr-btn.svg') }}" alt="" class=""
                                     draggable="false">
                             </a>

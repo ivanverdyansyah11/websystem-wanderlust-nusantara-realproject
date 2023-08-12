@@ -100,5 +100,13 @@ return [
     'description1_category_locations' => "Selamat datang di halaman arahan yang mempesona WanderLustNusantara yang didedikasikan untuk atraksi sejarah",
     'description2_category_locations' => '.Benamkan diri Anda dalam keindahan abadi dan warisan kaya dari wilayah yang menawan ini saat kami mengungkap permata tersembunyi yang ada di dalamnya.',
 
+    'destination_subtitle' => 'Temukan warisan',
+    'destination_title' => 'Meluncurkan rahasia',
+    'destination_description1' => 'Selamat Datang di',
+    'destination_description2' => ', tujuan yang menawan dengan warisan sejarah yang kaya.Terletak di',
+    'destination_description3' => ', membujuk pengunjung dengan arsitektur yang menakjubkan, kekayaan budaya, dan cerita yang melampaui waktu.',
+    'destination_description4' => 'Mengundang Anda untuk mempelajari lebih dalam ke dalam kisah tersembunyi di balik struktur historisnya yang luar biasa. Melalui kegiatan interaktif atau panduan ahli, Anda akan diperkenalkan dengan cerita yang menarik tentang',
+    'destination_description5' => 'dan peninggalan berharga yang telah bertahan selama berabad -abad.',
+
     'modal_close' => "Tutup Modal",
 ];
