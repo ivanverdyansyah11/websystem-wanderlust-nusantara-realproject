@@ -32,23 +32,38 @@
                 <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link active fw-semibold" href="#home">Home</a>
+                            <a class="nav-link active fw-semibold" href="#home">@lang('messages.nav_link1')</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link fw-semibold" href="/location">Destination Location</a>
+                            <a class="nav-link fw-semibold" href="/location">@lang('messages.nav_link2')</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link fw-semibold" href="/gallery">Gallery Documentation</a>
+                            <a class="nav-link fw-semibold" href="/gallery">@lang('messages.nav_link3')</a>
                         </li>
                     </ul>
                 </div>
-                <div class="d-lg-flex justify-content-end d-none">
+                <div class="d-lg-flex justify-content-end d-none gap-2">
                     <a href="https://wa.me/+62123456789" target="_blank"
-                        class="btn btn-color d-flex flex-row align-items-center gap-2">
-                        contact us
+                        class="btn btn-color d-flex flex-row align-items-center gap-2"
+                        style="height: fit-content; padding: 13px 22px;">
+                        @lang('messages.nav_button')
                         <img src="{{ asset('assets/img-homepage/arr-btn.svg') }}" alt="" class=""
                             draggable="false">
                     </a>
+                    <div class="dropdown">
+                        <button class="btn btn-dark dropdown-toggle" style="height: fit-content; padding: 13px 22px;"
+                            type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            {{ strtoupper(session('locale')) ?? strtoupper(config('app.locale')) }}
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item"
+                                    href="{{ route('switch-language', ['locale' => 'id']) }}">ID</a>
+                            </li>
+                            <li><a class="dropdown-item"
+                                    href="{{ route('switch-language', ['locale' => 'en']) }}">EN</a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </nav>
@@ -60,28 +75,24 @@
                     <div class="col-xl-6 col-lg-7 col-12">
                         <div class="badge-section">
                             <p class="main-color">
-                                Discover the Hidden Treasures of Nusantara
+                                @lang('messages.subtitle_home')
                             </p>
                         </div>
                         <p class="fw-semibold display-4 mt-2 text-black">
-                            Explore, Discover, and Indulge in the Beauty of Nusantara
+                            @lang('messages.title_home')
                         </p>
                         <article class="mt-3">
                             <p>
-                                Welcome to WanderlustNusantara, where we invite you to embark on an extraordinary
-                                journey through the enchanting landscapes and vibrant cultures of Nusantara. Get ready
-                                to satisfy your wanderlust as we curate immersive and unforgettable tours that showcase
-                                the hidden gems and iconic landmarks of this breathtaking archipelago.
+                                @lang('messages.description1_home')
                             </p>
                             <p class="mt-1">
-                                We believe that travel is not just about visiting destinations, but about creating
-                                lifelong memories and forging connections with the places we explore.
+                                @lang('messages.description2_home')
                             </p>
                         </article>
                         <div class="mt-4 d-flex flex-row gap-3">
-                            <a href="#about" class="btn btn-color">Start Exploring</a>
+                            <a href="#about" class="btn btn-color">@lang('messages.button1_home')</a>
                             <a href="/gallery" class="btn btn-secondary d-flex flex-row align-items-center gap-2">
-                                Check Gallery
+                                @lang('messages.button2_home')
                                 <img src="{{ asset('assets/img-homepage/arr-btn.svg') }}" draggable="false">
                             </a>
                         </div>
@@ -89,7 +100,8 @@
                 </div>
             </div>
             <div class="hero-banner row  position-absolute d-none top-0 banner-background end-0 d-lg-inline-block">
-                <img src="{{ asset('assets/img-homepage/hero-img.jpg') }}" alt="hero section image" class="w-100 h-100">
+                <img src="{{ asset('assets/img-homepage/hero-img.jpg') }}" alt="hero section image"
+                    class="w-100 h-100">
             </div>
         </section>
     </div>
@@ -99,20 +111,17 @@
             <div class="row">
                 <div class="col-lg-6 col-12">
                     <p class="badge-section main-color fs-15 fw-semibold">
-                        Recommendations Based on Rating Given
+                        @lang('messages.recommendation_subtitle')
                     </p>
                     <h4 class="text-black mt-1 display-5 fw-semibold">
-                        Recommendation Place’s Nusantara Destinations
+                        @lang('messages.recommendation_title')
                     </h4>
                     <p class="fw-medium">
-                        At WanderlustNusantara, we have handpicked the most breathtaking destinations across Nusantara
-                        to offer you an unforgettable travel experience. Whether you seek pristine beaches, ancient
-                        temples, or vibrant cities, our destination tours will take you on a remarkable journey to the
-                        hidden gems and iconic landmarks of Nusantara.
+                        @lang('messages.recommendation_description')
                     </p>
                     <div class="mt-5">
                         <a href="/location" class="btn btn-color d-flex flex-row gap-2 align-items-center">
-                            Destination Location
+                            @lang('messages.recommendation_button')
                             <img src="{{ asset('assets/img-homepage/arr-btn') }}.svg" alt="" class=""
                                 draggable="false">
                         </a>
@@ -677,6 +686,7 @@
             </div>
         </div>
     </div>
+
     </div>
 
     <script src="https://kit.fontawesome.com/9e88c62f38.js" crossorigin="anonymous"></script>

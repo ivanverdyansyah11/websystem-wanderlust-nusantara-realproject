@@ -2,20 +2,21 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Chef;
 use App\Models\City;
 use App\Models\Destination;
-use App\Models\Feedback;
 use App\Models\Gallery;
-use App\Models\History;
-use App\Models\Location;
-use App\Models\Menu;
-use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Session;
 
 class HomepageController extends Controller
 {
     public function homepage()
     {
+        if (!$locale = session('locale')) {
+            Session::put('locale', 'id');
+        } else {
+            app()->setLocale($locale);
+        }
+
         $gallery_count_all = Gallery::select('image')->get()
             ->map(function ($file) {
                 return explode(',', $file->image);
@@ -36,6 +37,12 @@ class HomepageController extends Controller
 
     public function location()
     {
+        if (!$locale = session('locale')) {
+            Session::put('locale', 'id');
+        } else {
+            app()->setLocale($locale);
+        }
+
         return view('homepage.location', [
             'page' => 'Destination Location',
             'destination_all' => Destination::all(),
@@ -45,6 +52,12 @@ class HomepageController extends Controller
 
     public function locationDetail($id)
     {
+        if (!$locale = session('locale')) {
+            Session::put('locale', 'id');
+        } else {
+            app()->setLocale($locale);
+        }
+
         return view('homepage.location-detail', [
             'page' => 'Location Detail',
             'destination_all' => Destination::all(),
@@ -55,6 +68,12 @@ class HomepageController extends Controller
 
     public function gallery()
     {
+        if (!$locale = session('locale')) {
+            Session::put('locale', 'id');
+        } else {
+            app()->setLocale($locale);
+        }
+
         $gallery_count_all = Gallery::select('image')->get()
             ->map(function ($file) {
                 return explode(',', $file->image);
@@ -71,6 +90,12 @@ class HomepageController extends Controller
 
     public function destinationDetail($id)
     {
+        if (!$locale = session('locale')) {
+            Session::put('locale', 'id');
+        } else {
+            app()->setLocale($locale);
+        }
+
         $images = Gallery::where('destinations_id', $id)->value('image');
         $images = explode(',', $images);
 
@@ -80,5 +105,12 @@ class HomepageController extends Controller
             'recommendations' => Destination::whereNotIn('id', [$id])->take(5)->get(),
             'gallery' => $images,
         ]);
+    }
+
+    public function switchLanguage($locale)
+    {
+        Session::put('locale', $locale);
+
+        return redirect()->back();
     }
 }

@@ -28,6 +28,7 @@ Route::redirect('/', '/homepage');
 Route::redirect('/admin', '/admin/dashboard');
 
 Route::controller(HomepageController::class)->group(function () {
+    Route::get('/switchLanguage/{locale}', 'switchLanguage')->name('switch-language');
     Route::get('/homepage', 'homepage')->name('homepage');
     Route::get('/location', 'location')->name('location');
     Route::get('/location/{id}', 'locationDetail')->name('location-detail');
