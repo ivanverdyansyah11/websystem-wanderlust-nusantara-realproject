@@ -212,7 +212,6 @@
         </section>
     </main>
 
-
     <footer class="footer mt-5">
         <div class="container">
             <div class="footer-content pb-3 row gy-5">
@@ -224,8 +223,7 @@
                                     alt="logo">
                             </div>
                             <p class="footer-color pt-3 footer-desc">
-                                Welcome to WanderlustNusantara, where we invite you to embark on an extraordinary
-                                journey through the enchanting landscapes
+                                @lang('messages.footer_description')
                             </p>
                         </div>
                         <div class="d-flex flex-row pt-4 gap-2">
@@ -243,48 +241,54 @@
                     </div>
                 </div>
                 <div class="col-lg-2 col-md-6 col-12" style="width:fit-content;">
-                    <p class="text-white title-font second-font fw-medium" style="font-size: 1.125rem;">Home Page</p>
+                    <p class="text-white title-font second-font fw-medium" style="font-size: 1.125rem;">
+                        @lang('messages.footer_subtitle1')</p>
                     <div class="d-flex flex-column pt-4">
-                        <a href="/homepage" class="footer-color footer-link text-decoration-none">Home</a>
-                        <a href="/location" class="footer-color text-decoration-none footer-link pt-3">Destination
-                            Location</a>
-                        <a href="/gallery" class="footer-color text-decoration-none footer-link pt-3">Gallery
-                            Documentation</a>
+                        <a href="/homepage"
+                            class="footer-color footer-link text-decoration-none">@lang('messages.nav_link1')</a>
+                        <a href="/location"
+                            class="footer-color text-decoration-none footer-link pt-3">@lang('messages.nav_link2')</a>
+                        <a href="/gallery"
+                            class="footer-color text-decoration-none footer-link pt-3">@lang('messages.nav_link3')</a>
                     </div>
                 </div>
                 <div class="col-lg-2 col-md-6 col-12" style="width:fit-content;">
-                    <p class="text-white title-font second-font fw-medium" style="font-size: 1.125rem;">Quick Link</p>
+                    <p class="text-white title-font second-font fw-medium" style="font-size: 1.125rem;">
+                        @lang('messages.footer_subtitle2')</p>
                     <div class="d-flex flex-column pt-4">
                         <a href="/homepage#recommendation"
-                            class="footer-color footer-link text-decoration-none ">Recommendation Place</a>
-                        <a href="/homepage#featured" class="footer-color footer-link pt-3 text-decoration-none">Our
-                            Featured</a>
-                        <a href="/homepage#about" class="footer-color footer-link pt-3 text-decoration-none">About
-                            Us</a>
+                            class="footer-color footer-link text-decoration-none ">@lang('messages.footer_item2_link1')</a>
+                        <a href="/homepage#featured"
+                            class="footer-color footer-link pt-3 text-decoration-none">@lang('messages.footer_item2_link2')</a>
+                        <a href="/homepage#about"
+                            class="footer-color footer-link pt-3 text-decoration-none">@lang('messages.footer_item2_link3')</a>
                         <a href="/homepage#testi"
-                            class="footer-color footer-link pt-3 text-decoration-none">Testimonial</a>
+                            class="footer-color footer-link pt-3 text-decoration-none">@lang('messages.footer_item2_link4')</a>
                     </div>
                 </div>
                 <div class="col-lg-2 col-md-6 col-12">
-                    <p class="text-white title-font second-font fw-medium" style="font-size: 1.125rem;">Our featured
+                    <p class="text-white title-font second-font fw-medium" style="font-size: 1.125rem;">
+                        @lang('messages.footer_subtitle3')
                     </p>
                     <div class="d-flex flex-column pt-4">
-                        <a href="#featured" class="footer-color text-decoration-none footer-link ">Island Paradise
-                            Retreat</a>
-                        <a href="#featured" class="footer-color text-decoration-none footer-link pt-3">Cultural
-                            Heritage Expedition</a>
-                        <a href="#featured" class="footer-color text-decoration-none footer-link pt-3">Jungle
-                            Adventure Trek</a>
+                        <a href="/homepage#featured"
+                            class="footer-color text-decoration-none footer-link ">@lang('messages.featured_item1')</a>
+                        <a href="/homepage#featured"
+                            class="footer-color text-decoration-none footer-link pt-3">@lang('messages.featured_item2')</a>
+                        <a href="/homepage#featured"
+                            class="footer-color text-decoration-none footer-link pt-3">@lang('messages.featured_item3')</a>
+                        <a href="/homepage#featured"
+                            class="footer-color text-decoration-none footer-link pt-3">@lang('messages.featured_item4')</a>
                     </div>
                 </div>
                 <div class="col-lg-2 col-md-6 col-12">
-                    <p class="text-white title-font second-font fw-medium" style="font-size: 1.125rem;">Help & guide
-                    </p>
+                    <p class="text-white title-font second-font fw-medium" style="font-size: 1.125rem;">
+                        @lang('messages.footer_subtitle4')</p>
                     <div class="d-flex flex-column pt-4">
-                        <p class="footer-color footer-link ">Terms & Conditions</p>
-                        <p class="footer-color footer-link pt-3">Privacy Policy</p>
+                        <p class="footer-color footer-link ">@lang('messages.footer_item4_link1')</p>
+                        <p class="footer-color footer-link pt-3">@lang('messages.footer_item4_link2')</p>
                         <a target="_blank" href="https://wa.me/+62123456789"
-                            class="footer-color footer-link pt-3">Contact Us</a>
+                            class="footer-color footer-link pt-3 text-decoration-none">@lang('messages.footer_item4_link3')</a>
                     </div>
                 </div>
                 <div class="d-flex justify-content-center flex-column mt-5 pt-5 pb-4">
