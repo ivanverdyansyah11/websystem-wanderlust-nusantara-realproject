@@ -111,18 +111,17 @@
                     <div class="d-flex flex-column">
                         <div class="badge-section">
                             <p class="fs-15 fw-semibold main-color">
-                                Discover the Hidden Archipelago Cities
+                                @lang('messages.category_subtitle')
                             </p>
                         </div>
                         <p class="mt-2 display-5 fw-semibold text-black">
-                            Find Out the Nusantara's Historic Cities
+                            @lang('messages.category_title')
                         </p>
                     </div>
                 </div>
                 <div class="col-lg-1 d-lg-block d-none"></div>
                 <div class="col-lg-5 align-self-end col-md-6 col-12">
-                    Embark on an extraordinary voyage through Nusantara's history as you explore WanderlustNusantara's
-                    city categories. From the majestic ruins of Yogyakarta to the colonial charms of Jakarta.
+                    @lang('messages.category_description')
                 </div>
             </div>
 
@@ -149,20 +148,15 @@
             <div class="row">
                 <div class="col-lg-6 col-12">
                     <p class="badge-section main-color fs-15 fw-semibold">
-                        A Pictorial Journey Through Historical Tapestry
+                        @lang('messages.gallery_subtitle')
                     </p>
                     <h4 class="text-black mt-1 display-5 fw-semibold">
-                        Gallery of Beautiful Archipelago Places
+                        @lang('messages.gallery_title')
                     </h4>
-                    <p class="fw-medium">
-                        Immerse yourself in the captivating gallery of WanderlustNusantara's historical tourism website,
-                        where the rich tapestry of Nusantara's heritage comes to life. Explore a visual feast of ancient
-                        ruins, majestic temples, and cultural landmarks that showcase the remarkable history of
-                        Indonesia.
-                    </p>
+                    <p class="fw-medium">@lang('messages.gallery_description')</p>
                     <div class="mt-5">
                         <a href="/gallery" class="btn btn-color d-flex flex-row gap-2 align-items-center">
-                            More Documentation
+                            @lang('messages.gallery_button')
                             <img src="{{ asset('assets/img-homepage/arr-btn.svg') }}" alt="" class=""
                                 draggable="false">
                         </a>

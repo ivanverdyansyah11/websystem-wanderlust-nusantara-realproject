@@ -75,5 +75,9 @@ return [
     'button1_location' => 'Explore Now',
     'button2_location' => 'Back to Home',
 
+    'category_subtitle' => 'Discover the Hidden Archipelago Cities',
+    'category_title' => "Find Out the Nusantara's Historic Cities",
+    'category_description' => "Embark on an extraordinary voyage through Nusantara's history as you explore WanderlustNusantara's city categories. From the majestic ruins of Yogyakarta to the colonial charms of Jakarta.",
+
     'modal_close' => "Close Modal",
 ];

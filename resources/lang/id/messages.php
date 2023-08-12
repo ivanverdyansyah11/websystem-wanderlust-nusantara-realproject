@@ -68,5 +68,16 @@ return [
     'footer_item4_link2' => "Kebijakan Pribadi",
     'footer_item4_link3' => "Hubungi Kami",
 
+    'subtitle_location' => 'Mengungkap Harta Historis dari Semua Kota',
+    'title_location' => "Meluncurkan permata bersejarah Nusantara, dari kota berdasarkan kota",
+    'description1_location' => "Dari puri agung agung semarapura yang agung, bekas istana kerajaan yang menyaksikan pertempuran puputan heroik melawan Belanda, hingga menawan Taman Gili Kerta Gosa, di mana kasus -kasus pengadilan kuno dinilai dan diukir di langit -langitnya yang megah, setiap lokasi memegang sepotong unik dari Klajam's's'ssejarah.",
+    'description2_location' => 'Jelajahi Pura Goa Lawah yang suci, yang dikenal dengan gua yang dipenuhi kelelawar dan hubungannya dengan dewa pelindung Dewa Naga Bekuuki.Kagumi Pura Penataran Sasih kuno, kuil tertua di Klungkung, dihormati oleh penduduk setempat karena signifikansi historis dan spiritualnya.',
+    'button1_location' => 'Jelajahi Sekarang',
+    'button2_location' => 'Kembali ke Beranda',
+
+    'category_subtitle' => 'Temukan Kota Kepulauan Tersembunyi',
+    'category_title' => "Cari tahu kota -kota bersejarah Nusantara",
+    'category_description' => "Memulai perjalanan yang luar biasa melalui sejarah Nusantara saat Anda menjelajahi kategori kota Wanderlustnusantara.Dari reruntuhan agung Yogyakarta hingga pesona kolonial Jakarta.",
+
     'modal_close' => "Tutup Modal",
 ];
