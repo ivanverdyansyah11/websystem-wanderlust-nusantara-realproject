@@ -84,5 +84,9 @@ return [
     'description1_gallery' => "Welcome to the Gallery section of our landing page, where you can embark on a visual adventure through the historic wonders of Klungkung. This curated collection of captivating images offers a glimpse into the rich tapestry of Klungkung's history, allowing you to immerse yourself in its cultural heritage.",
     'description2_gallery' => "Browse through a diverse range of photographs and illustrations, capturing the architectural beauty, intricate details, and awe-inspiring landscapes of Klungkung's historic sites. From the grandeur of Puri Agung Semarapura to the exquisite carvings of Taman Gili Kerta Gosa, each image tells a unique story of Klungkung's past.",
 
+    'galleries_subtitle' => "Capturing the Essence of Klungkung's History in Frames",
+    'galleries_title' => "Exploring Klungkung's Historic Gallery",
+    'galleries_description' => "Through this Gallery section, we invite you to explore Klungkung's historical treasures through a visual narrative. Let the images transport you back in time, evoking a sense of wonder and admiration for the cultural legacy that continues to thrive in Klungkung.",
+
     'modal_close' => "Close Modal",
 ];

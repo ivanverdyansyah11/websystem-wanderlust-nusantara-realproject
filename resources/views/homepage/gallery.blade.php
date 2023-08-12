@@ -110,20 +110,16 @@
                     <div class="d-flex flex-column">
                         <div class="badge-section">
                             <p class="fs-15 fw-semibold main-color">
-                                Capturing the Essence of Klungkung's History in Frames
+                                @lang('messages.galleries_subtitle')
                             </p>
                         </div>
                         <p class="mt-2 display-5 fw-semibold text-black">
-                            Exploring Klungkung's Historic Gallery
+                            @lang('messages.galleries_title')
                         </p>
                     </div>
                 </div>
                 <div class="col-lg-1 d-lg-block d-none"></div>
-                <div class="col-lg-5 align-self-end col-md-6 col-12">
-                    Through this Gallery section, we invite you to explore Klungkung's historical treasures through a
-                    visual narrative. Let the images transport you back in time, evoking a sense of wonder and
-                    admiration for the cultural legacy that continues to thrive in Klungkung.
-                </div>
+                <div class="col-lg-5 align-self-end col-md-6 col-12">@lang('messages.galleries_description')</div>
 
             </div>
             <div class="content-section mt-5">
