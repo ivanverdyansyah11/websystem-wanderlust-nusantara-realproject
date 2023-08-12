@@ -95,5 +95,10 @@ return [
     'description2_locations' => 'Di tengah',
     'description3_locations' => "terletak pusat budaya dan spiritual Indonesia, Yogyakarta.Kota yang semarak ini adalah rumah bagi Kuil Borobudur yang megah, situs warisan dunia UNESCO dan salah satu monumen Buddha terhebat di dunia.",
 
+    'subtitle_category_locations' => 'Ketahui Harta Historis',
+    'title_category_locations' => "Ketahui Harta Historis di Kota",
+    'description1_category_locations' => "Selamat datang di halaman arahan yang mempesona WanderLustNusantara yang didedikasikan untuk atraksi sejarah",
+    'description2_category_locations' => '.Benamkan diri Anda dalam keindahan abadi dan warisan kaya dari wilayah yang menawan ini saat kami mengungkap permata tersembunyi yang ada di dalamnya.',
+
     'modal_close' => "Tutup Modal",
 ];

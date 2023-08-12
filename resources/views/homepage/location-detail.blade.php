@@ -164,20 +164,17 @@
             <div class="row">
                 <div class="col-lg-6 col-12">
                     <p class="badge-section main-color fs-15 fw-semibold">
-                        A Pictorial Journey Through Historical Tapestry
+                        @lang('messages.gallery_subtitle')
                     </p>
                     <h4 class="text-black mt-1 display-5 fw-semibold">
-                        Gallery of Beautiful Archipelago Places
+                        @lang('messages.gallery_title')
                     </h4>
                     <p class="fw-medium">
-                        Immerse yourself in the captivating gallery of WanderlustNusantara's historical tourism website,
-                        where the rich tapestry of Nusantara's heritage comes to life. Explore a visual feast of ancient
-                        ruins, majestic temples, and cultural landmarks that showcase the remarkable history of
-                        Indonesia.
+                        @lang('messages.gallery_description')
                     </p>
                     <div class="mt-5">
                         <a href="/gallery" class="btn btn-color d-flex flex-row gap-2 align-items-center">
-                            More Documentation
+                            @lang('messages.gallery_button')
                             <img src="{{ asset('assets/img-homepage/arr-btn.svg') }}" alt="" class=""
                                 draggable="false">
                         </a>
