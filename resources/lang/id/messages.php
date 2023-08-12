@@ -43,4 +43,8 @@ return [
     'gallery_title' => 'Galeri tempat kepulauan yang indah',
     'gallery_description' => "Benamkan diri Anda di galeri menawan situs pariwisata historis Wanderlustnusantara, di mana permadani yang kaya akan warisan Nusantara menjadi hidup.Jelajahi pesta visual reruntuhan kuno, kuil -kuil yang megah, dan landmark budaya yang memamerkan sejarah Indonesia yang luar biasa.",
     'gallery_button' => "Lebih Banyak Dokumentasi",
+
+    'testimoni_subtitle' => "Jelajahi Sejarah Hidup Nusantara",
+    'testimoni_title' => "Mengungkap kisah sejarah Nusantara yang kaya",
+    'testimoni_description' => "Bagian Tur Sejarah Tur kami menampilkan pengalaman menakjubkan dari para pelancong kami yang senang yang telah menemukan kisah-kisah tersembunyi dan rahasia kepulauan yang luar biasa ini.",
 ];

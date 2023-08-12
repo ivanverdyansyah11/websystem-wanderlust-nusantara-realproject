@@ -378,19 +378,18 @@
                     <div class="d-flex flex-column">
                         <div class="badge-section">
                             <p class="fs-13 fw-medium main-color">
-                                Explore Nusantara's Living History
+                                @lang('messages.testimoni_subtitle')
                             </p>
                         </div>
                         <p class="mt-2 display-5 fw-semibold text-black">
-                            Unveiling the Stories of Nusantara's Rich History
+                            @lang('messages.testimoni_title')
                         </p>
                     </div>
                 </div>
                 <div class="col-lg-1 d-lg-block d-none"></div>
                 <div class="col-lg-5 align-self-end col-md-6 col-12">
                     <p>
-                        Our tour history testimonials section showcases the awe-inspiring experiences of our delighted
-                        travelers who have discovered the hidden stories and secrets of this remarkable archipelago.
+                        @lang('messages.testimoni_description')
                     </p>
                 </div>
             </div>
