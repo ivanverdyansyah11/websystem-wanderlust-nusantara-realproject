@@ -30,21 +30,21 @@ class DatabaseSeeder extends Seeder
 
         City::create([
             'name' => 'Semarapura',
-            'image' => 'city-image',
+            'image' => 'city-images/semarapura-thumbnail.jpg',
             'history_1' => 'Semarapura was once the capital of the powerful Klungkung Kingdom, which reached its peak in the 17th century. The kingdom was ruled by the royal family of Klungkung, known as the Dewa Agung, who held great influence over the island.',
             'history_2' => "One of the most renowned events in Semarapura's history is the Battle of Klungkung, also known as the Puputan Klungkung, which took place in 1908. Facing the Dutch colonial forces, the royal family and their loyal followers chose to fight to the death rather than surrender. The puputan is regarded as a heroic last stand and a symbol of resistance against colonial rule.",
         ]);
 
         City::create([
             'name' => 'Sangkan Gunung',
-            'image' => 'city-image',
+            'image' => 'city-images/sangkan-gunung-thumbnail.jpg',
             'history_1' => "Klungkung regency, which includes Desa Sangkan Gunung, has historical significance in Bali as it was once the seat of the powerful Klungkung Kingdom, also known as the Kingdom of Gelgel. The Gelgel Kingdom rose to prominence in the 17th century and played a significant role in shaping the political and cultural landscape of Bali.",
             'history_2' => 'Under the rule of the Gelgel Kingdom, Klungkung became an important center for arts, culture, and governance. It was known for its royal court, palaces, temples, and artistic achievements. However, in the late 19th century, the Klungkung Kingdom faced a significant challenge with the arrival of the Dutch colonial forces.',
         ]);
 
         City::create([
             'name' => 'Dawan',
-            'image' => 'city-image',
+            'image' => 'city-images/dawan-thumbnail.jpg',
             'history_1' => "Dawan was traditionally known as a strategic coastal area and was home to fishing communities that thrived on the abundant marine resources. The coastal villages played a vital role in the region's economy and trade networks, contributing to the overall prosperity of Klungkung.",
             'history_2' => 'During the Dutch colonial era, Dawan, like the rest of Bali, came under Dutch influence. The Dutch established their presence in Bali and introduced new administrative systems. However, Dawan maintained its cultural identity and preserved its traditional practices despite external influences.',
         ]);
