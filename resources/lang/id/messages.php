@@ -38,4 +38,9 @@ return [
     'about_caption1' => 'Total Tujuan',
     'about_caption2' => 'Lokasi Tersedia',
     'about_caption3' => 'Dokumentasi Galeri',
+
+    'gallery_subtitle' => 'Perjalanan bergambar melalui permadani sejarah',
+    'gallery_title' => 'Galeri tempat kepulauan yang indah',
+    'gallery_description' => "Benamkan diri Anda di galeri menawan situs pariwisata historis Wanderlustnusantara, di mana permadani yang kaya akan warisan Nusantara menjadi hidup.Jelajahi pesta visual reruntuhan kuno, kuil -kuil yang megah, dan landmark budaya yang memamerkan sejarah Indonesia yang luar biasa.",
+    'gallery_button' => "Lebih Banyak Dokumentasi",
 ];

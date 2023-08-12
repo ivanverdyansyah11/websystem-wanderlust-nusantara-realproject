@@ -38,4 +38,9 @@ return [
     'about_caption1' => 'Total Destination',
     'about_caption2' => 'Location Available',
     'about_caption3' => 'Gallery Documentation',
+
+    'gallery_subtitle' => 'A Pictorial Journey Through Historical Tapestry',
+    'gallery_title' => 'Gallery of Beautiful Archipelago Places',
+    'gallery_description' => "Immerse yourself in the captivating gallery of WanderlustNusantara's historical tourism website, where the rich tapestry of Nusantara's heritage comes to life. Explore a visual feast of ancient ruins, majestic temples, and cultural landmarks that showcase the remarkable history of Indonesia.",
+    'gallery_button' => "More Documentation",
 ];
