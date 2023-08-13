@@ -179,19 +179,11 @@
     <form id="edit-modal" method="post" enctype="multipart/form-data">
         @csrf
         <div class="modal fade" id="EditModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
+            <div class="modal-dialog modal-lg">
                 <div class="modal-content">
                     <div class="modal-body p-5">
                         <div class="text-center fs-3 title-font fw-medium fw-medium">@lang('messages.modal_edit_city')</div>
                         <div class="d-flex flex-column gap-3">
-                            <div class="pt-2 w-100">
-                                <div class="input-text-wrapper w-100 mb-3">
-                                    <label for="name" class="text-black fw-medium fs-14">@lang('messages.table_name')</label>
-                                    <input type="text" id="name" name="name"
-                                        class="w-100 input-text border-0 @error('name') is-invalid @enderror"
-                                        data-value="name">
-                                </div>
-                            </div>
                             <div class="w-100">
                                 <div class="input-text-wrapper w-100 mb-3">
                                     <input type="hidden" name="oldImage" data-value="oldImage">
@@ -204,19 +196,64 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="w-100">
-                                <div class="input-text-wrapper w-100 mb-3">
-                                    <label for="history_1" class="text-black fw-medium fs-14">@lang('messages.table_history_paragraph1')</label>
-                                    <textarea type="text" id="history_1" name="history_1"
-                                        class="w-100 input-text border-0 @error('history_1') is-invalid @enderror" rows="3" data-value="history_1"></textarea>
+                            <div class="wrapper d-flex gap-3 pt-2">
+                                <div class="w-100">
+                                    <div class="input-text-wrapper w-100 mb-3">
+                                        <label for="name"
+                                            class="text-black fw-medium fs-14">@lang('messages.table_name')</label>
+                                        <input type="text" id="name" name="name"
+                                            class="w-100 input-text border-0 @error('name') is-invalid @enderror"
+                                            data-value="name">
+                                    </div>
+                                </div>
+                                <div class="w-100">
+                                    <div class="input-text-wrapper w-100 mb-3">
+                                        <label for="name_translation"
+                                            class="text-black fw-medium fs-14">@lang('messages.table_name') EN</label>
+                                        <input type="text" id="name_translation" name="name_translation"
+                                            class="w-100 input-text border-0 @error('name') is-invalid @enderror"
+                                            data-value="name_translation">
+                                    </div>
                                 </div>
                             </div>
-                            <div class="w-100">
-                                <div class="input-text-wrapper w-100 mb-3">
-                                    <label for="history_2" class="text-black fw-medium fs-14">@lang('messages.table_history_paragraph2')</label>
-                                    <textarea type="text" id="history_2" name="history_2"
-                                        class="w-100 input-text border-0 @error('history_2') is-invalid @enderror" rows="3"
-                                        data-value="history_1"></textarea>
+                            <div class="wrapper d-flex gap-3 pt-2">
+                                <div class="w-100">
+                                    <div class="input-text-wrapper w-100 mb-3">
+                                        <label for="history_1"
+                                            class="text-black fw-medium fs-14">@lang('messages.table_history_paragraph1')</label>
+                                        <textarea type="text" id="history_1" name="history_1"
+                                            class="w-100 input-text border-0 @error('history_1') is-invalid @enderror" rows="3"
+                                            data-value="history_1"></textarea>
+                                    </div>
+                                </div>
+                                <div class="w-100">
+                                    <div class="input-text-wrapper w-100 mb-3">
+                                        <label for="history_1_translation"
+                                            class="text-black fw-medium fs-14">@lang('messages.table_history_paragraph1') EN</label>
+                                        <textarea type="text" id="history_1_translation" name="history_1_translation"
+                                            class="w-100 input-text border-0 @error('history_1_translation') is-invalid @enderror" rows="3"
+                                            data-value="history_1_translation"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="wrapper d-flex gap-3 pt-2">
+                                <div class="w-100">
+                                    <div class="input-text-wrapper w-100 mb-3">
+                                        <label for="history_2"
+                                            class="text-black fw-medium fs-14">@lang('messages.table_history_paragraph1')</label>
+                                        <textarea type="text" id="history_2" name="history_2"
+                                            class="w-100 input-text border-0 @error('history_2') is-invalid @enderror" rows="3"
+                                            data-value="history_2"></textarea>
+                                    </div>
+                                </div>
+                                <div class="w-100">
+                                    <div class="input-text-wrapper w-100 mb-3">
+                                        <label for="history_2_translation"
+                                            class="text-black fw-medium fs-14">@lang('messages.table_history_paragraph1') EN</label>
+                                        <textarea type="text" id="history_2_translation" name="history_2_translation"
+                                            class="w-100 input-text border-0 @error('history_2_translation') is-invalid @enderror" rows="3"
+                                            data-value="history_2_translation"></textarea>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -262,13 +299,14 @@
                 type: 'get',
                 url: '/admin/city/edit/' + id,
                 success: function(data) {
-                    $('[data-value="name"]').val(data.name);
-                    $('[data-value="oldImage"]').val(data.image);
-                    $('[data-value="image"]').attr("src", "/storage/" + data.image);
-                    $('[data-value="history_1"]').val(data.history_1);
-                    $('[data-value="history_2"]').val(data.history_2);
-
-                    console.log($('[data-value="image"]').attr("src"));
+                    $('[data-value="name"]').val(data[0].name);
+                    $('[data-value="oldImage"]').val(data[0].image);
+                    $('[data-value="image"]').attr("src", "/storage/" + data[0].image);
+                    $('[data-value="history_1"]').val(data[0].history_1);
+                    $('[data-value="history_2"]').val(data[0].history_2);
+                    $('[data-value="name_translation"]').val(data[1][1].name);
+                    $('[data-value="history_1_translation"]').val(data[1][1].history_1);
+                    $('[data-value="history_2_translation"]').val(data[1][1].history_2);
                 }
             });
         });

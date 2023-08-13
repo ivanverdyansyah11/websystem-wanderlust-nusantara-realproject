@@ -74,7 +74,8 @@ class CityController extends Controller
     public function edit($id)
     {
         $city = City::where('id', $id)->first();
-        return response()->json($city);
+        $cityTranslation = CityTranslation::where('cities_id', $id)->get();
+        return response()->json([$city, $cityTranslation]);
     }
 
     public function update(Request $request, $id)
@@ -86,13 +87,34 @@ class CityController extends Controller
             'history_2' => 'required',
         ]);
 
+        $validatedDataTranslation = $request->validate([
+            'name_translation' => 'required',
+            'history_1_translation' => 'required',
+            'history_2_translation' => 'required',
+        ]);
+
         if ($request->file('image')) {
             Storage::delete($request->oldImage);
             $validatedData['image'] = $request->file('image')->store('city-images');
         }
 
         $city = City::findOrFail($id)->update($validatedData);
-        if ($city) {
+
+        $cityTranslationIN = CityTranslation::where('cities_id', $id)->where('language', 'id')->update([
+            'name' => $validatedData['name'],
+            'image' => $validatedData['image'],
+            'history_1' => $validatedData['history_1'],
+            'history_2' => $validatedData['history_2'],
+        ]);
+
+        $cityTranslationEN = CityTranslation::where('cities_id', $id)->where('language', 'en')->update([
+            'name' => $validatedDataTranslation['name_translation'],
+            'image' => $validatedData['image'],
+            'history_1' => $validatedDataTranslation['history_1_translation'],
+            'history_2' => $validatedDataTranslation['history_2_translation'],
+        ]);
+
+        if ($city && $cityTranslationIN && $cityTranslationEN) {
             return redirect(route('index-city'))->with('success', 'Update City Successfully!');
         } else {
             return redirect(route('index-city'))->with('failed', 'Update City Failed!');
