@@ -132,5 +132,20 @@ return [
     'title_recommendation_destination' => 'Cari tahu harta sejarah lainnya',
     'description_recommendation_destination' => 'Bagian Tur Sejarah Tur kami menampilkan pengalaman menakjubkan dari para pelancong kami yang senang yang telah menemukan kisah-kisah tersembunyi dan rahasia kepulauan yang luar biasa ini.',
 
+    'dashboard_title' => "Halaman Beranda",
+    'dashboard_item1' => "Total unggulan",
+    'dashboard_item2' => "Total tujuan",
+    'dashboard_item3' => "Total City",
+    'dashboard_item4' => "Total Galeri",
+    'dashboard_subtitle' => "Tujuan Terbaru",
+
+    'table_name' => "Nama",
+    'table_location' => "Lokasi",
+    'table_rating' => "Peringkat",
+    'table_total_images' => "Total Gambar",
+    'table_history' => "Sejarah",
+
+    'table_destination_notfound' => "Tujuan data tidak ditemukan",
+
     'modal_close' => "Tutup Modal",
 ];

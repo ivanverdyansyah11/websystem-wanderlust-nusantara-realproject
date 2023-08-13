@@ -74,4 +74,8 @@ Route::middleware(['auth'])->prefix('admin')->group(function () {
         Route::post('/gallery/store', 'store')->name('store-gallery');
         Route::post('/gallery/delete/{id}', 'delete')->name('delete-gallery');
     });
+
+    Route::controller(FeedbackController::class)->group(function () {
+        Route::get('/feedback', 'index')->name('index-feedback');
+    });
 });

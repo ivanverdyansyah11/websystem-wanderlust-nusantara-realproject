@@ -528,7 +528,7 @@
                 </div>
             </div>
             <div class="row banner-section position-absolute d-none top-0 banner-background end-0 d-lg-inline-block">
-                <img src="{{ asset('assets/img-homepage/about-img.png') }}" alt="about section image"
+                <img src="{{ asset('assets/img-homepage/contact-img.png') }}" alt="about section image"
                     class="w-100 h-100">
             </div>
         </section>

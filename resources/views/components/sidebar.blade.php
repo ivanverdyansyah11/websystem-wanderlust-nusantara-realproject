@@ -44,6 +44,15 @@
             </div>
             <div class="col-12">
                 <div class="menu-sidebar ps-4 pe-3">
+                    <a href="{{ route('index-feedback') }}"
+                        class="{{ Request::is('*feedback*') ? 'active' : '' }} d-flex align-items-center menu-wrapper gap-3 text-decoration-none">
+                        <div class="icon-sidebar feedback-icon"></div>
+                        <p class="mb-0">Feedback</p>
+                    </a>
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="menu-sidebar ps-4 pe-3">
                     <form action="{{ route('logout.action') }}" method="post" class="d-inline-block"
                         style="width: 100%;">
                         @csrf

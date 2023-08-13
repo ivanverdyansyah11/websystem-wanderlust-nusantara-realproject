@@ -197,6 +197,9 @@ textarea::-webkit-scrollbar{
 .gallery-icon {
     background-image: url('../img/sidebar/gallery-unactive.svg');
 }
+.feedback-icon {
+    background-image: url('../img/sidebar/feedback-unactive.svg');
+}
 .logout-icon {
     background-image: url('../img/sidebar/logout-unactive.svg');
 }
@@ -216,6 +219,10 @@ textarea::-webkit-scrollbar{
 .menu-wrapper.active .gallery-icon,
 .menu-wrapper:hover .gallery-icon {
     background-image: url('../img/sidebar/gallery-active.svg');
+}
+.menu-wrapper.active .feedback-icon,
+.menu-wrapper:hover .feedback-icon {
+    background-image: url('../img/sidebar/feedback-active.svg');
 }
 .menu-wrapper.active .logout-icon,
 .menu-wrapper:hover .logout-icon {
