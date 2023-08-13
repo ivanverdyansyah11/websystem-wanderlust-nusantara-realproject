@@ -77,5 +77,8 @@ Route::middleware(['auth'])->prefix('admin')->group(function () {
 
     Route::controller(FeedbackController::class)->group(function () {
         Route::get('/feedback', 'index')->name('index-feedback');
+        Route::get('/feedback/edit/{id}', 'edit')->name('edit-feedback');
+        Route::post('/feedback/edit/{id}', 'update')->name('update-feedback');
+        Route::post('/feedback/delete/{id}', 'delete')->name('delete-feedback');
     });
 });

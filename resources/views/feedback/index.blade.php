@@ -56,7 +56,12 @@
                                     <td>{{ $loop->iteration }}</td>
                                     <td>{{ $feedback->username }}</td>
                                     <td>{{ $feedback->position }}</td>
-                                    <td style="width: 300px">{{ $feedback->message }}</td>
+                                    <td style="width: 300px">
+                                        <p
+                                            style="-webkit-line-clamp:2; overflow: hidden; display: -webkit-box; -webkit-box-orient: vertical; color: #212529;">
+                                            {{ $feedback->message }}
+                                        </p>
+                                    </td>
                                     <td class=" flex-row gap-1 d-lg-flex d-none">
                                         <button class="btn btn-edit d-lg-flex d-none p-0" data-bs-toggle="modal"
                                             data-bs-target="#EditModal" data-id="{{ $feedback->id }}">
@@ -76,70 +81,35 @@
         </div>
     </div>
 
-    {{-- <form id="edit-modal" method="post" enctype="multipart/form-data">
+    <form id="edit-modal" method="post" enctype="multipart/form-data">
         @csrf
         <div class="modal fade" id="EditModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-lg">
+            <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-body p-5">
-                        <div class="text-center fs-3 title-font fw-medium fw-medium">Edit Menu</div>
+                        <div class="text-center fs-3 title-font fw-medium fw-medium">Edit Feedback</div>
                         <div class="d-flex flex-column gap-3">
-                            <div class="wrapper d-flex gap-3">
-                                <div class="pt-2 w-100">
-                                    <div class="input-text-wrapper w-100 mb-3">
-                                        <label for="name" class="text-black fw-medium fs-14">Name</label>
-                                        <input type="text" id="name" name="name"
-                                            class="w-100 input-text border-0 @error('name') is-invalid @enderror"
-                                            data-value="name">
-                                    </div>
-                                </div>
-                                <div class="pt-2 w-100">
-                                    <div class="input-text-wrapper w-100 mb-3">
-                                        <label for="rating" class="text-black fw-medium fs-14">Rating</label>
-                                        <input type="text" id="rating" name="rating"
-                                            class="w-100 input-text border-0 @error('rating') is-invalid @enderror"
-                                            data-value="rating">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="pt-2 w-100">
+                            <div class="w-100">
                                 <div class="input-text-wrapper w-100 mb-3">
-                                    <label for="location" class="text-black fw-medium fs-14">Location</label>
-                                    <input type="text" id="location" name="location"
-                                        class="w-100 input-text border-0 @error('location') is-invalid @enderror"
-                                        data-value="location">
+                                    <label for="username" class="text-black fw-medium fs-14">Username</label>
+                                    <input type="text" id="username" name="username"
+                                        class="w-100 input-text border-0 @error('username') is-invalid @enderror"
+                                        data-value="username">
                                 </div>
                             </div>
                             <div class="w-100">
                                 <div class="input-text-wrapper w-100 mb-3">
-                                    <input type="hidden" name="oldImage" data-value="oldImage">
-                                    <p class="text-black fw-medium fs-14">Image</p>
-                                    <div class="d-flex flex-row align-items-end gap-2">
-                                        <img src="" alt="your image" class="tag-image-edit img-preview"
-                                            data-value="image" />
-                                        <input type='file' class="input-file-edit @error('image') is-invalid @enderror"
-                                            size="150" name="image">
-                                    </div>
+                                    <label for="position" class="text-black fw-medium fs-14">Job Position</label>
+                                    <input type="text" id="position" name="position"
+                                        class="w-100 input-text border-0 @error('position') is-invalid @enderror"
+                                        data-value="position">
                                 </div>
                             </div>
-                            <div class="wrapper d-flex gap-3">
-                                <div class="w-100">
-                                    <div class="input-text-wrapper w-100 mb-3">
-                                        <label for="history_1" class="text-black fw-medium fs-14">History Paragraph
-                                            1</label>
-                                        <textarea type="text" id="history_1" name="history_1"
-                                            class="w-100 input-text border-0 @error('history_1') is-invalid @enderror" data-value="history_1"
-                                            rows="3"></textarea>
-                                    </div>
-                                </div>
-                                <div class="w-100">
-                                    <div class="input-text-wrapper w-100 mb-3">
-                                        <label for="history_2" class="text-black fw-medium fs-14">History Paragraph
-                                            2</label>
-                                        <textarea type="text" id="history_2" name="history_2"
-                                            class="w-100 input-text border-0 @error('history_2') is-invalid @enderror" data-value="history_2"
-                                            rows="3"></textarea>
-                                    </div>
+                            <div class="w-100">
+                                <div class="input-text-wrapper w-100 mb-3">
+                                    <label for="message" class="text-black fw-medium fs-14">Message</label>
+                                    <textarea type="text" id="message" name="message"
+                                        class="w-100 input-text border-0 @error('message') is-invalid @enderror" data-value="message" rows="3"></textarea>
                                 </div>
                             </div>
                         </div>
@@ -173,7 +143,7 @@
                 </div>
             </div>
         </div>
-    </form> --}}
+    </form>
 
     <script src="{{ asset('assets/js/jquery-3.5.1.js') }}"></script>
     <script src="https://kit.fontawesome.com/9e88c62f38.js" crossorigin="anonymous"></script>
@@ -182,25 +152,21 @@
     <script>
         $(document).on('click', '[data-bs-target="#EditModal"]', function() {
             let id = $(this).data('id');
-            $('#edit-modal').attr('action', '/admin/destination/edit/' + id);
+            $('#edit-modal').attr('action', '/admin/feedback/edit/' + id);
             $.ajax({
                 type: 'get',
-                url: '/admin/destination/edit/' + id,
+                url: '/admin/feedback/edit/' + id,
                 success: function(data) {
-                    $('[data-value="name"]').val(data.name);
-                    $('[data-value="rating"]').val(data.rating);
-                    $('[data-value="location"]').val(data.location);
-                    $('[data-value="oldImage"]').val(data.image);
-                    $('[data-value="image"]').attr("src", "/storage/" + data.image);
-                    $('[data-value="history_1"]').val(data.history_1);
-                    $('[data-value="history_2"]').val(data.history_2);
+                    $('[data-value="username"]').val(data.username);
+                    $('[data-value="position"]').val(data.position);
+                    $('[data-value="message"]').val(data.message);
                 }
             });
         });
 
         $(document).on('click', '[data-bs-target="#DeleteModal"]', function() {
             let id = $(this).data('id');
-            $('#delete-modal').attr('action', '/admin/destination/delete/' + id);
+            $('#delete-modal').attr('action', '/admin/feedback/delete/' + id);
         });
 
         const tagImage = document.querySelector('.tag-image');
