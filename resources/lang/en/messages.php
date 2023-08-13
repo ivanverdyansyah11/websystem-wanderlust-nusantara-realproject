@@ -190,4 +190,8 @@ return [
     'modal_edit_city' => "Edit City",
     'modal_delete_city' => "Delete City",
     'modal_delete_city_description' => "Do you really want to delete these city? This process cannot be undone.",
+
+    'modal_edit_destination' => "Edit Destination",
+    'modal_delete_destination' => "Delete Destination",
+    'modal_delete_city_description' => "Do you really want to delete these city? This process cannot be undone.",
 ];

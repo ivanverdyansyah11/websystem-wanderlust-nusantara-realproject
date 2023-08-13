@@ -162,6 +162,7 @@ return [
 
     'table_name' => "Nama",
     'table_location' => "Lokasi",
+    'table_city' => "Kota",
     'table_rating' => "Peringkat",
     'table_total_images' => "Total Gambar",
     'table_history' => "Sejarah",

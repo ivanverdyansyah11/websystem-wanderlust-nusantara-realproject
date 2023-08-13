@@ -95,7 +95,8 @@ class DestinationController extends Controller
     public function edit($id)
     {
         $destination = Destination::where('id', $id)->first();
-        return response()->json($destination);
+        $destinationTranslation = DestinationTranslation::where('destinations_id', $id)->get();
+        return response()->json([$destination, $destinationTranslation]);
     }
 
     public function update(Request $request, $id)
@@ -109,13 +110,38 @@ class DestinationController extends Controller
             'history_2' => 'required',
         ]);
 
+        $validatedDataTranslation = $request->validate([
+            'name_translation' => 'required',
+            'history_1_translation' => 'required',
+            'history_2_translation' => 'required',
+        ]);
+
         if ($request->file('image')) {
             Storage::delete($request->oldImage);
             $validatedData['image'] = $request->file('image')->store('destination-images');
         }
 
         $destination = Destination::findOrFail($id)->update($validatedData);
-        if ($destination) {
+
+        $destinationTranslationIN = DestinationTranslation::where('destinations_id', $id)->where('language', 'id')->update([
+            'name' => $validatedData['name'],
+            'rating' => $validatedData['rating'],
+            'location' => $validatedData['location'],
+            'image' => $validatedData['location'],
+            'history_1' => $validatedData['history_1'],
+            'history_2' => $validatedData['history_2'],
+        ]);
+
+        $destinationTranslationEN = DestinationTranslation::where('destinations_id', $id)->where('language', 'en')->update([
+            'name' => $validatedDataTranslation['name_translation'],
+            'rating' => $validatedData['rating'],
+            'location' => $validatedData['location'],
+            'image' => $validatedData['location'],
+            'history_1' => $validatedDataTranslation['history_1_translation'],
+            'history_2' => $validatedDataTranslation['history_2_translation'],
+        ]);
+
+        if ($destination && $destinationTranslationIN && $destinationTranslationEN) {
             return redirect(route('index-destination'))->with('success', 'Update Destination Successfully!');
         } else {
             return redirect(route('index-destination'))->with('failed', 'Update Destination Failed!');
