@@ -129,8 +129,11 @@ class CityController extends Controller
             Storage::delete($city->image);
         }
 
+        $cityID = CityTranslation::where('cities_id', $id)->where('language', 'id')->first()->delete();
+        $cityEN = CityTranslation::where('cities_id', $id)->where('language', 'en')->first()->delete();
+
         $city = $city->delete();
-        if ($city) {
+        if ($city && $cityID && $cityEN) {
             return redirect(route('index-city'))->with('success', 'Delete City Successfully!');
         } else {
             return redirect(route('index-city'))->with('failed', 'Delete City Failed!');
