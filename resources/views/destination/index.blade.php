@@ -2,10 +2,10 @@
 
 @section('main')
     <div class="header-section d-flex flex-row justify-content-between padding-section px-5">
-        <p class="text-black fw-semibold fs-2">@lang('messages.dashboard_item1')</p>
+        <p class="text-black fw-semibold fs-2">@lang('messages.dashboard_destination_title')</p>
         <div class="d-lg-flex justify-content-end gap-2">
             <button class="btn btn-color d-lg-flex d-none" data-bs-toggle="modal"
-                data-bs-target="#AddModal">@lang('messages.dashboard_item1')</button>
+                data-bs-target="#AddModal">@lang('messages.dashboard_destination_button')</button>
             <div class="d-xl-none hamburger-wrapper d-flex text-white align-self-center">
                 <i class="fa-solid fa-bars"></i>
             </div>
@@ -58,8 +58,11 @@
                             @foreach ($destinations as $i => $destinations)
                                 <tr>
                                     <td>{{ $loop->iteration }}</td>
-                                    <td style="width: 250px">{{ $destinations->name }}</td>
-                                    <td>{{ $destinations->location }}</td>
+                                    <td style="width: 250px">
+                                        {{ $destinations->translation(session('locale'))->name ?? $destinations->name }}
+                                    </td>
+                                    <td>{{ $destinations->translation(session('locale'))->location ?? $destinations->location }}
+                                    </td>
                                     <td>{{ $destinations->rating }}</td>
                                     @php
                                         $isEmpty = empty(array_filter($gallery_count[$i]));
@@ -72,7 +75,7 @@
                                     <td style="width: 300px">
                                         <p
                                             style="-webkit-line-clamp:2; overflow: hidden; display: -webkit-box; -webkit-box-orient: vertical; color: #212529;">
-                                            {{ $destinations->history_1 }}
+                                            {{ $destinations->translation(session('locale'))->history_1 ?? $destinations->history_1 }}
                                         </p>
                                     </td>
                                     <td class=" flex-row gap-1 d-lg-flex d-none">
