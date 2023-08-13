@@ -156,8 +156,11 @@ class DestinationController extends Controller
             Storage::delete($destination->image);
         }
 
+        $destinationID = DestinationTranslation::where('destinations_id', $id)->where('language', 'id')->first()->delete();
+        $destinationEN = DestinationTranslation::where('destinations_id', $id)->where('language', 'en')->first()->delete();
+
         $destination = $destination->delete();
-        if ($destination) {
+        if ($destination && $destinationID && $destinationEN) {
             return redirect(route('index-destination'))->with('success', 'Delete Destination Successfully!');
         } else {
             return redirect(route('index-destination'))->with('failed', 'Delete Destination Failed!');

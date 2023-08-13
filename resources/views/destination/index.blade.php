@@ -328,14 +328,12 @@
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-body p-5">
-                        <div class="text-center fs-3 fw-medium title-font">Delete Destination</div>
-                        <div class="pt-3 text-center"> Do you really want to delete these destination? This process cannot
-                            be
-                            undone.
-                        </div>
+                        <div class="text-center fs-3 fw-medium title-font">@lang('messages.modal_delete_destination')</div>
+                        <div class="pt-3 text-center">@lang('messages.modal_delete_city_description')</div>
                         <div class="d-flex flex-row justify-content-center gap-2 pt-4">
-                            <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Cancel Delete</button>
-                            <button type="submit" class="btn btn-color">Delete Destination</button>
+                            <button type="button" class="btn btn-dark"
+                                data-bs-dismiss="modal">@lang('messages.modal_close_delete')</button>
+                            <button type="submit" class="btn btn-color">@lang('messages.modal_delete_destination')</button>
                         </div>
                     </div>
                 </div>

@@ -190,4 +190,8 @@ return [
     'modal_edit_city' => "Edit City",
     'modal_delete_city' => "Hapus Kota",
     'modal_delete_city_description' => "Apakah Anda benar -benar ingin menghapus kota ini?Proses ini tidak bisa dibatalkan.",
+
+    'modal_edit_destination' => "Edit Destinasi",
+    'modal_delete_destination' => "Hapus Destinasi",
+    'modal_delete_city_description' => "Apakah Anda benar -benar ingin menghapus tujuan ini?Proses ini tidak bisa dibatalkan.",
 ];
