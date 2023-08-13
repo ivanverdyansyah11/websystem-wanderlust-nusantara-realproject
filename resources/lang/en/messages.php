@@ -152,6 +152,8 @@ return [
     'dashboard_gallery_detail_button1' => "Add New Images",
     'dashboard_gallery_detail_button2' => "Delete All Images",
 
+    'dashboard_feedback_title' => "Feedback Page",
+
     'table_name' => "Name",
     'table_location' => "Location",
     'table_rating' => "Rating",
@@ -161,6 +163,7 @@ return [
 
     'table_destination_notfound' => "Data Destination Not Found",
     'table_gallry_notfound' => "Image Not Found",
+    'table_feedback_notfound' => "Data Feedback Not Found",
 
     'modal_add_image' => "Add New Images",
     'modal_delete_image' => "Delete Gallery",
@@ -168,4 +171,9 @@ return [
     'modal_close_add' => "Close Add",
     'modal_close_delete' => "Close Delete",
     'modal_close' => "Close Modal",
+    'modal_close_edit' => "Close Edit",
+    'modal_edit' => "Save Changes",
+    'modal_edit_feedback' => "Edit Feedback",
+    'modal_delete_feedback' => "Delete Feedback",
+    'modal_delete_feedback_description' => "Do you really want to delete these feedback? This process cannot be undone.",
 ];

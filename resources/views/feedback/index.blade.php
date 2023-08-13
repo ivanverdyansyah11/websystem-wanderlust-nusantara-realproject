@@ -2,7 +2,7 @@
 
 @section('main')
     <div class="header-section d-flex flex-row justify-content-between padding-section px-5">
-        <p class="text-black fw-medium fs-2">Feedback Page</p>
+        <p class="text-black fw-semibold fs-2">@lang('messages.dashboard_feedback_title')</p>
         <div class="d-lg-flex justify-content-end d-none gap-2">
             <div class="d-xl-none hamburger-wrapper d-flex text-white align-self-center">
                 <i class="fa-solid fa-bars"></i>
@@ -39,16 +39,16 @@
                     <thead>
                         <tr>
                             <td>No</td>
-                            <td>Name</td>
-                            <td>Job Position</td>
-                            <td>Message</td>
+                            <td>@lang('messages.contact_form1_caption')</td>
+                            <td>@lang('messages.contact_form2_caption')</td>
+                            <td>@lang('messages.contact_form3_caption')</td>
                             <td></td>
                         </tr>
                     </thead>
                     <tbody>
                         @if ($feedbacks->count() == 0)
                             <tr>
-                                <td colspan="5" class="text-center py-3">Data Feedback Not Found!</td>
+                                <td colspan="5" class="text-center py-3">@lang('messages.table_feedback_notfound')!</td>
                             </tr>
                         @else
                             @foreach ($feedbacks as $i => $feedback)
@@ -87,11 +87,11 @@
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-body p-5">
-                        <div class="text-center fs-3 title-font fw-medium fw-medium">Edit Feedback</div>
+                        <div class="text-center fs-3 title-font fw-medium fw-medium">@lang('messages.modal_edit_feedback')</div>
                         <div class="d-flex flex-column gap-3">
                             <div class="w-100">
                                 <div class="input-text-wrapper w-100 mb-3">
-                                    <label for="username" class="text-black fw-medium fs-14">Username</label>
+                                    <label for="username" class="text-black fw-medium fs-14">@lang('messages.contact_form1_caption')</label>
                                     <input type="text" id="username" name="username"
                                         class="w-100 input-text border-0 @error('username') is-invalid @enderror"
                                         data-value="username">
@@ -99,7 +99,7 @@
                             </div>
                             <div class="w-100">
                                 <div class="input-text-wrapper w-100 mb-3">
-                                    <label for="position" class="text-black fw-medium fs-14">Job Position</label>
+                                    <label for="position" class="text-black fw-medium fs-14">@lang('messages.contact_form2_caption')</label>
                                     <input type="text" id="position" name="position"
                                         class="w-100 input-text border-0 @error('position') is-invalid @enderror"
                                         data-value="position">
@@ -107,16 +107,16 @@
                             </div>
                             <div class="w-100">
                                 <div class="input-text-wrapper w-100 mb-3">
-                                    <label for="message" class="text-black fw-medium fs-14">Message</label>
+                                    <label for="message" class="text-black fw-medium fs-14">@lang('messages.contact_form3_caption')</label>
                                     <textarea type="text" id="message" name="message"
                                         class="w-100 input-text border-0 @error('message') is-invalid @enderror" data-value="message" rows="3"></textarea>
                                 </div>
                             </div>
                         </div>
                         <div class="d-flex flex-row justify-content-center gap-2 pt-4">
-                            <button type="button" class="btn btn-dark fs-15" data-bs-dismiss="modal">Cancel
-                                Edit</button>
-                            <button type="submit" class="btn btn-color fs-15">Save Changes</button>
+                            <button type="button" class="btn btn-dark fs-15"
+                                data-bs-dismiss="modal">@lang('messages.modal_close_edit')</button>
+                            <button type="submit" class="btn btn-color fs-15">@lang('messages.modal_edit')</button>
                         </div>
                     </div>
                 </div>
@@ -130,14 +130,12 @@
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-body p-5">
-                        <div class="text-center fs-3 fw-medium title-font">Delete Destination</div>
-                        <div class="pt-3 text-center"> Do you really want to delete these destination? This process cannot
-                            be
-                            undone.
-                        </div>
+                        <div class="text-center fs-3 fw-medium title-font">@lang('messages.modal_delete_feedback')</div>
+                        <div class="pt-3 text-center">@lang('messages.modal_delete_feedback_description')</div>
                         <div class="d-flex flex-row justify-content-center gap-2 pt-4">
-                            <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Cancel Delete</button>
-                            <button type="submit" class="btn btn-color">Delete Destination</button>
+                            <button type="button" class="btn btn-dark"
+                                data-bs-dismiss="modal">@lang('messages.modal_close_delete')</button>
+                            <button type="submit" class="btn btn-color">@lang('messages.modal_delete_feedback')</button>
                         </div>
                     </div>
                 </div>

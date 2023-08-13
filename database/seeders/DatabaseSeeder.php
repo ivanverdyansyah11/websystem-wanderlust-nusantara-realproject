@@ -8,6 +8,7 @@ use App\Models\Chef;
 use App\Models\City;
 use App\Models\Destination;
 use App\Models\Feedback;
+use App\Models\FeedbackTranslation;
 use App\Models\Gallery;
 use App\Models\History;
 use App\Models\Location;

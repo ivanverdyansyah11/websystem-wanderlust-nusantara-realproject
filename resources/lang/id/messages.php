@@ -152,6 +152,8 @@ return [
     'dashboard_gallery_detail_button1' => "Tambah Gambar Baru",
     'dashboard_gallery_detail_button2' => "Hapus Semua Gambar",
 
+    'dashboard_feedback_title' => "Halaman Tanggapan",
+
     'table_name' => "Nama",
     'table_location' => "Lokasi",
     'table_rating' => "Peringkat",
@@ -161,6 +163,7 @@ return [
 
     'table_destination_notfound' => "Tujuan data tidak ditemukan",
     'table_gallry_notfound' => "Gambar tidak ditemukan",
+    'table_feedback_notfound' => "Tanggapan data tidak ditemukan",
 
     'modal_add_image' => "Tambah Gambar Baru",
     'modal_delete_image' => "Hapus Galeri",
@@ -168,4 +171,9 @@ return [
     'modal_close_add' => "Batal Tambah",
     'modal_close_delete' => "Batal Hapus",
     'modal_close' => "Tutup Modal",
+    'modal_close_edit' => "Batal Edit",
+    'modal_edit' => "Simpan Perubahan",
+    'modal_edit_feedback' => "Edit Tanggapan",
+    'modal_delete_feedback' => "Hapus Tanggapan",
+    'modal_delete_feedback_description' => "Apakah Anda benar -benar ingin menghapus umpan balik ini?Proses ini tidak bisa dibatalkan.",
 ];
