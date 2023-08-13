@@ -22,6 +22,26 @@ class FeedbackController extends Controller
         ]);
     }
 
+    public function store(Request $request)
+    {
+        if ($locale = session('locale')) {
+            app()->setLocale($locale);
+        }
+
+        $validatedData = $request->validate([
+            'username' => 'required',
+            'position' => 'required',
+            'message' => 'required',
+        ]);
+
+        $feedback = Feedback::create($validatedData);
+        if ($feedback) {
+            return redirect(route('homepage'))->with('success', 'Successfully Send Feedback!');
+        } else {
+            return redirect(route('homepage'))->with('failed', 'Failed to Send Feedback!');
+        }
+    }
+
     public function edit($id)
     {
         $feedback = Feedback::where('id', $id)->first();

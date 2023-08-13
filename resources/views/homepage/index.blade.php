@@ -19,6 +19,16 @@
 </head>
 
 <body>
+    @if (session()->has('success'))
+        <script>
+            alert('Submit Feedback Successfully!');
+        </script>
+    @elseif(session()->has('failed'))
+        <script>
+            alert('Submit Feedback Failed!');
+        </script>
+    @endif
+
     <div class="top-section">
         <nav class="navbar navbar-expand-lg py-3">
             <div class="container">
@@ -492,7 +502,7 @@
                                 @lang('messages.contact_description')
                             </p>
                         </article>
-                        <form action="" method="POST" class="form mt-5">
+                        <form action="{{ route('store-feedback') }}" method="POST" class="form mt-5">
                             @csrf
                             <div class="row">
                                 <div class="col-md-6 mb-4">
