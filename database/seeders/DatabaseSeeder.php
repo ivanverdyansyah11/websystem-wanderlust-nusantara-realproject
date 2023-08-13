@@ -8,6 +8,7 @@ use App\Models\Chef;
 use App\Models\City;
 use App\Models\CityTranslation;
 use App\Models\Destination;
+use App\Models\DestinationTranslation;
 use App\Models\Feedback;
 use App\Models\FeedbackTranslation;
 use App\Models\Gallery;
@@ -108,7 +109,31 @@ class DatabaseSeeder extends Seeder
         Destination::create([
             'id' => '1',
             'cities_id' => '1',
-            'name' => 'Taman Wisata Kertha Gosa',
+            'name' => 'Taman Kertha Gosa Tourist',
+            'location' => 'Semarapura, Klungkung',
+            'rating' => '5.0',
+            'image' => 'destination-images/taman-wisata-kertha-gosa-thumbnail.jpg',
+            'history_1' => "Sejarah Kertha Gosa berasal dari abad ke -18 ketika berfungsi sebagai pengadilan kerajaan Kerajaan Klungkung.Itu adalah tempat di mana raja dan anggota dewannya berkumpul untuk membahas masalah pemerintahan, keadilan, dan urusan budaya.",
+            'history_2' => 'Salah satu fitur paling terkenal dari Kertha Gosa adalah paviliun Kerta Gosa.Kerta Gosa, yang berarti "tempat di mana keadilan diadakan," digunakan sebagai pengadilan di mana perselisihan diselesaikan dan keadilan dikelola berdasarkan prinsip -prinsip hukum tradisional Bali.Paviliun ini terkenal dengan langit -langitnya yang dicat rumit yang menggambarkan adegan -adegan dari epos Hindu seperti Mahabharata dan Ramayana, serta berbagai ajaran moral dan etika.',
+        ]);
+
+        DestinationTranslation::create([
+            'destinations_id' => '1',
+            'language' => 'id',
+            'cities_id' => '1',
+            'name' => 'Taman Kertha Gosa Tourist',
+            'location' => 'Semarapura, Klungkung',
+            'rating' => '5.0',
+            'image' => 'destination-images/taman-wisata-kertha-gosa-thumbnail.jpg',
+            'history_1' => "Sejarah Kertha Gosa berasal dari abad ke -18 ketika berfungsi sebagai pengadilan kerajaan Kerajaan Klungkung.Itu adalah tempat di mana raja dan anggota dewannya berkumpul untuk membahas masalah pemerintahan, keadilan, dan urusan budaya.",
+            'history_2' => 'Salah satu fitur paling terkenal dari Kertha Gosa adalah paviliun Kerta Gosa.Kerta Gosa, yang berarti "tempat di mana keadilan diadakan," digunakan sebagai pengadilan di mana perselisihan diselesaikan dan keadilan dikelola berdasarkan prinsip -prinsip hukum tradisional Bali.Paviliun ini terkenal dengan langit -langitnya yang dicat rumit yang menggambarkan adegan -adegan dari epos Hindu seperti Mahabharata dan Ramayana, serta berbagai ajaran moral dan etika.',
+        ]);
+
+        DestinationTranslation::create([
+            'destinations_id' => '1',
+            'language' => 'en',
+            'cities_id' => '1',
+            'name' => 'Kertha Gosa Tourist Park',
             'location' => 'Semarapura, Klungkung',
             'rating' => '5.0',
             'image' => 'destination-images/taman-wisata-kertha-gosa-thumbnail.jpg',
@@ -128,6 +153,30 @@ class DatabaseSeeder extends Seeder
             'location' => 'Semarapura, Klungkung',
             'rating' => '5.0',
             'image' => 'destination-images/monumen-puputan-klungkung-thumbnail.jpg',
+            'history_1' => "Puputan Klungkung adalah peristiwa tragis dalam sejarah Bali yang terjadi selama era kolonial Belanda.Menghadapi ancaman invasi dan tuntutan untuk menyerah oleh pasukan Belanda, keluarga kerajaan Klungkung, bersama dengan pengikut mereka, memilih untuk terlibat dalam pertempuran putus asa daripada tunduk pada pemerintahan kolonial.",
+            'history_2' => 'Pertempuran terjadi di dalam kompleks Istana Klungkung, yang merupakan kursi kerajaan Klungkung.Keluarga kerajaan, yang dipimpin oleh penguasa, Dewa Agung Jambe, berjuang dengan gagah berani melawan pasukan Belanda yang luar biasa.Meskipun kalah jumlah dan kalah, mereka menunjukkan keberanian dan tekad yang tak tergoyahkan.',
+        ]);
+
+        DestinationTranslation::create([
+            'destinations_id' => '2',
+            'language' => 'id',
+            'cities_id' => '1',
+            'name' => 'Monumen Puputan Klungkung',
+            'location' => 'Semarapura, Klungkung',
+            'rating' => '5.0',
+            'image' => 'destination-images/monumen-puputan-klungkung-thumbnail.jpg',
+            'history_1' => "Puputan Klungkung adalah peristiwa tragis dalam sejarah Bali yang terjadi selama era kolonial Belanda.Menghadapi ancaman invasi dan tuntutan untuk menyerah oleh pasukan Belanda, keluarga kerajaan Klungkung, bersama dengan pengikut mereka, memilih untuk terlibat dalam pertempuran putus asa daripada tunduk pada pemerintahan kolonial.",
+            'history_2' => 'Pertempuran terjadi di dalam kompleks Istana Klungkung, yang merupakan kursi kerajaan Klungkung.Keluarga kerajaan, yang dipimpin oleh penguasa, Dewa Agung Jambe, berjuang dengan gagah berani melawan pasukan Belanda yang luar biasa.Meskipun kalah jumlah dan kalah, mereka menunjukkan keberanian dan tekad yang tak tergoyahkan.',
+        ]);
+
+        DestinationTranslation::create([
+            'destinations_id' => '2',
+            'language' => 'en',
+            'cities_id' => '1',
+            'name' => 'Puputan Klungkung Monument',
+            'location' => 'Semarapura, Klungkung',
+            'rating' => '5.0',
+            'image' => 'destination-images/monumen-puputan-klungkung-thumbnail.jpg',
             'history_1' => "The Puputan Klungkung was a tragic event in Bali's history that unfolded during the Dutch colonial era. Facing threats of invasion and demands for surrender by the Dutch forces, the royal family of Klungkung, along with their followers, chose to engage in a desperate battle rather than submit to colonial rule.",
             'history_2' => 'The battle took place within the Klungkung Palace complex, which was the seat of the Klungkung Kingdom. The royal family, led by the ruler, Dewa Agung Jambe, fought valiantly against the overwhelming Dutch forces. Despite being outnumbered and outgunned, they displayed unwavering bravery and determination.',
         ]);
@@ -139,6 +188,30 @@ class DatabaseSeeder extends Seeder
 
         Destination::create([
             'id' => '3',
+            'cities_id' => '1',
+            'name' => 'Museum Seni Klasik dan Modern Nyoman Gunarsa',
+            'location' => 'Semarapura, Klungkung',
+            'rating' => '4.9',
+            'image' => 'destination-images/museum-seni-klasik-dan-modern-nyoman-gunarsa-thumbnail.jpg',
+            'history_1' => "Museum ini menampilkan koleksi besar karya seni klasik dan modern, terutama berfokus pada bentuk seni tradisional Bali.Nyoman Gunarsa mendedikasikan hidupnya untuk pelestarian dan promosi seni Bali, dan museum berfungsi sebagai bukti hasrat dan visi artistiknya.",
+            'history_2' => 'Nyoman Gunarsa lahir di Klungkung pada tahun 1944 dan mengembangkan apresiasi yang mendalam terhadap seni dan budaya Bali sejak usia muda.Dia berlatih dalam teknik melukis tradisional Bali dan kemudian mengeksplorasi berbagai gaya dan media artistik.Karya -karya seninya sering menggambarkan adegan -adegan dari mitologi Bali, cerita rakyat, dan kehidupan sehari -hari, menangkap esensi dan semangat budaya Bali.',
+        ]);
+
+        DestinationTranslation::create([
+            'destinations_id' => '3',
+            'language' => 'id',
+            'cities_id' => '1',
+            'name' => 'Museum Seni Klasik dan Modern Nyoman Gunarsa',
+            'location' => 'Semarapura, Klungkung',
+            'rating' => '4.9',
+            'image' => 'destination-images/museum-seni-klasik-dan-modern-nyoman-gunarsa-thumbnail.jpg',
+            'history_1' => "Museum ini menampilkan koleksi besar karya seni klasik dan modern, terutama berfokus pada bentuk seni tradisional Bali.Nyoman Gunarsa mendedikasikan hidupnya untuk pelestarian dan promosi seni Bali, dan museum berfungsi sebagai bukti hasrat dan visi artistiknya.",
+            'history_2' => 'Nyoman Gunarsa lahir di Klungkung pada tahun 1944 dan mengembangkan apresiasi yang mendalam terhadap seni dan budaya Bali sejak usia muda.Dia berlatih dalam teknik melukis tradisional Bali dan kemudian mengeksplorasi berbagai gaya dan media artistik.Karya -karya seninya sering menggambarkan adegan -adegan dari mitologi Bali, cerita rakyat, dan kehidupan sehari -hari, menangkap esensi dan semangat budaya Bali.',
+        ]);
+
+        DestinationTranslation::create([
+            'destinations_id' => '3',
+            'language' => 'en',
             'cities_id' => '1',
             'name' => 'Museum Seni Klasik dan Modern Nyoman Gunarsa',
             'location' => 'Semarapura, Klungkung',
@@ -160,6 +233,30 @@ class DatabaseSeeder extends Seeder
             'location' => 'Semarapura, Klungkung',
             'rating' => '4.7',
             'image' => 'destination-images/pura-taman-sari-thumbnail.jpg',
+            'history_1' => "Pura Taman Sari dibangun pada masa pemerintahan Kerajaan Klungkung pada abad ke -18.Itu berfungsi sebagai bagian dari kompleks kerajaan dan didedikasikan untuk penyembahan para dewa Hindu.Kuil ini awalnya dibangun sebagai tempat bagi keluarga kerajaan untuk melakukan upacara dan ritual keagamaan.",
+            'history_2' => "Salah satu fitur paling terkenal dari Pura Taman Sari adalah Paviliun Kertha Gosa, yang terletak di dalam kompleks candi.Paviliun berfungsi sebagai pengadilan selama era Kerajaan Klungkung.Di sinilah keputusan penting dibuat, perselisihan diselesaikan, dan keadilan dikelola.",
+        ]);
+
+        DestinationTranslation::create([
+            'destinations_id' => '4',
+            'language' => 'id',
+            'cities_id' => '1',
+            'name' => 'Pura Taman Sari',
+            'location' => 'Semarapura, Klungkung',
+            'rating' => '4.7',
+            'image' => 'destination-images/pura-taman-sari-thumbnail.jpg',
+            'history_1' => "Pura Taman Sari dibangun pada masa pemerintahan Kerajaan Klungkung pada abad ke -18.Itu berfungsi sebagai bagian dari kompleks kerajaan dan didedikasikan untuk penyembahan para dewa Hindu.Kuil ini awalnya dibangun sebagai tempat bagi keluarga kerajaan untuk melakukan upacara dan ritual keagamaan.",
+            'history_2' => "Salah satu fitur paling terkenal dari Pura Taman Sari adalah Paviliun Kertha Gosa, yang terletak di dalam kompleks candi.Paviliun berfungsi sebagai pengadilan selama era Kerajaan Klungkung.Di sinilah keputusan penting dibuat, perselisihan diselesaikan, dan keadilan dikelola.",
+        ]);
+
+        DestinationTranslation::create([
+            'destinations_id' => '4',
+            'language' => 'en',
+            'cities_id' => '1',
+            'name' => 'Tamansari Temple',
+            'location' => 'Semarapura, Klungkung',
+            'rating' => '4.7',
+            'image' => 'destination-images/pura-taman-sari-thumbnail.jpg',
             'history_1' => "Pura Taman Sari was built during the reign of the Klungkung Kingdom in the 18th century. It served as part of the royal complex and was dedicated to the worship of the Hindu gods. The temple was originally constructed as a place for the royal family to perform religious ceremonies and rituals.",
             'history_2' => "One of the most notable features of Pura Taman Sari is the Kertha Gosa Pavilion, which is located within the temple complex. The pavilion served as a court of justice during the Klungkung Kingdom era. It was here that important decisions were made, disputes were settled, and justice was administered.",
         ]);
@@ -171,6 +268,30 @@ class DatabaseSeeder extends Seeder
 
         Destination::create([
             'id' => '5',
+            'cities_id' => '1',
+            'name' => 'Puri Klungkung',
+            'location' => 'Semarapura, Klungkung',
+            'rating' => '4.8',
+            'image' => 'destination-images/puri-klungkung-thumbnail.jpg',
+            'history_1' => "Puri Klungkung adalah kediaman dinasti yang berkuasa di Kerajaan Klungkung, juga dikenal sebagai Kerajaan Gelgel.Kerajaan Gelgel naik ke kekuasaan pada abad ke -17 dan memainkan peran penting dalam membentuk lanskap politik dan budaya Bali.",
+            'history_2' => "Kerajaan Klungkung mencapai puncak kekuasaan dan pengaruhnya di bawah pemerintahan Dewa Agung Jambe, juga dikenal sebagai Dewa Agung yang dibuat.Dia adalah raja yang dihormati yang menerapkan berbagai reformasi dan kemajuan selama pemerintahannya.Dewa Agung Jambe sangat diingat karena perlindungan seni, sastra, dan pelestarian budaya Bali.",
+        ]);
+
+        DestinationTranslation::create([
+            'destinations_id' => '5',
+            'language' => 'id',
+            'cities_id' => '1',
+            'name' => 'Puri Klungkung',
+            'location' => 'Semarapura, Klungkung',
+            'rating' => '4.8',
+            'image' => 'destination-images/puri-klungkung-thumbnail.jpg',
+            'history_1' => "Puri Klungkung adalah kediaman dinasti yang berkuasa di Kerajaan Klungkung, juga dikenal sebagai Kerajaan Gelgel.Kerajaan Gelgel naik ke kekuasaan pada abad ke -17 dan memainkan peran penting dalam membentuk lanskap politik dan budaya Bali.",
+            'history_2' => "Kerajaan Klungkung mencapai puncak kekuasaan dan pengaruhnya di bawah pemerintahan Dewa Agung Jambe, juga dikenal sebagai Dewa Agung yang dibuat.Dia adalah raja yang dihormati yang menerapkan berbagai reformasi dan kemajuan selama pemerintahannya.Dewa Agung Jambe sangat diingat karena perlindungan seni, sastra, dan pelestarian budaya Bali.",
+        ]);
+
+        DestinationTranslation::create([
+            'destinations_id' => '5',
+            'language' => 'en',
             'cities_id' => '1',
             'name' => 'Puri Klungkung',
             'location' => 'Semarapura, Klungkung',
@@ -192,6 +313,30 @@ class DatabaseSeeder extends Seeder
             'location' => 'Dawan, Klungkung',
             'rating' => '4.6',
             'image' => 'destination-images/goa-jepang-thumbnail.jpeg',
+            'history_1' => "Selama Perang Dunia II, pasukan Jepang menduduki Indonesia, termasuk pulau Bali.Mereka menggunakan Goa Jepang sebagai basis dan bunker bawah tanah yang strategis.Gua itu dibangun oleh Angkatan Darat Jepang sebagai pos dan tempat penampungan defensif.",
+            'history_2' => "Goa Jepang menjabat sebagai kompleks militer dengan terowongan, kamar, dan area penyimpanan.Itu terutama digunakan untuk operasi militer, komunikasi, dan penyimpanan senjata dan persediaan.Lokasi strategis Goa Jepang memungkinkan pasukan Jepang untuk memantau daerah sekitarnya dan mempertahankan kendali atas wilayah tersebut.",
+        ]);
+
+        DestinationTranslation::create([
+            'destinations_id' => '6',
+            'language' => 'id',
+            'cities_id' => '3',
+            'name' => 'Goa Jepang',
+            'location' => 'Dawan, Klungkung',
+            'rating' => '4.6',
+            'image' => 'destination-images/goa-jepang-thumbnail.jpeg',
+            'history_1' => "Selama Perang Dunia II, pasukan Jepang menduduki Indonesia, termasuk pulau Bali.Mereka menggunakan Goa Jepang sebagai basis dan bunker bawah tanah yang strategis.Gua itu dibangun oleh Angkatan Darat Jepang sebagai pos dan tempat penampungan defensif.",
+            'history_2' => "Goa Jepang menjabat sebagai kompleks militer dengan terowongan, kamar, dan area penyimpanan.Itu terutama digunakan untuk operasi militer, komunikasi, dan penyimpanan senjata dan persediaan.Lokasi strategis Goa Jepang memungkinkan pasukan Jepang untuk memantau daerah sekitarnya dan mempertahankan kendali atas wilayah tersebut.",
+        ]);
+
+        DestinationTranslation::create([
+            'destinations_id' => '6',
+            'language' => 'en',
+            'cities_id' => '3',
+            'name' => 'Goa Jepang',
+            'location' => 'Dawan, Klungkung',
+            'rating' => '4.6',
+            'image' => 'destination-images/goa-jepang-thumbnail.jpeg',
             'history_1' => "During World War II, the Japanese forces occupied Indonesia, including the island of Bali. They used Goa Jepang as a strategic underground base and bunker. The cave was constructed by the Japanese army as a defensive outpost and shelter.",
             'history_2' => "Goa Jepang served as a military complex with tunnels, rooms, and storage areas. It was primarily used for military operations, communications, and storage of weapons and supplies. The strategic location of Goa Jepang allowed the Japanese forces to monitor the surrounding areas and maintain control over the region.",
         ]);
@@ -203,6 +348,30 @@ class DatabaseSeeder extends Seeder
 
         Destination::create([
             'id' => '7',
+            'cities_id' => '3',
+            'name' => 'Pura Goa Lawah',
+            'location' => 'Dawan, Klungkung',
+            'rating' => '4.8',
+            'image' => 'destination-images/pura-goa-lawah-thumbnail.jfif',
+            'history_1' => "Sejarah Pura Goa Lawah berasal dari zaman kuno dan terkait erat dengan mitologi dan cerita rakyat Bali.Legenda mengatakan bahwa kuil itu diciptakan oleh orang bijak Empu Kuturan selama misinya untuk membangun kuil -kuil di seluruh Bali.Menurut mitologi, gua di bawah kuil diyakini sebagai lorong bagi dewa ular mitos yang disebut Naga Basuki, yang melindungi pulau itu dari roh jahat.",
+            'history_2' => 'Nama "Goa Lawah" diterjemahkan menjadi "gua kelelawar" dalam bahasa Indonesia.Kuil mendapatkan namanya dari ribuan kelelawar yang berada di dalam gua, menciptakan pemandangan yang unik dan menakjubkan bagi pengunjung.Kelelawar dianggap sakral dan diyakini sebagai penjaga kuil.',
+        ]);
+
+        DestinationTranslation::create([
+            'destinations_id' => '7',
+            'language' => 'id',
+            'cities_id' => '3',
+            'name' => 'Pura Goa Lawah',
+            'location' => 'Dawan, Klungkung',
+            'rating' => '4.8',
+            'image' => 'destination-images/pura-goa-lawah-thumbnail.jfif',
+            'history_1' => "Sejarah Pura Goa Lawah berasal dari zaman kuno dan terkait erat dengan mitologi dan cerita rakyat Bali.Legenda mengatakan bahwa kuil itu diciptakan oleh orang bijak Empu Kuturan selama misinya untuk membangun kuil -kuil di seluruh Bali.Menurut mitologi, gua di bawah kuil diyakini sebagai lorong bagi dewa ular mitos yang disebut Naga Basuki, yang melindungi pulau itu dari roh jahat.",
+            'history_2' => 'Nama "Goa Lawah" diterjemahkan menjadi "gua kelelawar" dalam bahasa Indonesia.Kuil mendapatkan namanya dari ribuan kelelawar yang berada di dalam gua, menciptakan pemandangan yang unik dan menakjubkan bagi pengunjung.Kelelawar dianggap sakral dan diyakini sebagai penjaga kuil.',
+        ]);
+
+        DestinationTranslation::create([
+            'destinations_id' => '7',
+            'language' => 'en',
             'cities_id' => '3',
             'name' => 'Pura Goa Lawah',
             'location' => 'Dawan, Klungkung',
