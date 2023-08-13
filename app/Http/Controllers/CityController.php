@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\City;
+use App\Models\CityTranslation;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
@@ -20,22 +21,50 @@ class CityController extends Controller
 
         return view('city.index', [
             'page' => 'Cities',
-            'cities' => City::all(),
+            'cities' => City::with('city_translations')->get(),
+            'id' => City::latest('id')->value('id'),
         ]);
     }
 
     public function store(Request $request)
     {
         $validatedData = $request->validate([
+            'id' => 'required',
             'name' => 'required',
             'image' => 'file|image',
             'history_1' => 'required',
             'history_2' => 'required',
         ]);
 
+        $validatedDataTranslation = $request->validate([
+            'name_translation' => 'required',
+            'history_1_translation' => 'required',
+            'history_2_translation' => 'required',
+        ]);
+
         $validatedData['image'] = $request->file('image')->store('city-images');
+
         $city = City::create($validatedData);
-        if ($city) {
+
+        $cityTranslationIN = CityTranslation::create([
+            'cities_id' => $validatedData['id'],
+            'language' => 'id',
+            'name' => $validatedData['name'],
+            'image' => $validatedData['image'],
+            'history_1' => $validatedData['history_1'],
+            'history_2' => $validatedData['history_2'],
+        ]);
+
+        $cityTranslationEN = CityTranslation::create([
+            'cities_id' => $validatedData['id'],
+            'language' => 'en',
+            'name' => $validatedDataTranslation['name_translation'],
+            'image' => $validatedData['image'],
+            'history_1' => $validatedDataTranslation['history_1_translation'],
+            'history_2' => $validatedDataTranslation['history_2_translation'],
+        ]);
+
+        if ($city && $cityTranslationIN && $cityTranslationEN) {
             return redirect(route('index-city'))->with('success', 'Add New City Successfully!');
         } else {
             return redirect(route('index-city'))->with('failed', 'Add New City Failed!');

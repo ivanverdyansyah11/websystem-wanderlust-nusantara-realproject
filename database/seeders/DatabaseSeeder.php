@@ -6,6 +6,7 @@ namespace Database\Seeders;
 
 use App\Models\Chef;
 use App\Models\City;
+use App\Models\CityTranslation;
 use App\Models\Destination;
 use App\Models\Feedback;
 use App\Models\FeedbackTranslation;
@@ -32,6 +33,24 @@ class DatabaseSeeder extends Seeder
         City::create([
             'name' => 'Semarapura',
             'image' => 'city-images/semarapura-thumbnail.jpg',
+            'history_1' => 'Semarakura dulunya adalah ibu kota kerajaan Klungkung yang kuat, yang mencapai puncaknya di abad ke -17.Kerajaan itu diperintah oleh keluarga kerajaan Klungkung, yang dikenal sebagai Dewa Agung, yang memiliki pengaruh besar atas pulau itu.',
+            'history_2' => "Salah satu peristiwa paling terkenal dalam sejarah Semarapura adalah Pertempuran Klungkung, juga dikenal sebagai Puputan Klungkung, yang terjadi pada tahun 1908. Menghadapi pasukan kolonial Belanda, keluarga kerajaan dan pengikut mereka yang setia memilih untuk berjuang sampai mati daripada menyerah.Puputan dianggap sebagai pendirian terakhir yang heroik dan simbol perlawanan terhadap pemerintahan kolonial.",
+        ]);
+
+        CityTranslation::create([
+            'cities_id' => '1',
+            'language' => 'id',
+            'name' => 'Semarapura',
+            'image' => 'city-images/semarapura-thumbnail.jpg',
+            'history_1' => 'Semarakura dulunya adalah ibu kota kerajaan Klungkung yang kuat, yang mencapai puncaknya di abad ke -17.Kerajaan itu diperintah oleh keluarga kerajaan Klungkung, yang dikenal sebagai Dewa Agung, yang memiliki pengaruh besar atas pulau itu.',
+            'history_2' => "Salah satu peristiwa paling terkenal dalam sejarah Semarapura adalah Pertempuran Klungkung, juga dikenal sebagai Puputan Klungkung, yang terjadi pada tahun 1908. Menghadapi pasukan kolonial Belanda, keluarga kerajaan dan pengikut mereka yang setia memilih untuk berjuang sampai mati daripada menyerah.Puputan dianggap sebagai pendirian terakhir yang heroik dan simbol perlawanan terhadap pemerintahan kolonial.",
+        ]);
+
+        CityTranslation::create([
+            'cities_id' => '1',
+            'language' => 'en',
+            'name' => 'Semarapura',
+            'image' => 'city-images/semarapura-thumbnail.jpg',
             'history_1' => 'Semarapura was once the capital of the powerful Klungkung Kingdom, which reached its peak in the 17th century. The kingdom was ruled by the royal family of Klungkung, known as the Dewa Agung, who held great influence over the island.',
             'history_2' => "One of the most renowned events in Semarapura's history is the Battle of Klungkung, also known as the Puputan Klungkung, which took place in 1908. Facing the Dutch colonial forces, the royal family and their loyal followers chose to fight to the death rather than surrender. The puputan is regarded as a heroic last stand and a symbol of resistance against colonial rule.",
         ]);
@@ -39,11 +58,47 @@ class DatabaseSeeder extends Seeder
         City::create([
             'name' => 'Sangkan Gunung',
             'image' => 'city-images/sangkan-gunung-thumbnail.jpg',
+            'history_1' => "Kabupaten Klungkung, yang meliputi Desa Sangkan Gunung, memiliki signifikansi historis di Bali karena dulunya adalah kursi kerajaan Klungkung yang kuat, juga dikenal sebagai Kerajaan Gelgel.Kerajaan gelgel menjadi terkenal di abad ke -17 dan memainkan peran penting dalam membentuk lanskap politik dan budaya Bali.",
+            'history_2' => 'Di bawah pemerintahan Kerajaan Gelgel, Klungkung menjadi pusat penting untuk seni, budaya, dan pemerintahan.Itu dikenal karena pengadilan kerajaan, istana, kuil, dan pencapaian artistik.Namun, pada akhir abad ke -19, kerajaan Klungkung menghadapi tantangan yang signifikan dengan kedatangan pasukan kolonial Belanda.',
+        ]);
+
+        CityTranslation::create([
+            'cities_id' => '2',
+            'language' => 'id',
+            'name' => 'Sangkan Gunung',
+            'image' => 'city-images/sangkan-gunung-thumbnail.jpg',
+            'history_1' => "Kabupaten Klungkung, yang meliputi Desa Sangkan Gunung, memiliki signifikansi historis di Bali karena dulunya adalah kursi kerajaan Klungkung yang kuat, juga dikenal sebagai Kerajaan Gelgel.Kerajaan gelgel menjadi terkenal di abad ke -17 dan memainkan peran penting dalam membentuk lanskap politik dan budaya Bali.",
+            'history_2' => 'Di bawah pemerintahan Kerajaan Gelgel, Klungkung menjadi pusat penting untuk seni, budaya, dan pemerintahan.Itu dikenal karena pengadilan kerajaan, istana, kuil, dan pencapaian artistik.Namun, pada akhir abad ke -19, kerajaan Klungkung menghadapi tantangan yang signifikan dengan kedatangan pasukan kolonial Belanda.',
+        ]);
+
+        CityTranslation::create([
+            'cities_id' => '2',
+            'language' => 'en',
+            'name' => 'Mountain Sangkan',
+            'image' => 'city-images/sangkan-gunung-thumbnail.jpg',
             'history_1' => "Klungkung regency, which includes Desa Sangkan Gunung, has historical significance in Bali as it was once the seat of the powerful Klungkung Kingdom, also known as the Kingdom of Gelgel. The Gelgel Kingdom rose to prominence in the 17th century and played a significant role in shaping the political and cultural landscape of Bali.",
             'history_2' => 'Under the rule of the Gelgel Kingdom, Klungkung became an important center for arts, culture, and governance. It was known for its royal court, palaces, temples, and artistic achievements. However, in the late 19th century, the Klungkung Kingdom faced a significant challenge with the arrival of the Dutch colonial forces.',
         ]);
 
         City::create([
+            'name' => 'Dawan',
+            'image' => 'city-images/dawan-thumbnail.jpg',
+            'history_1' => "Dawan secara tradisional dikenal sebagai daerah pantai yang strategis dan merupakan rumah bagi komunitas nelayan yang berkembang dengan sumber daya laut yang berlimpah.Desa -desa pesisir memainkan peran penting dalam ekonomi dan jaringan perdagangan di kawasan itu, berkontribusi pada keseluruhan kemakmuran Klungkung.",
+            'history_2' => 'Selama era kolonial Belanda, Dawan, seperti yang lain dari Bali, berada di bawah pengaruh Belanda.Belanda menetapkan kehadiran mereka di Bali dan memperkenalkan sistem administrasi baru.Namun, Dawan mempertahankan identitas budayanya dan melestarikan praktik tradisionalnya meskipun ada pengaruh eksternal.',
+        ]);
+
+        CityTranslation::create([
+            'cities_id' => '3',
+            'language' => 'id',
+            'name' => 'Dawan',
+            'image' => 'city-images/dawan-thumbnail.jpg',
+            'history_1' => "Dawan secara tradisional dikenal sebagai daerah pantai yang strategis dan merupakan rumah bagi komunitas nelayan yang berkembang dengan sumber daya laut yang berlimpah.Desa -desa pesisir memainkan peran penting dalam ekonomi dan jaringan perdagangan di kawasan itu, berkontribusi pada keseluruhan kemakmuran Klungkung.",
+            'history_2' => 'Selama era kolonial Belanda, Dawan, seperti yang lain dari Bali, berada di bawah pengaruh Belanda.Belanda menetapkan kehadiran mereka di Bali dan memperkenalkan sistem administrasi baru.Namun, Dawan mempertahankan identitas budayanya dan melestarikan praktik tradisionalnya meskipun ada pengaruh eksternal.',
+        ]);
+
+        CityTranslation::create([
+            'cities_id' => '3',
+            'language' => 'en',
             'name' => 'Dawan',
             'image' => 'city-images/dawan-thumbnail.jpg',
             'history_1' => "Dawan was traditionally known as a strategic coastal area and was home to fishing communities that thrived on the abundant marine resources. The coastal villages played a vital role in the region's economy and trade networks, contributing to the overall prosperity of Klungkung.",

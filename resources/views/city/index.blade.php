@@ -56,7 +56,7 @@
                             @foreach ($cities as $i => $city)
                                 <tr>
                                     <td>{{ $loop->iteration }}</td>
-                                    <td>{{ $city->name }}</td>
+                                    <td>{{ $city->translation(session('locale'))->name ?? $city->name }}</td>
                                     <td>
                                         <img src="{{ asset('storage/' . $city->image) }}" alt="{{ $city->name }} image"
                                             width="120">
@@ -64,7 +64,7 @@
                                     <td style="width: 300px">
                                         <p
                                             style="-webkit-line-clamp:2; overflow: hidden; display: -webkit-box; -webkit-box-orient: vertical; color: #212529;">
-                                            {{ $city->history_1 }}
+                                            {{ $city->translation(session('locale'))->history_1 ?? $city->history_1 }}
                                         </p>
                                     </td>
                                     <td class=" flex-row gap-1 d-lg-flex d-none">
@@ -89,20 +89,13 @@
     <form action="{{ route('store-city') }}" method="post" enctype="multipart/form-data">
         @csrf
         <div class="modal fade" id="AddModal" tabindex="-1" aria-labelledby="AddModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
+            <div class="modal-dialog modal-lg">
                 <div class="modal-content">
                     <div class="modal-body p-5">
                         <div class="text-center fs-3 title-font fw-medium">@lang('messages.modal_add_city')</div>
+                        <input type="hidden" name="id" value="{{ $id + 1 }}">
                         <div class="d-flex flex-column">
-                            <div class="pt-2 w-100">
-                                <div class="input-text-wrapper w-100 mb-3">
-                                    <label for="name" class="text-black fw-medium fs-14">@lang('messages.table_name')</label>
-                                    <input type="text" id="name" name="name"
-                                        class="w-100 input-text border-0 @error('name') is-invalid @enderror"
-                                        placeholder="Enter city name" value="{{ old('name') }}">
-                                </div>
-                            </div>
-                            <div class="w-100">
+                            <div class="w-100 pt-2">
                                 <div class="input-text-wrapper w-100 mb-3">
                                     <p class="text-black fw-medium fs-14">@lang('messages.table_image')</p>
                                     <div class="d-flex flex-row align-items-end gap-2">
@@ -113,20 +106,62 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="w-100">
-                                <div class="input-text-wrapper w-100 mb-3">
-                                    <label for="history_1" class="text-black fw-medium fs-14">@lang('messages.table_history_paragraph1')</label>
-                                    <textarea type="text" id="history_1" name="history_1"
-                                        class="w-100 input-text border-0 @error('history_1') is-invalid @enderror"
-                                        placeholder="Enter city history paragraph 1" value="{{ old('history_1') }}" rows="3"></textarea>
+                            <div class="wrapper d-flex gap-3 pt-2">
+                                <div class="w-100">
+                                    <div class="input-text-wrapper w-100 mb-3">
+                                        <label for="name" class="text-black fw-medium fs-14">@lang('messages.table_name')</label>
+                                        <input type="text" id="name" name="name"
+                                            class="w-100 input-text border-0 @error('name') is-invalid @enderror"
+                                            placeholder="Enter city name En" value="{{ old('name') }}">
+                                    </div>
+                                </div>
+                                <div class="w-100">
+                                    <div class="input-text-wrapper w-100 mb-3">
+                                        <label for="name_translation" class="text-black fw-medium fs-14">@lang('messages.table_name')
+                                            EN</label>
+                                        <input type="text" id="name_translation" name="name_translation"
+                                            class="w-100 input-text border-0 @error('name') is-invalid @enderror"
+                                            placeholder="Enter city name En" value="{{ old('name_translation') }}">
+                                    </div>
                                 </div>
                             </div>
-                            <div class="w-100">
-                                <div class="input-text-wrapper w-100 mb-3">
-                                    <label for="history_2" class="text-black fw-medium fs-14">@lang('messages.table_history_paragraph2')</label>
-                                    <textarea type="text" id="history_2" name="history_2"
-                                        class="w-100 input-text border-0 @error('history_2') is-invalid @enderror"
-                                        placeholder="Enter city history paragraph 2" value="{{ old('history_2') }}" rows="3"></textarea>
+                            <div class="wrapper d-flex gap-3 pt-2">
+                                <div class="w-100">
+                                    <div class="input-text-wrapper w-100 mb-3">
+                                        <label for="history_1" class="text-black fw-medium fs-14">@lang('messages.table_history_paragraph1')</label>
+                                        <textarea type="text" id="history_1" name="history_1"
+                                            class="w-100 input-text border-0 @error('history_1') is-invalid @enderror"
+                                            placeholder="Enter city history paragraph 1" value="{{ old('history_1') }}" rows="3"></textarea>
+                                    </div>
+                                </div>
+                                <div class="w-100">
+                                    <div class="input-text-wrapper w-100 mb-3">
+                                        <label for="history_1_translation"
+                                            class="text-black fw-medium fs-14">@lang('messages.table_history_paragraph1') EN</label>
+                                        <textarea type="text" id="history_1_translation" name="history_1_translation"
+                                            class="w-100 input-text border-0 @error('history_1_translation') is-invalid @enderror"
+                                            placeholder="Enter city history paragraph 1" value="{{ old('history_1_translation') }}" rows="3"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="wrapper d-flex gap-3 pt-2">
+                                <div class="w-100">
+                                    <div class="input-text-wrapper w-100 mb-3">
+                                        <label for="history_2"
+                                            class="text-black fw-medium fs-14">@lang('messages.table_history_paragraph1')</label>
+                                        <textarea type="text" id="history_2" name="history_2"
+                                            class="w-100 input-text border-0 @error('history_2') is-invalid @enderror"
+                                            placeholder="Enter city history paragraph 1" value="{{ old('history_2') }}" rows="3"></textarea>
+                                    </div>
+                                </div>
+                                <div class="w-100">
+                                    <div class="input-text-wrapper w-100 mb-3">
+                                        <label for="history_2_translation"
+                                            class="text-black fw-medium fs-14">@lang('messages.table_history_paragraph1') EN</label>
+                                        <textarea type="text" id="history_2_translation" name="history_2_translation"
+                                            class="w-100 input-text border-0 @error('history_2_translation') is-invalid @enderror"
+                                            placeholder="Enter city history paragraph 1" value="{{ old('history_2_translation') }}" rows="3"></textarea>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -180,7 +215,8 @@
                                 <div class="input-text-wrapper w-100 mb-3">
                                     <label for="history_2" class="text-black fw-medium fs-14">@lang('messages.table_history_paragraph2')</label>
                                     <textarea type="text" id="history_2" name="history_2"
-                                        class="w-100 input-text border-0 @error('history_2') is-invalid @enderror" rows="3" data-value="history_1"></textarea>
+                                        class="w-100 input-text border-0 @error('history_2') is-invalid @enderror" rows="3"
+                                        data-value="history_1"></textarea>
                                 </div>
                             </div>
                         </div>
