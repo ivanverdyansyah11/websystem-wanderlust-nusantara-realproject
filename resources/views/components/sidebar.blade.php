@@ -11,7 +11,7 @@
                     <a href="{{ route('dashboard') }}"
                         class="{{ Request::is('*dashboard') ? 'active' : '' }} d-flex align-items-center menu-wrapper gap-3 text-decoration-none">
                         <div class="icon-sidebar dashboard-icon"></div>
-                        <p class="mb-0">Dashboard</p>
+                        <p class="mb-0">@lang('messages.sidebar1')</p>
                     </a>
                 </div>
             </div>
@@ -20,7 +20,7 @@
                     <a href="{{ route('index-destination') }}"
                         class="{{ Request::is('*destination*') ? 'active' : '' }} d-flex align-items-center menu-wrapper gap-3 text-decoration-none">
                         <div class="icon-sidebar destination-icon"></div>
-                        <p class="mb-0">Destination</p>
+                        <p class="mb-0">@lang('messages.sidebar2')</p>
                     </a>
                 </div>
             </div>
@@ -29,7 +29,7 @@
                     <a href="{{ route('index-city') }}"
                         class="{{ Request::is('*city*') ? 'active' : '' }} d-flex align-items-center menu-wrapper gap-3 text-decoration-none">
                         <div class="icon-sidebar city-icon"></div>
-                        <p class="mb-0">City</p>
+                        <p class="mb-0">@lang('messages.sidebar3')</p>
                     </a>
                 </div>
             </div>
@@ -38,7 +38,7 @@
                     <a href="{{ route('index-gallery') }}"
                         class="{{ Request::is('*gallery*') ? 'active' : '' }} d-flex align-items-center menu-wrapper gap-3 text-decoration-none">
                         <div class="icon-sidebar gallery-icon"></div>
-                        <p class="mb-0">Gallery</p>
+                        <p class="mb-0">@lang('messages.sidebar4')</p>
                     </a>
                 </div>
             </div>
@@ -47,7 +47,7 @@
                     <a href="{{ route('index-feedback') }}"
                         class="{{ Request::is('*feedback*') ? 'active' : '' }} d-flex align-items-center menu-wrapper gap-3 text-decoration-none">
                         <div class="icon-sidebar feedback-icon"></div>
-                        <p class="mb-0">Feedback</p>
+                        <p class="mb-0">@lang('messages.sidebar5')</p>
                     </a>
                 </div>
             </div>
@@ -59,7 +59,7 @@
                         <button type="submit"
                             class="d-flex align-items-center menu-wrapper py-3 gap-3 text-decoration-none">
                             <div class="icon-sidebar logout-icon"></div>
-                            <p class="mb-0">Logout</p>
+                            <p class="mb-0">@lang('messages.sidebar6')</p>
                         </button>
                     </form>
                 </div>

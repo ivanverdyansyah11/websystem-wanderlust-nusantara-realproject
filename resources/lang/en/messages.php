@@ -132,6 +132,13 @@ return [
     'title_recommendation_destination' => 'Find Out Other Historical Treasures',
     'description_recommendation_destination' => 'Our tour history testimonials section showcases the awe-inspiring experiences of our delighted travelers who have discovered the hidden stories and secrets of this remarkable archipelago.',
 
+    'sidebar1' => "Dashboard",
+    'sidebar2' => "Destination",
+    'sidebar3' => "City",
+    'sidebar4' => "Gallery",
+    'sidebar5' => "Feedback",
+    'sidebar6' => "Logout",
+
     'dashboard_title' => "Dashboard Page",
     'dashboard_item1' => "Total Featured",
     'dashboard_item2' => "Total Destination",
