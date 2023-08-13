@@ -497,28 +497,31 @@
                             <div class="row">
                                 <div class="col-md-6 mb-4">
                                     <div class="input-wrapper d-flex flex-column">
-                                        <label class="label-input text-black" for="username">Username</label>
+                                        <label class="label-input text-black"
+                                            for="username">@lang('messages.contact_form1_caption')</label>
                                         <input type="text" class="input" id="username" name="username"
-                                            placeholder="Enter your username">
+                                            placeholder="@lang('messages.contact_form1_placeholder')">
                                     </div>
                                 </div>
                                 <div class="col-md-6 mb-4">
                                     <div class="input-wrapper d-flex flex-column">
-                                        <label class="label-input text-black" for="position">Job Position</label>
+                                        <label class="label-input text-black"
+                                            for="position">@lang('messages.contact_form2_caption')</label>
                                         <input type="text" class="input" id="position" name="position"
-                                            placeholder="Enter your job position">
+                                            placeholder="@lang('messages.contact_form2_placeholder')">
                                     </div>
                                 </div>
                                 <div class="col-12">
                                     <div class="input-wrapper d-flex flex-column">
-                                        <label class="label-input text-black" for="message">Message</label>
-                                        <textarea id="message" class="input" name="message" rows="4">Enter your message</textarea>
+                                        <label class="label-input text-black"
+                                            for="message">@lang('messages.contact_form3_caption')</label>
+                                        <textarea id="message" class="input" name="message" rows="4" placeholder="@lang('messages.contact_form3_placeholder')"></textarea>
                                     </div>
                                 </div>
                             </div>
                             <button type="submit" class="mt-4 btn btn-color d-flex flex-row align-items-center gap-2"
                                 style="height: fit-content; padding: 13px 22px;">
-                                Send Message
+                                @lang('messages.contact_button')
                             </button>
                         </form>
                     </div>

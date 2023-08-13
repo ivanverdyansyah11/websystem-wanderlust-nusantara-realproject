@@ -50,7 +50,14 @@ return [
 
     'contact_subtitle' => "We Want To Hear From You!",
     'contact_title' => "Contact Us",
-    'contact_description' => "Ada pertanyaan, atau hanya ingin menghubungi kami? Kami akan senang mendengar dari Anda! Jangan ragu untuk menghubungi kami menggunakan informasi di bawah ini atau mengisi formulir kontak.",
+    'contact_description' => "Have a question, or just want to contact us? We'd love to hear from you! Feel free to contact us using the information below or fill out the contact form.",
+    'contact_form1_caption' => "Username",
+    'contact_form1_placeholder' => "Enter your username",
+    'contact_form2_caption' => "Job Position",
+    'contact_form2_placeholder' => "Enter your job position",
+    'contact_form3_caption' => "Message",
+    'contact_form3_placeholder' => "Enter your message",
+    'contact_button' => "Send Message",
 
     'testimoni_subtitle' => "Explore Nusantara's Living History",
     'testimoni_title' => "Unveiling the Stories of Nusantara's Rich History",

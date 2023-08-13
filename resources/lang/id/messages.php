@@ -51,6 +51,13 @@ return [
     'contact_subtitle' => "Kami Ingin Mendengar dari Anda!",
     'contact_title' => "Hubungi Kami",
     'contact_description' => "Ada pertanyaan, atau hanya ingin menghubungi kami? Kami akan senang mendengar dari Anda! Jangan ragu untuk menghubungi kami menggunakan informasi di bawah ini atau mengisi formulir kontak.",
+    'contact_form1_caption' => "Nama belakang",
+    'contact_form1_placeholder' => "Masukkan nama pengguna Anda",
+    'contact_form2_caption' => "Posisi pekerjaan",
+    'contact_form2_placeholder' => "Masukkan Posisi Pekerjaan Anda",
+    'contact_form3_caption' => "Pesan",
+    'contact_form3_placeholder' => "Masukkan pesan Anda",
+    'contact_button' => "Kirim Pesan",
 
     'testimoni_subtitle' => "Jelajahi Sejarah Hidup Nusantara",
     'testimoni_title' => "Mengungkap kisah sejarah Nusantara yang kaya",
