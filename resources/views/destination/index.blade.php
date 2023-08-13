@@ -2,12 +2,25 @@
 
 @section('main')
     <div class="header-section d-flex flex-row justify-content-between padding-section px-5">
-
-        <p class="text-black fw-medium fs-2">{{ $page }} Page</p>
-        <button class="btn btn-color d-lg-flex d-none" data-bs-toggle="modal" data-bs-target="#AddModal">Add New
-            Destination</button>
-        <div class="d-xl-none hamburger-wrapper d-flex text-white align-self-center">
-            <i class="fa-solid fa-bars"></i>
+        <p class="text-black fw-semibold fs-2">@lang('messages.dashboard_item1')</p>
+        <div class="d-lg-flex justify-content-end gap-2">
+            <button class="btn btn-color d-lg-flex d-none" data-bs-toggle="modal"
+                data-bs-target="#AddModal">@lang('messages.dashboard_item1')</button>
+            <div class="d-xl-none hamburger-wrapper d-flex text-white align-self-center">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+            <div class="dropdown d-none d-lg-inline-block">
+                <button class="btn btn-dark dropdown-toggle" style="height: fit-content; padding: 13px 22px;" type="button"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    {{ strtoupper(session('locale')) ?? strtoupper(config('app.locale')) }}
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="{{ route('switch-language', ['locale' => 'id']) }}">ID</a>
+                    </li>
+                    <li><a class="dropdown-item" href="{{ route('switch-language', ['locale' => 'en']) }}">EN</a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </div>
 
@@ -28,24 +41,24 @@
                     <thead>
                         <tr>
                             <td>No</td>
-                            <td>Name</td>
-                            <td>Location</td>
-                            <td>Rating</td>
-                            <td>Total Images</td>
-                            <td>History</td>
+                            <td>@lang('messages.table_name')</td>
+                            <td>@lang('messages.table_location')</td>
+                            <td>@lang('messages.table_rating')</td>
+                            <td>@lang('messages.table_total_images')</td>
+                            <td>@lang('messages.table_history')</td>
                             <td></td>
                         </tr>
                     </thead>
                     <tbody>
                         @if ($destinations->count() == 0)
                             <tr>
-                                <td colspan="7" class="text-center py-3">Data Destination Not Found!</td>
+                                <td colspan="7" class="text-center py-3">@lang('messages.table_destination_notfound')!</td>
                             </tr>
                         @else
                             @foreach ($destinations as $i => $destinations)
                                 <tr>
                                     <td>{{ $loop->iteration }}</td>
-                                    <td>{{ $destinations->name }}</td>
+                                    <td style="width: 250px">{{ $destinations->name }}</td>
                                     <td>{{ $destinations->location }}</td>
                                     <td>{{ $destinations->rating }}</td>
                                     @php
@@ -56,7 +69,12 @@
                                     @else
                                         <td>0</td>
                                     @endif
-                                    <td style="width: 300px">{{ $text_history_1[$i] }}</td>
+                                    <td style="width: 300px">
+                                        <p
+                                            style="-webkit-line-clamp:2; overflow: hidden; display: -webkit-box; -webkit-box-orient: vertical; color: #212529;">
+                                            {{ $destinations->history_1 }}
+                                        </p>
+                                    </td>
                                     <td class=" flex-row gap-1 d-lg-flex d-none">
                                         <button class="btn btn-edit d-lg-flex d-none p-0" data-bs-toggle="modal"
                                             data-bs-target="#EditModal" data-id="{{ $destinations->id }}">

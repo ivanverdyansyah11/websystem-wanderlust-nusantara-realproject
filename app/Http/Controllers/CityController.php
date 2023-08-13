@@ -6,7 +6,6 @@ use App\Models\City;
 use App\Models\CityTranslation;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
-use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Session;
 
 class CityController extends Controller

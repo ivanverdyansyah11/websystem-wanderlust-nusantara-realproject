@@ -157,6 +157,9 @@ return [
     'dashboard_city_title' => "City Page",
     'dashboard_city_button' => "Add New City",
 
+    'dashboard_destination_title' => "Destination Page",
+    'dashboard_destination_button' => "Add New Destination",
+
     'table_name' => "Name",
     'table_location' => "Location",
     'table_rating' => "Rating",

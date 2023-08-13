@@ -7,17 +7,17 @@ use App\Models\Destination;
 use App\Models\Gallery;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
-use Illuminate\Support\Str;
+use Illuminate\Support\Facades\Session;
 
 class DestinationController extends Controller
 {
     public function index()
     {
-        $text_history_1 = Destination::select('history_1')
-            ->get()
-            ->map(function ($text) {
-                return Str::limit($text->history_1, 100);
-            });
+        if (!$locale = session('locale')) {
+            Session::put('locale', 'id');
+        } else {
+            app()->setLocale($locale);
+        }
 
         $gallery_count = Gallery::select('image')->get()
             ->map(function ($file) {
@@ -27,9 +27,8 @@ class DestinationController extends Controller
         return view('destination.index', [
             'page' => 'Destination',
             'id' => Destination::latest('id')->value('id'),
-            'destinations' => Destination::all(),
+            'destinations' => Destination::with('destination_translations')->get(),
             'cities' => City::all(),
-            'text_history_1' => $text_history_1,
             'gallery_count' => $gallery_count,
         ]);
     }

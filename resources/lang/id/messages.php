@@ -157,6 +157,9 @@ return [
     'dashboard_city_title' => "Halaman Perkotaan",
     'dashboard_city_button' => "Tambah Kota Baru",
 
+    'dashboard_destination_title' => "Halaman Destinasi",
+    'dashboard_destination_button' => "Tambah Destinasi Baru",
+
     'table_name' => "Nama",
     'table_location' => "Lokasi",
     'table_rating' => "Peringkat",
