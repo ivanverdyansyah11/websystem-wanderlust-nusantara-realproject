@@ -1,8 +1,8 @@
 @extends('templates.main')
 @section('main')
     <div class="header-section d-flex flex-row justify-content-between padding-section px-5">
-        <p class="text-black fw-medium fs-2">{{ $page }} Page</p>
-        <div class="wrapper d-flex gap-2">
+        <p class="text-black fw-semibold fs-2">Galeri Detail Page</p>
+        <div class="d-lg-flex justify-content-end gap-2">
             <button class="btn btn-color d-lg-flex d-none" data-bs-toggle="modal" data-bs-target="#AddModal">Add New
                 Gallery</button>
             @if (!is_null($gallery->image))
@@ -11,9 +11,21 @@
                     All
                     Gallery</button>
             @endif
-        </div>
-        <div class="d-xl-none hamburger-wrapper d-flex text-white align-self-center">
-            <i class="fa-solid fa-bars"></i>
+            <div class="d-xl-none hamburger-wrapper d-flex text-white align-self-center">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+            <div class="dropdown d-none d-lg-inline-block">
+                <button class="btn btn-dark dropdown-toggle" style="height: fit-content; padding: 13px 22px;" type="button"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    {{ strtoupper(session('locale')) ?? strtoupper(config('app.locale')) }}
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="{{ route('switch-language', ['locale' => 'id']) }}">ID</a>
+                    </li>
+                    <li><a class="dropdown-item" href="{{ route('switch-language', ['locale' => 'en']) }}">EN</a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </div>
 

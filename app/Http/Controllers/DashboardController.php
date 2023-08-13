@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 use App\Models\City;
 use App\Models\Destination;
 use App\Models\Gallery;
-use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Session;
 
 class DashboardController extends Controller

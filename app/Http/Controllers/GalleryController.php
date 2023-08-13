@@ -6,11 +6,18 @@ use App\Models\Destination;
 use App\Models\Gallery;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\Session;
 
 class GalleryController extends Controller
 {
     public function index()
     {
+        if (!$locale = session('locale')) {
+            Session::put('locale', 'id');
+        } else {
+            app()->setLocale($locale);
+        }
+
         $gallery_count = Gallery::select('image')->get()
             ->map(function ($file) {
                 return explode(',', $file->image);
@@ -25,6 +32,12 @@ class GalleryController extends Controller
 
     public function detail($id)
     {
+        if (!$locale = session('locale')) {
+            Session::put('locale', 'id');
+        } else {
+            app()->setLocale($locale);
+        }
+
         $imagesFull = Gallery::where('destinations_id', $id)->pluck('image')->toArray();
 
         $imageJoin = implode(',', $imagesFull);

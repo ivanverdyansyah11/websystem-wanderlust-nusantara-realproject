@@ -146,6 +146,8 @@ return [
     'dashboard_item4' => "Total Gallery",
     'dashboard_subtitle' => "Most Recent Destination",
 
+    'dashboard_gallery_title' => "Gallery Page",
+
     'table_name' => "Name",
     'table_location' => "Location",
     'table_rating' => "Rating",

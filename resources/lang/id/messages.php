@@ -146,6 +146,8 @@ return [
     'dashboard_item4' => "Total Galeri",
     'dashboard_subtitle' => "Tujuan Terbaru",
 
+    'dashboard_gallery_title' => "Halaman Galeri",
+
     'table_name' => "Nama",
     'table_location' => "Lokasi",
     'table_rating' => "Peringkat",
