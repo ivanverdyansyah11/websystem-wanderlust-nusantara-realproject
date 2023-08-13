@@ -148,13 +148,24 @@ return [
 
     'dashboard_gallery_title' => "Halaman Galeri",
 
+    'dashboard_gallery_detail_title' => "Halaman Detail Galeri",
+    'dashboard_gallery_detail_button1' => "Tambah Gambar Baru",
+    'dashboard_gallery_detail_button2' => "Hapus Semua Gambar",
+
     'table_name' => "Nama",
     'table_location' => "Lokasi",
     'table_rating' => "Peringkat",
     'table_total_images' => "Total Gambar",
     'table_history' => "Sejarah",
+    'table_image' => "Gambar",
 
     'table_destination_notfound' => "Tujuan data tidak ditemukan",
+    'table_gallry_notfound' => "Gambar tidak ditemukan",
 
+    'modal_add_image' => "Tambah Gambar Baru",
+    'modal_delete_image' => "Hapus Galeri",
+    'modal_delete_image_description' => "Apakah Anda benar -benar ingin menghapus galeri ini?Proses ini tidak bisa dibatalkan.",
+    'modal_close_add' => "Batal Tambah",
+    'modal_close_delete' => "Batal Hapus",
     'modal_close' => "Tutup Modal",
 ];

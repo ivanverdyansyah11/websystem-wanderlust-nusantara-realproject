@@ -1,15 +1,13 @@
 @extends('templates.main')
 @section('main')
     <div class="header-section d-flex flex-row justify-content-between padding-section px-5">
-        <p class="text-black fw-semibold fs-2">Galeri Detail Page</p>
+        <p class="text-black fw-semibold fs-2">@lang('messages.dashboard_gallery_detail_title')</p>
         <div class="d-lg-flex justify-content-end gap-2">
-            <button class="btn btn-color d-lg-flex d-none" data-bs-toggle="modal" data-bs-target="#AddModal">Add New
-                Gallery</button>
+            <button class="btn btn-color d-lg-flex d-none" data-bs-toggle="modal"
+                data-bs-target="#AddModal">@lang('messages.dashboard_gallery_detail_button1')</button>
             @if (!is_null($gallery->image))
                 <button class="btn btn-danger d-lg-flex d-none" data-bs-toggle="modal" data-bs-target="#DeleteModal"
-                    data-id="{{ $gallery->id }}">Delete
-                    All
-                    Gallery</button>
+                    data-id="{{ $gallery->id }}">@lang('messages.dashboard_gallery_detail_button2')</button>
             @endif
             <div class="d-xl-none hamburger-wrapper d-flex text-white align-self-center">
                 <i class="fa-solid fa-bars"></i>
@@ -51,7 +49,7 @@
                     <tbody>
                         <tr>
                             @if (is_null($gallery->image))
-                                <td colspan="1" class="text-center pt-3">Image Not Found!</td>
+                                <td colspan="1" class="text-center pt-3">@lang('messages.table_gallry_notfound')!</td>
                             @else
                                 <td class="p-0 pt-3">
                                     <div class="wrapper" style="columns: 4; column-gap: 20px;">
@@ -77,12 +75,12 @@
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-body p-5">
-                        <div class="text-center fs-3 title-font fw-medium">Add New Gallery</div>
+                        <div class="text-center fs-3 title-font fw-medium">@lang('messages.modal_add_image')</div>
                         <div class="d-flex flex-column">
                             <div class="w-100">
                                 <div class="input-text-wrapper w-100 mb-3">
                                     <input type="hidden" name="destinations_id" value="{{ $destination->id }}">
-                                    <p class="text-black fw-medium fs-14">Image</p>
+                                    <p class="text-black fw-medium fs-14">@lang('messages.table_image')</p>
                                     <div class="d-flex flex-column gap-2">
                                         <img src="{{ asset('assets/img/table/img-modal.svg') }}" alt="your image"
                                             class="tag-image img-preview" />
@@ -93,8 +91,9 @@
                             </div>
                         </div>
                         <div class="d-flex flex-row justify-content-center gap-2 pt-4">
-                            <button type="button" class="btn btn-dark fs-15" data-bs-dismiss="modal">Cancel Add</button>
-                            <button type="submit" class="btn btn-color fs-15">Add New Gallery</button>
+                            <button type="button" class="btn btn-dark fs-15"
+                                data-bs-dismiss="modal">@lang('messages.modal_close_add')</button>
+                            <button type="submit" class="btn btn-color fs-15">@lang('messages.modal_add_image')</button>
                         </div>
                     </div>
                 </div>
@@ -108,13 +107,11 @@
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-body p-5">
-                        <div class="text-center fs-3 fw-medium title-font">Delete Gallery</div>
-                        <div class="pt-3 text-center"> Do you really want to delete these gallery? This process cannot be
-                            undone.
-                        </div>
+                        <div class="text-center fs-3 fw-medium title-font">@lang('messages.modal_delete_image')</div>
+                        <div class="pt-3 text-center">@lang('messages.modal_delete_image_description')</div>
                         <div class="d-flex flex-row justify-content-center gap-2 pt-4">
-                            <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Cancel Delete</button>
-                            <button type="submit" class="btn btn-color">Delete Gallery</button>
+                            <button type="button" class="btn btn-dark" data-bs-dismiss="modal">@lang('messages.modal_close_delete')</button>
+                            <button type="submit" class="btn btn-color">@lang('messages.modal_delete_image')</button>
                         </div>
                     </div>
                 </div>

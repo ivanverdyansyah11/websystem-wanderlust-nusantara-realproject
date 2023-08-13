@@ -148,13 +148,24 @@ return [
 
     'dashboard_gallery_title' => "Gallery Page",
 
+    'dashboard_gallery_detail_title' => "Gallery Detail Page",
+    'dashboard_gallery_detail_button1' => "Add New Images",
+    'dashboard_gallery_detail_button2' => "Delete All Images",
+
     'table_name' => "Name",
     'table_location' => "Location",
     'table_rating' => "Rating",
     'table_total_images' => "Total Images",
     'table_history' => "History",
+    'table_image' => "Image",
 
     'table_destination_notfound' => "Data Destination Not Found",
+    'table_gallry_notfound' => "Image Not Found",
 
+    'modal_add_image' => "Add New Images",
+    'modal_delete_image' => "Delete Gallery",
+    'modal_delete_image_description' => "Do you really want to delete these gallery? This process cannot be undone.",
+    'modal_close_add' => "Close Add",
+    'modal_close_delete' => "Close Delete",
     'modal_close' => "Close Modal",
 ];
