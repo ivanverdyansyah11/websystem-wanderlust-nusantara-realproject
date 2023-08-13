@@ -34,7 +34,7 @@
 
     <div class="main-content mt-4 px-5 mb-5">
         <div class="row px-3 py-4 rounded-1" style="background-color: white">
-            <div class="col-12 my-2">
+            <div class="col-12 mt-2">
                 <table class="table mb-0">
                     <thead>
                         <tr>
