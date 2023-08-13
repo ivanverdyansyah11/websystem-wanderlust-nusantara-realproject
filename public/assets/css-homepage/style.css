@@ -232,7 +232,30 @@ section.position-relative{
 .grid-content{
     display: inline-block;
     margin-top: 24px;
+}
 
+form.form {
+    width: 100%;
+    display: inline-block;
+}
+
+.label-input {
+    font-size: 0.938rem;
+    margin-bottom: 6px;
+}
+
+.input{
+    padding: 18px 24px;
+    border: none;
+    background: #f0f0f0;
+    border-radius: 2px !important;
+    color: #A4A4A4;
+    font-size: 14.6px;
+    font-weight: 500 !important;
+    outline: none;
+}
+.input::placeholder {
+    color: #A4A4A4;
 }
 @media (min-width: 500px) and (max-width: 900px){
     .first-hr:after{

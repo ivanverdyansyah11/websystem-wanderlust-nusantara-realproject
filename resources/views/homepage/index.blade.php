@@ -99,7 +99,7 @@
                     </div>
                 </div>
             </div>
-            <div class="hero-banner row  position-absolute d-none top-0 banner-background end-0 d-lg-inline-block">
+            <div class="hero-banner row position-absolute d-none top-0 banner-background end-0 d-lg-inline-block">
                 <img src="{{ asset('assets/img-homepage/hero-img.jpg') }}" alt="hero section image"
                     class="w-100 h-100">
             </div>
@@ -405,7 +405,7 @@
                                     turned out to be a game-changer.”
                                 </p>
                                 <div class="d-flex flex-row align-items-center gap-2 mt-2">
-                                    <img src="{{ asset('assets/img-homepage/testi1.svg') }}"
+                                    <img src="{{ asset('assets/img-homepage/testi-image.svg') }}"
                                         alt="testimonial profile" class="">
                                     <div class="d-flex flex-column">
                                         <p class="second-color fs-15 fw-semibold">Rebecca Amessa</p>
@@ -474,7 +474,63 @@
             </div>
         </section>
 
-        <section class="cta-section">
+        <section id="about" class="about-section position-relative">
+            <div class="bg-section"></div>
+            <div class="container position-relative">
+                <div class="row">
+                    <div class="col-xl-6 col-lg-7 col-12">
+                        <div class="badge-section">
+                            <p class="main-color fs-15 fw-semibold">
+                                @lang('messages.contact_subtitle')
+                            </p>
+                        </div>
+                        <p class="fw-semibold display-5 mt-1 text-black">
+                            @lang('messages.contact_title')
+                        </p>
+                        <article class="mt-3">
+                            <p>
+                                @lang('messages.contact_description')
+                            </p>
+                        </article>
+                        <form action="" class="form mt-5">
+                            @csrf
+                            <div class="row">
+                                <div class="col-md-6 mb-4">
+                                    <div class="input-wrapper d-flex flex-column">
+                                        <label class="label-input text-black" for="username">Username</label>
+                                        <input type="text" class="input" id="username" name="username"
+                                            placeholder="Enter your username">
+                                    </div>
+                                </div>
+                                <div class="col-md-6 mb-4">
+                                    <div class="input-wrapper d-flex flex-column">
+                                        <label class="label-input text-black" for="position">Job Position</label>
+                                        <input type="text" class="input" id="position" name="position"
+                                            placeholder="Enter your job position">
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="input-wrapper d-flex flex-column">
+                                        <label class="label-input text-black" for="message">Message</label>
+                                        <textarea id="message" class="input" name="message" rows="4">Enter your message</textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            <button type="submit" class="mt-4 btn btn-color d-flex flex-row align-items-center gap-2"
+                                style="height: fit-content; padding: 13px 22px;">
+                                Send Message
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="row banner-section position-absolute d-none top-0 banner-background end-0 d-lg-inline-block">
+                <img src="{{ asset('assets/img-homepage/about-img.png') }}" alt="about section image"
+                    class="w-100 h-100">
+            </div>
+        </section>
+
+        <section class="cta-section" style="margin-top: 0;">
             <div class="cta-content container">
                 <div class="row gy-4">
                     <div class="col-md-6 col-12">

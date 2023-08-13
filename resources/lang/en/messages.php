@@ -48,9 +48,13 @@ return [
     'gallery_description' => "Immerse yourself in the captivating gallery of WanderlustNusantara's historical tourism website, where the rich tapestry of Nusantara's heritage comes to life. Explore a visual feast of ancient ruins, majestic temples, and cultural landmarks that showcase the remarkable history of Indonesia.",
     'gallery_button' => "More Documentation",
 
+    'contact_subtitle' => "We Want To Hear From You!",
+    'contact_title' => "Contact Us",
+    'contact_description' => "Ada pertanyaan, atau hanya ingin menghubungi kami? Kami akan senang mendengar dari Anda! Jangan ragu untuk menghubungi kami menggunakan informasi di bawah ini atau mengisi formulir kontak.",
+
     'testimoni_subtitle' => "Explore Nusantara's Living History",
     'testimoni_title' => "Unveiling the Stories of Nusantara's Rich History",
-    'testimoni_description' => "Our tour history testimonials section showcases the awe-inspiring experiences of our delighted travelers who have discovered the hidden stories and secrets of this remarkable archipelago.",
+    'testimoni_description' => "Have a question, or just want to contact us? We'd love to hear from you! Feel free to contact us using the information below or fill out the contact form.",
 
     'cta_title' => "Get to Know More About the History of Other Archipelagos",
     'cta_button' => "Connect With Us",
