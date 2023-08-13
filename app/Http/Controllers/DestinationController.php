@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\City;
 use App\Models\Destination;
+use App\Models\DestinationTranslation;
 use App\Models\Gallery;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
@@ -46,12 +47,45 @@ class DestinationController extends Controller
             'history_2' => 'required',
         ]);
 
+        $validatedDataTranslation = $request->validate([
+            'name_translation' => 'required',
+            'history_1_translation' => 'required',
+            'history_2_translation' => 'required',
+        ]);
+
         $validatedData['image'] = $request->file('image')->store('destination-images');
+
         $gallery = Gallery::create([
             'destinations_id' => $validatedData['id'],
         ]);
+
         $destination = Destination::create($validatedData);
-        if ($destination) {
+
+        $destinationIN = DestinationTranslation::create([
+            'destinations_id' => $validatedData['id'],
+            'language' => 'id',
+            'cities_id' => $validatedData['cities_id'],
+            'name' => $validatedData['name'],
+            'rating' => $validatedData['rating'],
+            'location' => $validatedData['location'],
+            'image' => $validatedData['location'],
+            'history_1' => $validatedData['history_1'],
+            'history_2' => $validatedData['history_2'],
+        ]);
+
+        $destinationEN = DestinationTranslation::create([
+            'destinations_id' => $validatedData['id'],
+            'language' => 'en',
+            'cities_id' => $validatedData['cities_id'],
+            'name' => $validatedDataTranslation['name_translation'],
+            'rating' => $validatedData['rating'],
+            'location' => $validatedData['location'],
+            'image' => $validatedData['location'],
+            'history_1' => $validatedDataTranslation['history_1_translation'],
+            'history_2' => $validatedDataTranslation['history_2_translation'],
+        ]);
+
+        if ($destination && $gallery && $destinationIN && $destinationEN) {
             return redirect(route('index-destination'))->with('success', 'Add New Destination Successfully!');
         } else {
             return redirect(route('index-destination'))->with('failed', 'Add New Destination Failed!');

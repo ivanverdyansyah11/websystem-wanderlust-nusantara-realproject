@@ -103,50 +103,12 @@
             <div class="modal-dialog modal-lg">
                 <div class="modal-content">
                     <div class="modal-body p-5">
-                        <div class="text-center fs-3 title-font fw-medium">Add New Destination</div>
+                        <div class="text-center fs-3 title-font fw-medium">@lang('messages.dashboard_destination_button')</div>
                         <div class="d-flex flex-column">
-                            <div class="wrapper d-flex gap-3">
-                                <div class="pt-2 w-100">
-                                    <div class="input-text-wrapper w-100 mb-3">
-                                        <input type="hidden" name="id" value="{{ $id + 1 }}">
-                                        <label for="name" class="text-black fw-medium fs-14">Name</label>
-                                        <input type="text" id="name" name="name"
-                                            class="w-100 input-text border-0 @error('name') is-invalid @enderror"
-                                            placeholder="Enter city name" value="{{ old('name') }}">
-                                    </div>
-                                </div>
-                                <div class="pt-2 w-100">
-                                    <div class="input-text-wrapper w-100 mb-3">
-                                        <label for="rating" class="text-black fw-medium fs-14">Rating</label>
-                                        <input type="text" id="rating" name="rating"
-                                            class="w-100 input-text border-0 @error('rating') is-invalid @enderror"
-                                            placeholder="Enter city rating" value="{{ old('rating') }}">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="wrapper d-flex gap-3">
-                                <div class="pt-2 w-100">
-                                    <div class="input-text-wrapper w-100 mb-3">
-                                        <label for="location" class="text-black fw-medium fs-14">Location</label>
-                                        <input type="text" id="location" name="location"
-                                            class="w-100 input-text border-0 @error('location') is-invalid @enderror"
-                                            placeholder="Enter city location" value="{{ old('location') }}">
-                                    </div>
-                                </div>
-                                <div class="pt-2 w-100">
-                                    <div class="input-text-wrapper w-100 mb-3">
-                                        <label for="cities_id" class="text-black fw-medium fs-14">City</label>
-                                        <select class="w-100 input-text border-0" name="cities_id" id="cities_id">
-                                            @foreach ($cities as $city)
-                                                <option value="{{ $city->id }}">{{ $city->name }}</option>
-                                            @endforeach
-                                        </select>
-                                    </div>
-                                </div>
-                            </div>
+                            <input type="hidden" name="id" value="{{ $id + 1 }}">
                             <div class="w-100">
                                 <div class="input-text-wrapper w-100 mb-3">
-                                    <p class="text-black fw-medium fs-14">Image</p>
+                                    <p class="text-black fw-medium fs-14">@lang('messages.table_image')</p>
                                     <div class="d-flex flex-row align-items-end gap-2">
                                         <img src="{{ asset('assets/img/table/img-modal.svg') }}" alt="your image"
                                             class="tag-image img-preview" />
@@ -155,11 +117,56 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="wrapper d-flex gap-3">
+                            <div class="wrapper d-flex gap-3 pt-2">
                                 <div class="w-100">
                                     <div class="input-text-wrapper w-100 mb-3">
-                                        <label for="history_1" class="text-black fw-medium fs-14">History Paragraph
-                                            1</label>
+                                        <label for="name" class="text-black fw-medium fs-14">@lang('messages.table_name')</label>
+                                        <input type="text" id="name" name="name"
+                                            class="w-100 input-text border-0 @error('name') is-invalid @enderror"
+                                            placeholder="Enter city name" value="{{ old('name') }}">
+                                    </div>
+                                </div>
+                                <div class="w-100">
+                                    <div class="input-text-wrapper w-100 mb-3">
+                                        <label for="name_translation" class="text-black fw-medium fs-14">@lang('messages.table_name')
+                                            EN</label>
+                                        <input type="text" id="name_translation" name="name_translation"
+                                            class="w-100 input-text border-0 @error('name') is-invalid @enderror"
+                                            placeholder="Enter city name EN" value="{{ old('name') }}">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="w-100">
+                                <div class="input-text-wrapper w-100 mb-3">
+                                    <label for="rating" class="text-black fw-medium fs-14">@lang('messages.table_rating')</label>
+                                    <input type="text" id="rating" name="rating"
+                                        class="w-100 input-text border-0 @error('rating') is-invalid @enderror"
+                                        placeholder="Enter city rating" value="{{ old('rating') }}">
+                                </div>
+                            </div>
+                            <div class="w-100 pt-2">
+                                <div class="input-text-wrapper w-100 mb-3">
+                                    <label for="location" class="text-black fw-medium fs-14">@lang('messages.table_location')</label>
+                                    <input type="text" id="location" name="location"
+                                        class="w-100 input-text border-0 @error('location') is-invalid @enderror"
+                                        placeholder="Enter city location" value="{{ old('location') }}">
+                                </div>
+                            </div>
+                            <div class="pt-2 w-100">
+                                <div class="input-text-wrapper w-100 mb-3">
+                                    <label for="cities_id" class="text-black fw-medium fs-14">@lang('messages.table_city')</label>
+                                    <select class="w-100 input-text border-0" name="cities_id" id="cities_id">
+                                        @foreach ($cities as $city)
+                                            <option value="{{ $city->id }}">{{ $city->name }}</option>
+                                        @endforeach
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="wrapper d-flex gap-3 pt-2">
+                                <div class="w-100">
+                                    <div class="input-text-wrapper w-100 mb-3">
+                                        <label for="history_1"
+                                            class="text-black fw-medium fs-14">@lang('messages.table_history_paragraph1')</label>
                                         <textarea type="text" id="history_1" name="history_1"
                                             class="w-100 input-text border-0 @error('history_1') is-invalid @enderror"
                                             placeholder="Enter city history paragraph 1" value="{{ old('history_1') }}" rows="3"></textarea>
@@ -167,18 +174,39 @@
                                 </div>
                                 <div class="w-100">
                                     <div class="input-text-wrapper w-100 mb-3">
-                                        <label for="history_2" class="text-black fw-medium fs-14">History Paragraph
-                                            2</label>
+                                        <label for="history_1_translation"
+                                            class="text-black fw-medium fs-14">@lang('messages.table_history_paragraph1') EN</label>
+                                        <textarea type="text" id="history_1_translation" name="history_1_translation"
+                                            class="w-100 input-text border-0 @error('history_1_translation') is-invalid @enderror"
+                                            placeholder="Enter city history paragraph 1" value="{{ old('history_1_translation') }}" rows="3"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="wrapper d-flex gap-3 pt-2">
+                                <div class="w-100">
+                                    <div class="input-text-wrapper w-100 mb-3">
+                                        <label for="history_2"
+                                            class="text-black fw-medium fs-14">@lang('messages.table_history_paragraph2')</label>
                                         <textarea type="text" id="history_2" name="history_2"
                                             class="w-100 input-text border-0 @error('history_2') is-invalid @enderror"
-                                            placeholder="Enter city history paragraph 2" value="{{ old('history_2') }}" rows="3"></textarea>
+                                            placeholder="Enter city history paragraph 1" value="{{ old('history_2') }}" rows="3"></textarea>
+                                    </div>
+                                </div>
+                                <div class="w-100">
+                                    <div class="input-text-wrapper w-100 mb-3">
+                                        <label for="history_2_translation"
+                                            class="text-black fw-medium fs-14">@lang('messages.table_history_paragraph2') EN</label>
+                                        <textarea type="text" id="history_2_translation" name="history_2_translation"
+                                            class="w-100 input-text border-0 @error('history_2_translation') is-invalid @enderror"
+                                            placeholder="Enter city history paragraph 1" value="{{ old('history_2_translation') }}" rows="3"></textarea>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="d-flex flex-row justify-content-center gap-2 pt-4">
-                            <button type="button" class="btn btn-dark fs-15" data-bs-dismiss="modal">Cancel Add</button>
-                            <button type="submit" class="btn btn-color fs-15">Add New Destination</button>
+                            <button type="button" class="btn btn-dark fs-15"
+                                data-bs-dismiss="modal">@lang('messages.modal_close_add')</button>
+                            <button type="submit" class="btn btn-color fs-15">@lang('messages.dashboard_destination_button')</button>
                         </div>
                     </div>
                 </div>
@@ -227,8 +255,9 @@
                                     <div class="d-flex flex-row align-items-end gap-2">
                                         <img src="" alt="your image" class="tag-image-edit img-preview"
                                             data-value="image" />
-                                        <input type='file' class="input-file-edit @error('image') is-invalid @enderror"
-                                            size="150" name="image">
+                                        <input type='file'
+                                            class="input-file-edit @error('image') is-invalid @enderror" size="150"
+                                            name="image">
                                     </div>
                                 </div>
                             </div>
