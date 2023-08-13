@@ -160,5 +160,29 @@ class DatabaseSeeder extends Seeder
             'destinations_id' => '7',
             'image' => 'destination-images/gallery-27.jfif,destination-images/gallery-28.jfif,destination-images/gallery-29.jfif,destination-images/gallery-30.jpg,destination-images/gallery-31.jpg,destination-images/gallery-32.jpg,destination-images/gallery-33.jpg,destination-images/gallery-34.jpg',
         ]);
+
+        Feedback::create([
+            'username' => 'Rebecca Amessa',
+            'position' => 'History Educator',
+            'message' => 'I stumbled upon this historical tourism website while planning my trip, and it turned out to be a game-changer.',
+        ]);
+
+        Feedback::create([
+            'username' => 'Andrew Laurist',
+            'position' => 'Archaeologist',
+            'message' => 'I highly recommend this historical tourism website to all history buffs out there. Meticulously curated content.',
+        ]);
+
+        Feedback::create([
+            'username' => 'Sophia Divana',
+            'position' => 'History Enthusiast',
+            'message' => 'I can confidently say that this historical tourism website is a goldmine of knowledge.',
+        ]);
+
+        Feedback::create([
+            'username' => 'Jonathan Ronny',
+            'position' => 'Museum Curator',
+            'message' => 'I cannot thank this historical tourism website enough for the invaluable insights it provided during my travels.',
+        ]);
     }
 }

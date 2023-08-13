@@ -404,9 +404,9 @@
                                     “I stumbled upon this historical tourism website while planning my trip, and it
                                     turned out to be a game-changer.”
                                 </p>
-                                <div class="d-flex flex-row align-items-center gap-2 mt-2">
+                                <div class="d-flex flex-row align-items-center gap-3 mt-3">
                                     <img src="{{ asset('assets/img-homepage/testi-image.svg') }}"
-                                        alt="testimonial profile" class="">
+                                        alt="testimonial profile" class="" width="46">
                                     <div class="d-flex flex-column">
                                         <p class="second-color fs-15 fw-semibold">Rebecca Amessa</p>
                                         <p class="fw-medium fs-13">History Educator</p>
@@ -422,9 +422,9 @@
                                     “I highly recommend this historical tourism website to all history buffs out there.
                                     Meticulously curated content.”
                                 </p>
-                                <div class="d-flex flex-row align-items-center gap-2 mt-2">
-                                    <img src="{{ asset('assets/img-homepage/testi2.svg') }}"
-                                        alt="testimonial profile" class="">
+                                <div class="d-flex flex-row align-items-center gap-3 mt-3">
+                                    <img src="{{ asset('assets/img-homepage/testi-image.svg') }}"
+                                        alt="testimonial profile" class="" width="46">
                                     <div class="d-flex flex-column">
                                         <p class="second-color fs-15 fw-semibold">Andrew Laurist</p>
                                         <p class="fw-medium fs-13">Archaeologist</p>
@@ -440,9 +440,9 @@
                                     “I can confidently say that this historical tourism website is a goldmine of
                                     knowledge.”
                                 </p>
-                                <div class="d-flex flex-row align-items-center gap-2 mt-2">
-                                    <img src="{{ asset('assets/img-homepage/testi3.svg') }}"
-                                        alt="testimonial profile" class="">
+                                <div class="d-flex flex-row align-items-center gap-3 mt-3">
+                                    <img src="{{ asset('assets/img-homepage/testi-image.svg') }}"
+                                        alt="testimonial profile" class="" width="46">
                                     <div class="d-flex flex-column">
                                         <p class="second-color fs-15 fw-semibold">Sophia Divana</p>
                                         <p class="fw-medium fs-13">History Enthusiast</p>
@@ -458,9 +458,9 @@
                                     “I cannot thank this historical tourism website enough for the invaluable insights
                                     it provided during my travels.”
                                 </p>
-                                <div class="d-flex flex-row align-items-center gap-2 mt-2">
-                                    <img src="{{ asset('assets/img-homepage/testi4.svg') }}"
-                                        alt="testimonial profile" class="">
+                                <div class="d-flex flex-row align-items-center gap-3 mt-3">
+                                    <img src="{{ asset('assets/img-homepage/testi-image.svg') }}"
+                                        alt="testimonial profile" class="" width="46">
                                     <div class="d-flex flex-column">
                                         <p class="second-color fs-15 fw-semibold">Jonathan Ronny</p>
                                         <p class="fw-medium fs-13">Museum Curator</p>
@@ -492,7 +492,7 @@
                                 @lang('messages.contact_description')
                             </p>
                         </article>
-                        <form action="" class="form mt-5">
+                        <form action="" method="POST" class="form mt-5">
                             @csrf
                             <div class="row">
                                 <div class="col-md-6 mb-4">
