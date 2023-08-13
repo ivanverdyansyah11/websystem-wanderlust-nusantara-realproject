@@ -2,12 +2,25 @@
 
 @section('main')
     <div class="header-section d-flex flex-row justify-content-between padding-section px-5">
-
-        <p class="text-black fw-medium fs-2">{{ $page }} Page</p>
-        <button class="btn btn-color d-lg-flex d-none" data-bs-toggle="modal" data-bs-target="#AddModal">Add New
-            City</button>
-        <div class="d-xl-none hamburger-wrapper d-flex text-white align-self-center">
-            <i class="fa-solid fa-bars"></i>
+        <p class="text-black fw-semibold fs-2">@lang('messages.dashboard_city_title')</p>
+        <div class="d-lg-flex justify-content-end gap-2">
+            <button class="btn btn-color d-lg-flex d-none" data-bs-toggle="modal" data-bs-target="#AddModal"
+                style="height: fit-content; padding: 13px 22px;">@lang('messages.dashboard_city_button')</button>
+            <div class="d-xl-none hamburger-wrapper d-flex text-white align-self-center">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+            <div class="dropdown d-none d-lg-inline-block">
+                <button class="btn btn-dark dropdown-toggle" style="height: fit-content; padding: 13px 22px;" type="button"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    {{ strtoupper(session('locale')) ?? strtoupper(config('app.locale')) }}
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="{{ route('switch-language', ['locale' => 'id']) }}">ID</a>
+                    </li>
+                    <li><a class="dropdown-item" href="{{ route('switch-language', ['locale' => 'en']) }}">EN</a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </div>
 
@@ -28,16 +41,16 @@
                     <thead>
                         <tr>
                             <td>No</td>
-                            <td>Name</td>
-                            <td>Image</td>
-                            <td>History</td>
+                            <td>@lang('messages.table_name')</td>
+                            <td>@lang('messages.table_image')</td>
+                            <td>@lang('messages.table_history')</td>
                             <td></td>
                         </tr>
                     </thead>
                     <tbody>
                         @if ($cities->count() == 0)
                             <tr>
-                                <td colspan="5" class="text-center py-3">Data Menu Not Found!</td>
+                                <td colspan="5" class="text-center py-3">@lang('messages.table_city_notfound')!</td>
                             </tr>
                         @else
                             @foreach ($cities as $i => $city)
@@ -48,7 +61,12 @@
                                         <img src="{{ asset('storage/' . $city->image) }}" alt="{{ $city->name }} image"
                                             width="120">
                                     </td>
-                                    <td style="width: 300px">{{ $text_history_1[$i] }}</td>
+                                    <td style="width: 300px">
+                                        <p
+                                            style="-webkit-line-clamp:2; overflow: hidden; display: -webkit-box; -webkit-box-orient: vertical; color: #212529;">
+                                            {{ $city->history_1 }}
+                                        </p>
+                                    </td>
                                     <td class=" flex-row gap-1 d-lg-flex d-none">
                                         <button class="btn btn-edit d-lg-flex d-none p-0" data-bs-toggle="modal"
                                             data-bs-target="#EditModal" data-id="{{ $city->id }}">
@@ -74,11 +92,11 @@
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-body p-5">
-                        <div class="text-center fs-3 title-font fw-medium">Add New City</div>
+                        <div class="text-center fs-3 title-font fw-medium">@lang('messages.modal_add_city')</div>
                         <div class="d-flex flex-column">
                             <div class="pt-2 w-100">
                                 <div class="input-text-wrapper w-100 mb-3">
-                                    <label for="name" class="text-black fw-medium fs-14">Name</label>
+                                    <label for="name" class="text-black fw-medium fs-14">@lang('messages.table_name')</label>
                                     <input type="text" id="name" name="name"
                                         class="w-100 input-text border-0 @error('name') is-invalid @enderror"
                                         placeholder="Enter city name" value="{{ old('name') }}">
@@ -86,7 +104,7 @@
                             </div>
                             <div class="w-100">
                                 <div class="input-text-wrapper w-100 mb-3">
-                                    <p class="text-black fw-medium fs-14">Image</p>
+                                    <p class="text-black fw-medium fs-14">@lang('messages.table_image')</p>
                                     <div class="d-flex flex-row align-items-end gap-2">
                                         <img src="{{ asset('assets/img/table/img-modal.svg') }}" alt="your image"
                                             class="tag-image img-preview" />
@@ -97,7 +115,7 @@
                             </div>
                             <div class="w-100">
                                 <div class="input-text-wrapper w-100 mb-3">
-                                    <label for="history_1" class="text-black fw-medium fs-14">History Paragraph 1</label>
+                                    <label for="history_1" class="text-black fw-medium fs-14">@lang('messages.table_history_paragraph1')</label>
                                     <textarea type="text" id="history_1" name="history_1"
                                         class="w-100 input-text border-0 @error('history_1') is-invalid @enderror"
                                         placeholder="Enter city history paragraph 1" value="{{ old('history_1') }}" rows="3"></textarea>
@@ -105,7 +123,7 @@
                             </div>
                             <div class="w-100">
                                 <div class="input-text-wrapper w-100 mb-3">
-                                    <label for="history_2" class="text-black fw-medium fs-14">History Paragraph 2</label>
+                                    <label for="history_2" class="text-black fw-medium fs-14">@lang('messages.table_history_paragraph2')</label>
                                     <textarea type="text" id="history_2" name="history_2"
                                         class="w-100 input-text border-0 @error('history_2') is-invalid @enderror"
                                         placeholder="Enter city history paragraph 2" value="{{ old('history_2') }}" rows="3"></textarea>
@@ -113,8 +131,9 @@
                             </div>
                         </div>
                         <div class="d-flex flex-row justify-content-center gap-2 pt-4">
-                            <button type="button" class="btn btn-dark fs-15" data-bs-dismiss="modal">Cancel Add</button>
-                            <button type="submit" class="btn btn-color fs-15">Add New City</button>
+                            <button type="button" class="btn btn-dark fs-15"
+                                data-bs-dismiss="modal">@lang('messages.modal_close_add')</button>
+                            <button type="submit" class="btn btn-color fs-15">@lang('messages.modal_add_city')</button>
                         </div>
                     </div>
                 </div>
@@ -128,11 +147,11 @@
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-body p-5">
-                        <div class="text-center fs-3 title-font fw-medium fw-medium">Edit Menu</div>
+                        <div class="text-center fs-3 title-font fw-medium fw-medium">@lang('messages.modal_edit_city')</div>
                         <div class="d-flex flex-column gap-3">
                             <div class="pt-2 w-100">
                                 <div class="input-text-wrapper w-100 mb-3">
-                                    <label for="name" class="text-black fw-medium fs-14">Name</label>
+                                    <label for="name" class="text-black fw-medium fs-14">@lang('messages.table_name')</label>
                                     <input type="text" id="name" name="name"
                                         class="w-100 input-text border-0 @error('name') is-invalid @enderror"
                                         data-value="name">
@@ -141,7 +160,7 @@
                             <div class="w-100">
                                 <div class="input-text-wrapper w-100 mb-3">
                                     <input type="hidden" name="oldImage" data-value="oldImage">
-                                    <p class="text-black fw-medium fs-14">Image</p>
+                                    <p class="text-black fw-medium fs-14">@lang('messages.table_image')</p>
                                     <div class="d-flex flex-row align-items-end gap-2">
                                         <img src="" alt="your image" class="tag-image-edit img-preview"
                                             data-value="image" />
@@ -152,23 +171,23 @@
                             </div>
                             <div class="w-100">
                                 <div class="input-text-wrapper w-100 mb-3">
-                                    <label for="history_1" class="text-black fw-medium fs-14">History Paragraph 1</label>
+                                    <label for="history_1" class="text-black fw-medium fs-14">@lang('messages.table_history_paragraph1')</label>
                                     <textarea type="text" id="history_1" name="history_1"
                                         class="w-100 input-text border-0 @error('history_1') is-invalid @enderror" rows="3" data-value="history_1"></textarea>
                                 </div>
                             </div>
                             <div class="w-100">
                                 <div class="input-text-wrapper w-100 mb-3">
-                                    <label for="history_2" class="text-black fw-medium fs-14">History Paragraph 2</label>
+                                    <label for="history_2" class="text-black fw-medium fs-14">@lang('messages.table_history_paragraph2')</label>
                                     <textarea type="text" id="history_2" name="history_2"
                                         class="w-100 input-text border-0 @error('history_2') is-invalid @enderror" rows="3" data-value="history_1"></textarea>
                                 </div>
                             </div>
                         </div>
                         <div class="d-flex flex-row justify-content-center gap-2 pt-4">
-                            <button type="button" class="btn btn-dark fs-15" data-bs-dismiss="modal">Cancel
-                                Edit</button>
-                            <button type="submit" class="btn btn-color fs-15">Save Changes</button>
+                            <button type="button" class="btn btn-dark fs-15"
+                                data-bs-dismiss="modal">@lang('messages.modal_close_edit')</button>
+                            <button type="submit" class="btn btn-color fs-15">@lang('messages.modal_edit')</button>
                         </div>
                     </div>
                 </div>
@@ -182,13 +201,12 @@
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-body p-5">
-                        <div class="text-center fs-3 fw-medium title-font">Delete City</div>
-                        <div class="pt-3 text-center"> Do you really want to delete these city? This process cannot be
-                            undone.
-                        </div>
+                        <div class="text-center fs-3 fw-medium title-font">@lang('messages.modal_delete_city')</div>
+                        <div class="pt-3 text-center">@lang('messages.modal_delete_city_description')</div>
                         <div class="d-flex flex-row justify-content-center gap-2 pt-4">
-                            <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Cancel Delete</button>
-                            <button type="submit" class="btn btn-color">Delete City</button>
+                            <button type="button" class="btn btn-dark"
+                                data-bs-dismiss="modal">@lang('messages.modal_close_delete')</button>
+                            <button type="submit" class="btn btn-color">@lang('messages.modal_delete_city')</button>
                         </div>
                     </div>
                 </div>

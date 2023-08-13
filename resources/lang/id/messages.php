@@ -154,16 +154,22 @@ return [
 
     'dashboard_feedback_title' => "Halaman Tanggapan",
 
+    'dashboard_city_title' => "Halaman Perkotaan",
+    'dashboard_city_button' => "Tambah Kota Baru",
+
     'table_name' => "Nama",
     'table_location' => "Lokasi",
     'table_rating' => "Peringkat",
     'table_total_images' => "Total Gambar",
     'table_history' => "Sejarah",
     'table_image' => "Gambar",
+    'table_history_paragraph1' => "Sejarah Paragraph 1",
+    'table_history_paragraph2' => "Sejarah Paragraph 2",
 
-    'table_destination_notfound' => "Tujuan data tidak ditemukan",
+    'table_destination_notfound' => "Tujuan tidak ditemukan",
     'table_gallry_notfound' => "Gambar tidak ditemukan",
-    'table_feedback_notfound' => "Tanggapan data tidak ditemukan",
+    'table_feedback_notfound' => "Tanggapan tidak ditemukan",
+    'table_city_notfound' => "Perkotaan tidak ditemukan",
 
     'modal_add_image' => "Tambah Gambar Baru",
     'modal_delete_image' => "Hapus Galeri",
@@ -176,4 +182,8 @@ return [
     'modal_edit_feedback' => "Edit Tanggapan",
     'modal_delete_feedback' => "Hapus Tanggapan",
     'modal_delete_feedback_description' => "Apakah Anda benar -benar ingin menghapus umpan balik ini?Proses ini tidak bisa dibatalkan.",
+    'modal_add_city' => "Tambah Kota Baru",
+    'modal_edit_city' => "Edit City",
+    'modal_delete_city' => "Hapus Kota",
+    'modal_delete_city_description' => "Apakah Anda benar -benar ingin menghapus kota ini?Proses ini tidak bisa dibatalkan.",
 ];

@@ -154,16 +154,22 @@ return [
 
     'dashboard_feedback_title' => "Feedback Page",
 
+    'dashboard_city_title' => "City Page",
+    'dashboard_city_button' => "Add New City",
+
     'table_name' => "Name",
     'table_location' => "Location",
     'table_rating' => "Rating",
     'table_total_images' => "Total Images",
     'table_history' => "History",
     'table_image' => "Image",
+    'table_history_paragraph1' => "History Paragraph 1",
+    'table_history_paragraph2' => "History Paragraph 2",
 
     'table_destination_notfound' => "Data Destination Not Found",
     'table_gallry_notfound' => "Image Not Found",
     'table_feedback_notfound' => "Data Feedback Not Found",
+    'table_city_notfound' => "Data City Not Found",
 
     'modal_add_image' => "Add New Images",
     'modal_delete_image' => "Delete Gallery",
@@ -176,4 +182,8 @@ return [
     'modal_edit_feedback' => "Edit Feedback",
     'modal_delete_feedback' => "Delete Feedback",
     'modal_delete_feedback_description' => "Do you really want to delete these feedback? This process cannot be undone.",
+    'modal_add_city' => "Add New City",
+    'modal_edit_city' => "Edit City",
+    'modal_delete_city' => "Delete City",
+    'modal_delete_city_description' => "Do you really want to delete these city? This process cannot be undone.",
 ];

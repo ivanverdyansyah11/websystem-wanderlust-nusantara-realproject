@@ -6,21 +6,21 @@ use App\Models\City;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
+use Illuminate\Support\Facades\Session;
 
 class CityController extends Controller
 {
     public function index()
     {
-        $text_history_1 = City::select('history_1')
-            ->get()
-            ->map(function ($text) {
-                return Str::limit($text->history_1, 100);
-            });
+        if (!$locale = session('locale')) {
+            Session::put('locale', 'id');
+        } else {
+            app()->setLocale($locale);
+        }
 
         return view('city.index', [
             'page' => 'Cities',
             'cities' => City::all(),
-            'text_history_1' => $text_history_1,
         ]);
     }
 
