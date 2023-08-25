@@ -4,11 +4,11 @@
     <div class="px-5">
         <div class="d-flex flex-row justify-content-between">
             <p class="fw-semibold fs-2 text-black">@lang('messages.dashboard_title')</p>
-            <div class="d-lg-flex justify-content-end d-none gap-2">
+            <div class="d-flex justify-content-end gap-2">
                 <div class="d-xl-none hamburger-wrapper d-flex text-white align-self-center">
                     <i class="fa-solid fa-bars"></i>
                 </div>
-                <div class="dropdown">
+                <div class="dropdown d-xl-flex d-none">
                     <button class="btn btn-dark dropdown-toggle" style="height: fit-content; padding: 13px 22px;"
                         type="button" data-bs-toggle="dropdown" aria-expanded="false">
                         {{ strtoupper(session('locale')) ?? strtoupper(config('app.locale')) }}

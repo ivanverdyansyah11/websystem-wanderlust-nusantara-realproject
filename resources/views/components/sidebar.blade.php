@@ -64,6 +64,22 @@
                     </form>
                 </div>
             </div>
+            <div class="col-12 mt-3 d-lg-none d-block">
+                <div class="menu-sidebar ps-4 pe-3">
+                    <div class="dropdown">
+                        <button class="btn btn-dark dropdown-toggle w-100 d-flex align-items-center justify-content-between" style="height: fit-content; padding: 13px 22px;"
+                            type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            {{ strtoupper(session('locale')) ?? strtoupper(config('app.locale')) }}
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="{{ route('switch-language', ['locale' => 'id']) }}">ID</a>
+                            </li>
+                            <li><a class="dropdown-item" href="{{ route('switch-language', ['locale' => 'en']) }}">EN</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>
