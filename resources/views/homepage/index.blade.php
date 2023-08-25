@@ -50,6 +50,22 @@
                         <li class="nav-item">
                             <a class="nav-link fw-semibold" href="/gallery">@lang('messages.nav_link3')</a>
                         </li>
+                        <li class="nav-item d-lg-none d-block">
+                            <div class="dropdown">
+                                <button class="btn btn-dark dropdown-toggle" style="height: fit-content; padding: 13px 22px;"
+                                    type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    {{ strtoupper(session('locale')) ?? strtoupper(config('app.locale')) }}
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item"
+                                            href="{{ route('switch-language', ['locale' => 'id']) }}">ID</a>
+                                    </li>
+                                    <li><a class="dropdown-item"
+                                            href="{{ route('switch-language', ['locale' => 'en']) }}">EN</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
                     </ul>
                 </div>
                 <div class="d-lg-flex justify-content-end d-none gap-2">
