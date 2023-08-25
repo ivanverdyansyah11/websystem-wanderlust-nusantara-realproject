@@ -148,6 +148,15 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 
     <script>
+        const btnHamburger = document.querySelector('.fa-bars');
+        const sidebar = document.querySelector('.sidebar-wrapper');
+        const body = document.querySelector('body');
+
+        btnHamburger.addEventListener('click', function() {
+            btnHamburger.classList.toggle('active');
+            sidebar.classList.toggle('active');
+        });
+
         $(document).on('click', '[data-bs-target="#EditModal"]', function() {
             let id = $(this).data('id');
             $('#edit-modal').attr('action', '/admin/feedback/edit/' + id);
@@ -180,13 +189,5 @@
             tagImageEdit.src = URL.createObjectURL(inputImageEdit.files[0]);
         });
 
-        const btnHamburger = document.querySelector('.fa-bars');
-        const sidebar = document.querySelector('.sidebar-wrapper');
-        const body = document.querySelector('body');
-
-        btnHamburger.addEventListener('click', function() {
-            btnHamburger.classList.toggle('active');
-            sidebar.classList.toggle('active');
-        });
     </script>
 @endsection
