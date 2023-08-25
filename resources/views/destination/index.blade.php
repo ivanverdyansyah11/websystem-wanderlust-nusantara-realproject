@@ -9,7 +9,7 @@
             <div class="d-xl-none hamburger-wrapper d-flex text-white align-self-center">
                 <i class="fa-solid fa-bars"></i>
             </div>
-            <div class="dropdown d-none d-lg-inline-block">
+            <div class="dropdown d-none d-xl-inline-block">
                 <button class="btn btn-dark dropdown-toggle" style="height: fit-content; padding: 13px 22px;" type="button"
                     data-bs-toggle="dropdown" aria-expanded="false">
                     {{ strtoupper(session('locale')) ?? strtoupper(config('app.locale')) }}
